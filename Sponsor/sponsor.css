@@ -1,0 +1,919 @@
+/* SPONSOR PAGE
+/* =========================================================
+   SPONSOR PAGE
+========================================================= */
+
+.sponsor-page {
+  min-height: 100vh;
+  padding-bottom: 100px;
+
+  position: relative;
+  overflow-x: hidden;
+
+  color: #f5f5f5;
+
+  font-family: "Montserrat", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255,255,255,0.045),
+      transparent 30%
+    ),
+    #050505;
+}
+
+
+/* subtle background grid */
+
+.sponsor-page::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  opacity: 0.24;
+}
+
+
+
+/* =========================================================
+   SPONSOR HERO
+========================================================= */
+
+.sponsor-hero {
+  width: 100%;
+  min-height: 360px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.12);
+
+  background:
+    radial-gradient(
+      circle at 78% 50%,
+      rgba(255,255,255,0.055),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #050505,
+      #0c0c0c 55%,
+      #050505
+    );
+}
+
+
+.sponsor-hero-content {
+  width: min(1500px, 90%);
+
+  position: relative;
+  z-index: 3;
+}
+
+
+.sponsor-hero h1 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size:
+    clamp(
+      40px,
+      5vw,
+      68px
+    );
+
+  font-weight: 600;
+  letter-spacing: 11px;
+}
+
+
+.sponsor-hero p {
+  margin-top: 18px;
+
+  color: #888;
+
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+
+
+/* =========================================================
+   HERO WATERMARK
+========================================================= */
+
+.sponsor-hero-watermark {
+  width: 520px;
+  height: 520px;
+
+  position: absolute;
+
+  right: 40px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  object-fit: contain;
+
+  opacity: 0.07;
+
+  pointer-events: none;
+
+  filter: brightness(0.9);
+
+  z-index: 0;
+}
+
+
+
+/* =========================================================
+   HERO DIVIDER
+========================================================= */
+
+.sponsor-hero-divider {
+  position: relative;
+
+  width: min(600px, 65%);
+  height: 30px;
+
+  margin: 30px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sponsor-hero-divider::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 50%;
+
+  height: 1px;
+
+  background: #3a3a3a;
+
+  transform: translateY(-50%);
+
+  z-index: 0;
+}
+
+
+.sponsor-hero-divider img {
+  position: relative;
+
+  z-index: 2;
+
+  width: 18px;
+  height: 18px;
+
+  object-fit: contain;
+
+  background: #080808;
+
+  padding: 0 16px;
+
+  box-sizing: content-box;
+
+  opacity: 0.75;
+}
+
+
+
+/* =========================================================
+   SPONSOR TIER SECTIONS
+========================================================= */
+
+.sponsor-tier-section {
+  --tier-color: #ffffff;
+  --tier-rgb: 255,255,255;
+
+  width: min(1500px, 92%);
+
+  margin:
+    80px
+    auto
+    0;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+
+/* =========================================================
+   TIER COLORS
+========================================================= */
+
+.tier-section-onyx {
+  --tier-color: #f2f2f2;
+  --tier-rgb: 242,242,242;
+}
+
+
+.tier-section-diamond {
+  --tier-color: #c082ff;
+  --tier-rgb: 192,130,255;
+}
+
+
+.tier-section-platinum {
+  --tier-color: #75dde7;
+  --tier-rgb: 117,221,231;
+}
+
+
+.tier-section-gold {
+  --tier-color: #e7b848;
+  --tier-rgb: 231,184,72;
+}
+
+
+.tier-section-silver {
+  --tier-color: #c9c9c9;
+  --tier-rgb: 201,201,201;
+}
+
+
+.tier-section-bronze {
+  --tier-color: #c7834f;
+  --tier-rgb: 199,131,79;
+}
+
+
+
+/* =========================================================
+   TIER HEADING
+========================================================= */
+
+.tier-section-heading {
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 22px;
+}
+
+
+.tier-title-group h2 {
+  margin: 0;
+
+  color: var(--tier-color);
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+
+.tier-title-group p {
+  margin-top: 5px;
+
+  color: var(--tier-color);
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  opacity: 0.9;
+}
+
+
+.tier-heading-line {
+  height: 1px;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(var(--tier-rgb),0.75),
+      rgba(var(--tier-rgb),0.15),
+      transparent
+    );
+}
+
+
+.tier-heading-line::before {
+  content: "";
+
+  width: 5px;
+  height: 5px;
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+
+  background: var(--tier-color);
+}
+
+
+
+/* =========================================================
+   SPONSOR GRID
+========================================================= */
+
+.tier-sponsor-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      5,
+      minmax(0,1fr)
+    );
+
+  gap: 15px;
+}
+
+
+
+/* =========================================================
+   SPONSOR CARD — ENTIRE CARD IS IMAGE
+========================================================= */
+
+.sponsor-company-card {
+  min-height: 160px;
+
+  padding: 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: block;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.16);
+
+  background: #0d0d0d;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* tier-colored top line */
+
+.sponsor-company-card::before {
+  content: "";
+
+  width: 100%;
+  height: 2px;
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  z-index: 4;
+
+  opacity: 0;
+
+  background: var(--tier-color);
+
+  transition: opacity 0.3s ease;
+}
+
+
+/* dark overlay */
+
+.sponsor-company-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    rgba(0,0,0,0);
+
+  transition:
+    background 0.3s ease;
+}
+
+
+
+/* =========================================================
+   FULL SPONSOR IMAGE
+========================================================= */
+
+.sponsor-full-logo {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  object-fit: cover;
+
+  z-index: 1;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    opacity 0.35s ease;
+}
+
+
+
+/* =========================================================
+   SPONSOR CARD HOVER
+========================================================= */
+
+.sponsor-company-card:hover,
+.sponsor-company-card.active {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(var(--tier-rgb),0.65);
+
+  box-shadow:
+    0 0 22px
+    rgba(var(--tier-rgb),0.12);
+}
+
+
+.sponsor-company-card:hover::before,
+.sponsor-company-card.active::before {
+  opacity: 1;
+}
+
+
+.sponsor-company-card:hover::after,
+.sponsor-company-card.active::after {
+  background:
+    rgba(0,0,0,0.08);
+}
+
+
+.sponsor-company-card:hover .sponsor-full-logo,
+.sponsor-company-card.active .sponsor-full-logo {
+  transform: scale(1.04);
+}
+
+
+
+/* =========================================================
+   SPONSOR DETAIL DROPDOWN
+========================================================= */
+
+.sponsor-detail-panel {
+  grid-column:
+    1 / -1;
+
+  max-height: 0;
+
+  margin-top: 0;
+
+  padding:
+    0
+    28px;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform:
+    translateY(-14px);
+
+  border:
+    1px solid
+    transparent;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24,24,24,0.99),
+      rgba(7,7,7,0.99)
+    );
+
+  transition:
+    max-height 0.6s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.4s ease,
+    transform 0.5s ease,
+    margin 0.5s ease,
+    padding 0.5s ease,
+    border-color 0.5s ease;
+}
+
+
+.sponsor-detail-panel.open {
+  max-height: 450px;
+
+  margin-top: 7px;
+
+  padding: 28px;
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+  border-color:
+    rgba(var(--tier-rgb),0.42);
+
+  box-shadow:
+    inset
+    3px
+    0
+    0
+    var(--tier-color);
+}
+
+
+
+/* =========================================================
+   DETAIL CONTENT
+========================================================= */
+
+.sponsor-detail-content {
+  display: grid;
+
+  grid-template-columns:
+    150px
+    1fr
+    0.75fr;
+
+  gap: 35px;
+
+  align-items: center;
+}
+
+
+
+/* =========================================================
+   DETAIL LOGO
+========================================================= */
+
+.detail-logo {
+  width: 150px;
+  height: 150px;
+
+  display: grid;
+
+  place-items: center;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.2);
+
+  background: #050505;
+}
+
+
+.detail-logo img {
+  width: 100%;
+  height: 100%;
+
+  padding: 16px;
+
+  object-fit: contain;
+}
+
+
+
+/* =========================================================
+   DETAIL COMPANY INFO
+========================================================= */
+
+.detail-company-label {
+  color: var(--tier-color);
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+}
+
+
+.detail-company h3 {
+  margin:
+    9px
+    0
+    14px;
+
+  color: #f5f5f5;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+}
+
+
+.detail-company p {
+  max-width: 600px;
+
+  color: #aaa;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+
+/* =========================================================
+   DETAIL STATS
+========================================================= */
+
+.detail-stats {
+  padding-left: 30px;
+
+  border-left:
+    1px solid
+    rgba(255,255,255,0.15);
+}
+
+
+.detail-stat {
+  margin-bottom: 23px;
+}
+
+
+.detail-stat:last-child {
+  margin-bottom: 0;
+}
+
+
+.detail-stat span {
+  display: block;
+
+  color: #777;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+}
+
+
+.detail-stat strong {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #f5f5f5;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+
+
+/* =========================================================
+   LEARN MORE
+========================================================= */
+
+.detail-learn-more {
+  width: 230px;
+  height: 52px;
+
+  margin-top: 25px;
+
+  padding:
+    0
+    18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border:
+    1px solid
+    rgba(var(--tier-rgb),0.55);
+
+  color: #f5f5f5;
+
+  background: transparent;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.detail-learn-more:hover {
+  color: #050505;
+
+  background: var(--tier-color);
+
+  border-color: var(--tier-color);
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .tier-sponsor-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+  }
+
+
+  .sponsor-detail-content {
+    grid-template-columns:
+      120px
+      1fr;
+  }
+
+
+  .detail-stats {
+    grid-column:
+      1 / -1;
+
+    padding:
+      20px
+      0
+      0;
+
+    border-left: 0;
+
+    border-top:
+      1px solid
+      rgba(255,255,255,0.15);
+  }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .sponsor-hero {
+    min-height: 280px;
+  }
+
+
+  .sponsor-hero h1 {
+    font-size: 30px;
+
+    letter-spacing: 6px;
+  }
+
+
+  .sponsor-hero p {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .sponsor-hero-watermark {
+    width: 320px;
+    height: 320px;
+
+    right: -110px;
+
+    opacity: 0.055;
+  }
+
+
+  .sponsor-hero-divider {
+    width: 300px;
+    max-width: 85%;
+  }
+
+
+  .tier-sponsor-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+
+  .sponsor-company-card {
+    min-height: 140px;
+  }
+
+
+  .sponsor-detail-content {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .detail-logo {
+    width: 110px;
+    height: 110px;
+  }
+
+
+  .detail-stats {
+    grid-column: auto;
+  }
+
+
+  .detail-learn-more {
+    width: 100%;
+  }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .tier-sponsor-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .sponsor-company-card {
+    min-height: 165px;
+  }
+
+}
