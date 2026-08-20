@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Sponsors | Team NOX</title>
+
+
+  <!-- MONTSERRAT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- EXISTING TEAM NOX STYLES -->
+  <link
+    rel="stylesheet"
+    href="../style.css"
+  >
+
+
+  <style>
+
+    /* =========================================================
+       SPONSOR PAGE
+    ========================================================= */
+
+    .sponsor-page {
+      min-height: 100vh;
+
+      padding-bottom: 100px;
+
+      color: #f5f5f5;
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(255,255,255,0.045),
+          transparent 30%
+        ),
+        #050505;
+    }
+
+
+
+    /* subtle background grid */
+
+    .sponsor-page::before {
+      content: "";
+
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.012) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.012) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        80px
+        80px;
+
+      opacity: 0.25;
+    }
+
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .sponsor-hero {
+      width: min(1500px, 90%);
+
+      margin: 0 auto;
+
+      padding:
+        70px
+        0
+        65px;
+
+      position: relative;
+      z-index: 2;
+
+      text-align: center;
+    }
+
+
+    .sponsor-hero h1 {
+      margin: 0;
+
+      font-size:
+        clamp(
+          40px,
+          5vw,
+          68px
+        );
+
+      font-weight: 600;
+
+      letter-spacing: 11px;
+    }
+
+
+    .sponsor-hero p {
+      margin-top: 18px;
+
+      color: #888;
+
+      font-size: 10px;
+
+      letter-spacing: 3px;
+    }
+
+
+    .sponsor-hero-divider {
+      width: min(700px, 90%);
+
+      margin:
+        32px
+        auto
+        0;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        18px
+        1fr;
+
+      align-items: center;
+
+      gap: 16px;
+    }
+
+
+    .sponsor-hero-divider span {
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,0.35)
+        );
+    }
+
+
+    .sponsor-hero-divider span:last-child {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.35),
+          transparent
+        );
+    }
+
+
+    .sponsor-hero-divider img {
+      width: 18px;
+      height: 18px;
+
+      object-fit: contain;
+
+      opacity: 0.7;
+    }
+
+
+
+    /* =========================================================
+       TIER SECTION
+    ========================================================= */
+
+    .sponsor-tier-section {
+      --tier-color: #ffffff;
+      --tier-rgb: 255,255,255;
+
+      width: min(1500px, 92%);
+
+      margin:
+        0
+        auto
+        85px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+
+
+    /* =========================================================
+       COLORS
+    ========================================================= */
+
+    .tier-section-onyx {
+      --tier-color: #eeeeee;
+      --tier-rgb: 238,238,238;
+    }
+
+
+    .tier-section-diamond {
+      --tier-color: #b98cff;
+      --tier-rgb: 185,140,255;
+    }
+
+
+    .tier-section-platinum {
+      --tier-color: #76dce7;
+      --tier-rgb: 118,220,231;
+    }
+
+
+    .tier-section-gold {
+      --tier-color: #e7b84d;
+      --tier-rgb: 231,184,77;
+    }
+
+
+    .tier-section-silver {
+      --tier-color: #c8c8c8;
+      --tier-rgb: 200,200,200;
+    }
+
+
+    .tier-section-bronze {
+      --tier-color: #c9824f;
+      --tier-rgb: 201,130,79;
+    }
+
+
+
+    /* =========================================================
+       TIER HEADING
+    ========================================================= */
+
+    .tier-section-heading {
+      display: grid;
+
+      grid-template-columns:
+        auto
+        1fr;
+
+      align-items: center;
+
+      gap: 25px;
+
+      margin-bottom: 22px;
+    }
+
+
+    .tier-title-group h2 {
+      margin: 0;
+
+      color: var(--tier-color);
+
+      font-size: 22px;
+
+      font-weight: 600;
+
+      letter-spacing: 5px;
+    }
+
+
+    .tier-title-group p {
+      margin-top: 5px;
+
+      color: var(--tier-color);
+
+      font-size: 11px;
+
+      font-weight: 500;
+
+      letter-spacing: 2px;
+
+      opacity: 0.9;
+    }
+
+
+    .tier-heading-line {
+      height: 1px;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(var(--tier-rgb),0.8),
+          rgba(var(--tier-rgb),0.15),
+          transparent
+        );
+    }
+
+
+    .tier-heading-line::before {
+      content: "";
+
+      width: 5px;
+      height: 5px;
+
+      position: absolute;
+
+      left: 0;
+      top: 50%;
+
+      transform:
+        translateY(-50%)
+        rotate(45deg);
+
+      background:
+        var(--tier-color);
+    }
+
+
+
+    /* =========================================================
+       SPONSOR GRID
+    ========================================================= */
+
+    .tier-sponsor-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          5,
+          minmax(0,1fr)
+        );
+
+      gap: 15px;
+    }
+
+
+
+    /* =========================================================
+       SPONSOR CARD — FULL IMAGE
+    ========================================================= */
+
+    .sponsor-company-card {
+      min-height: 155px;
+      padding: 0;
+
+      position: relative;
+      overflow: hidden;
+
+      display: block;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.16);
+
+      background: #0d0d0d;
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+
+    .sponsor-company-card::before {
+      content: "";
+
+      width: 100%;
+      height: 2px;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      z-index: 3;
+
+      opacity: 0;
+
+      background: var(--tier-color);
+
+      transition:
+        opacity 0.3s ease;
+    }
+
+
+    .sponsor-company-card::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      z-index: 2;
+
+      pointer-events: none;
+
+      background:
+        rgba(0,0,0,0);
+
+      transition:
+        background 0.3s ease;
+    }
+
+
+    .sponsor-full-logo {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      inset: 0;
+
+      display: block;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.35s ease,
+        filter 0.35s ease,
+        opacity 0.35s ease;
+    }
+
+
+    .sponsor-company-card:hover,
+    .sponsor-company-card.active {
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(var(--tier-rgb),0.65);
+
+      box-shadow:
+        0 0 22px
+        rgba(var(--tier-rgb),0.12);
+    }
+
+
+    .sponsor-company-card:hover::before,
+    .sponsor-company-card.active::before {
+      opacity: 1;
+    }
+
+
+    .sponsor-company-card:hover::after,
+    .sponsor-company-card.active::after {
+      background:
+        rgba(0,0,0,0.08);
+    }
+
+
+    .sponsor-company-card:hover .sponsor-full-logo,
+    .sponsor-company-card.active .sponsor-full-logo {
+      transform:
+        scale(1.04);
+    }
+
+
+    /* =========================================================
+       DETAIL DROPDOWN
+    ========================================================= */
+
+    .sponsor-detail-panel {
+      grid-column:
+        1 / -1;
+
+      max-height: 0;
+
+      margin-top: 0;
+
+      overflow: hidden;
+
+      opacity: 0;
+
+      transform:
+        translateY(-15px);
+
+      border:
+        1px solid
+        transparent;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(24,24,24,0.99),
+          rgba(7,7,7,0.99)
+        );
+
+      transition:
+        max-height 0.6s cubic-bezier(0.22,1,0.36,1),
+        opacity 0.4s ease,
+        transform 0.5s ease,
+        margin 0.5s ease,
+        padding 0.5s ease,
+        border-color 0.5s ease;
+    }
+
+
+    .sponsor-detail-panel.open {
+      max-height: 420px;
+
+      margin-top: 5px;
+
+      padding: 28px;
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+
+      border-color:
+        rgba(var(--tier-rgb),0.4);
+
+      box-shadow:
+        inset
+        3px
+        0
+        0
+        var(--tier-color);
+    }
+
+
+
+    /* =========================================================
+       DETAIL PANEL CONTENT
+    ========================================================= */
+
+    .sponsor-detail-content {
+      display: grid;
+
+      grid-template-columns:
+        150px
+        1fr
+        0.75fr;
+
+      gap: 35px;
+
+      align-items: center;
+    }
+
+
+    .detail-logo {
+      width: 150px;
+      height: 150px;
+
+      display: grid;
+
+      place-items: center;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.2);
+
+      background:
+        #050505;
+
+      color: #777;
+
+      font-size: 9px;
+
+      letter-spacing: 2px;
+    }
+
+
+    .detail-logo img {
+      width: 100%;
+      height: 100%;
+
+      padding: 16px;
+
+      object-fit: contain;
+    }
+
+
+
+    /* =========================================================
+       COMPANY INFO
+    ========================================================= */
+
+    .detail-company-label {
+      color:
+        var(--tier-color);
+
+      font-size:
+        8px;
+
+      font-weight:
+        500;
+
+      letter-spacing:
+        3px;
+    }
+
+
+    .detail-company h3 {
+      margin:
+        9px
+        0
+        14px;
+
+      color:
+        #f5f5f5;
+
+      font-size:
+        25px;
+
+      font-weight:
+        500;
+
+      letter-spacing:
+        2px;
+    }
+
+
+    .detail-company p {
+      max-width:
+        600px;
+
+      color:
+        #aaa;
+
+      font-size:
+        11px;
+
+      line-height:
+        1.8;
+    }
+
+
+
+    /* =========================================================
+       CONTRIBUTION INFO
+    ========================================================= */
+
+    .detail-stats {
+      padding-left:
+        30px;
+
+      border-left:
+        1px solid
+        rgba(255,255,255,0.15);
+    }
+
+
+    .detail-stat {
+      margin-bottom:
+        23px;
+    }
+
+
+    .detail-stat:last-child {
+      margin-bottom:
+        0;
+    }
+
+
+    .detail-stat span {
+      display:
+        block;
+
+      color:
+        #777;
+
+      font-size:
+        8px;
+
+      font-weight:
+        500;
+
+      letter-spacing:
+        2px;
+    }
+
+
+    .detail-stat strong {
+      display:
+        block;
+
+      margin-top:
+        7px;
+
+      color:
+        #f5f5f5;
+
+      font-size:
+        13px;
+
+      font-weight:
+        500;
+
+      letter-spacing:
+        1px;
+    }
+
+
+
+    /* =========================================================
+       LEARN MORE
+    ========================================================= */
+
+    .detail-learn-more {
+      width:
+        230px;
+
+      height:
+        52px;
+
+      margin-top:
+        25px;
+
+      padding:
+        0
+        18px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      border:
+        1px solid
+        rgba(var(--tier-rgb),0.55);
+
+      color:
+        #f5f5f5;
+
+      background:
+        transparent;
+
+      font-size:
+        10px;
+
+      font-weight:
+        500;
+
+      letter-spacing:
+        2px;
+
+      transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+
+    .detail-learn-more:hover {
+      color:
+        #050505;
+
+      background:
+        var(--tier-color);
+
+      border-color:
+        var(--tier-color);
+    }
+
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1200px) {
+
+      .tier-sponsor-grid {
+        grid-template-columns:
+          repeat(
+            3,
+            1fr
+          );
+      }
+
+
+      .sponsor-detail-content {
+        grid-template-columns:
+          120px
+          1fr;
+      }
+
+
+      .detail-stats {
+        grid-column:
+          1 / -1;
+
+        padding:
+          20px
+          0
+          0;
+
+        border-left:
+          0;
+
+        border-top:
+          1px solid
+          rgba(255,255,255,0.15);
+      }
+
+    }
+
+
+
+    @media (max-width: 700px) {
+
+      .sponsor-hero h1 {
+        font-size:
+          30px;
+
+        letter-spacing:
+          6px;
+      }
+
+
+      .tier-sponsor-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            1fr
+          );
+      }
+
+
+      .sponsor-detail-content {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .detail-logo {
+        width:
+          110px;
+
+        height:
+          110px;
+      }
+
+
+      .detail-stats {
+        grid-column:
+          auto;
+      }
+
+
+      .detail-learn-more {
+        width:
+          100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
+
+  <header class="navbar">
+
+    <a
+      href="../index.html"
+      class="brand"
+    >
+
+      <img
+        src="../image/Nox Transparent Logo.png"
+        alt="Team NOX Logo"
+        class="nav-logo"
+      >
+
+      <span class="brand-name">
+        TEAM NOX
+      </span>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="../index.html">
+        Home
+      </a>
+
+
+      <div class="nav-dropdown">
+
+        <button
+          class="dropdown-button"
+          type="button"
+        >
+
+          About Us
+
+          <span class="arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="../About Us/founders.html">
+            Meet the Founders
+          </a>
+
+          <a href="../About Us/mentors.html">
+            Meet the Mentors
+          </a>
+
+          <a href="../story.html">
+            Our Story
+          </a>
+
+          <a href="../About Us/programs.html">
+            Our Programs
+          </a>
+
+          <a href="../About Us/divisions.html">
+            Divisions
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-dropdown">
+
+        <button
+          class="dropdown-button"
+          type="button"
+        >
+
+          Resources
+
+          <span class="arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="../Resources/grant-tracker.html">
+            Grant Tracker
+          </a>
+
+          <a href="../Resources/sponsor-packet.html">
+            Sponsor Packet
+          </a>
+
+          <a href="../Resources/team-handbook.html">
+            Team Handbook
+          </a>
+
+          <a href="../Resources/team-forms.html">
+            Team Forms
+          </a>
+
+          <a href="../Resources/calendar.html">
+            Calendar
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a href="../index.html#highlights">
+        Highlights
+      </a>
+
+      <a href="sponsor.html">
+        Sponsors
+      </a>
+
+      <a href="../index.html#join">
+        Join Us
+      </a>
+
+      <a href="../index.html#donate">
+        Donate
+      </a>
+
+    </nav>
+
+
+    <div class="nav-spacer"></div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       SPONSOR PAGE
+  ====================================================== -->
+
+  <main class="sponsor-page">
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="sponsor-hero">
+
+  <!-- FADED BACKGROUND LOGO -->
+
+  <img
+    src="../image/Nox Transparent Logo.png"
+    alt=""
+    class="sponsor-hero-watermark"
+  >
+
+
+  <div class="sponsor-hero-content">
+
+    <h1>
+      SPONSOR PARTNERS
+    </h1>
+
+    <p>
+      THANK YOU FOR POWERING OUR JOURNEY.
+    </p>
+
+
+    <div class="sponsor-hero-divider">
+  <img
+    src="../image/Nox Transparent Logo.png"
+    alt="Team NOX"
+  >
+</div>
+
+  </div>
+
+</section>
+
+
+
+    <!-- =================================================
+         ONYX
+    ================================================== -->
+
+    <section
+      class="sponsor-tier-section tier-section-onyx"
+      data-tier="ONYX"
+      data-range="$15,000+"
+    >
+
+      <div class="tier-section-heading">
+
+        <div class="tier-title-group">
+
+          <h2>
+            ONYX
+          </h2>
+
+          <p>
+            $15,000+
+          </p>
+
+        </div>
+
+        <div class="tier-heading-line"></div>
+
+      </div>
+
+
+      <div class="tier-sponsor-grid">
+
+        <button
+          class="sponsor-company-card"
+          data-name="ONYX SPONSOR 1"
+          data-contribution="$15,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/onyx-1.png"
+        >
+
+          <img
+            src="../image/sponsors/onyx-1.png"
+            alt="ONYX SPONSOR 1"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="ONYX SPONSOR 2"
+          data-contribution="$15,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/onyx-2.png"
+        >
+
+          <img
+            src="../image/sponsors/onyx-2.png"
+            alt="ONYX SPONSOR 2"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="ONYX SPONSOR 3"
+          data-contribution="$15,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/onyx-3.png"
+        >
+
+          <img
+            src="../image/sponsors/onyx-3.png"
+            alt="ONYX SPONSOR 3"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <div class="sponsor-detail-panel"></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         DIAMOND
+    ================================================== -->
+
+    <section
+      class="sponsor-tier-section tier-section-diamond"
+      data-tier="DIAMOND"
+      data-range="$10,000+"
+    >
+
+      <div class="tier-section-heading">
+
+        <div class="tier-title-group">
+
+          <h2>
+            DIAMOND
+          </h2>
+
+          <p>
+            $10,000+
+          </p>
+
+        </div>
+
+        <div class="tier-heading-line"></div>
+
+      </div>
+
+
+      <div class="tier-sponsor-grid">
+
+        <button
+          class="sponsor-company-card"
+          data-name="DIAMOND SPONSOR 1"
+          data-contribution="$10,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/diamond-1.png"
+        >
+
+          <img
+            src="../image/sponsors/diamond-1.png"
+            alt="DIAMOND SPONSOR 1"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="DIAMOND SPONSOR 2"
+          data-contribution="$10,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/diamond-2.png"
+        >
+
+          <img
+            src="../image/sponsors/diamond-2.png"
+            alt="DIAMOND SPONSOR 2"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="DIAMOND SPONSOR 3"
+          data-contribution="$10,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/diamond-3.png"
+        >
+
+          <img
+            src="../image/sponsors/diamond-3.png"
+            alt="DIAMOND SPONSOR 3"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <div class="sponsor-detail-panel"></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PLATINUM
+    ================================================== -->
+
+    <section
+      class="sponsor-tier-section tier-section-platinum"
+      data-tier="PLATINUM"
+      data-range="$5,000+"
+    >
+
+      <div class="tier-section-heading">
+
+        <div class="tier-title-group">
+
+          <h2>
+            PLATINUM
+          </h2>
+
+          <p>
+            $5,000+
+          </p>
+
+        </div>
+
+        <div class="tier-heading-line"></div>
+
+      </div>
+
+
+      <div class="tier-sponsor-grid">
+
+        <button
+          class="sponsor-company-card"
+          data-name="PLATINUM SPONSOR 1"
+          data-contribution="$5,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/platinum-1.png"
+        >
+
+          <img
+            src="../image/sponsors/platinum-1.png"
+            alt="PLATINUM SPONSOR 1"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="PLATINUM SPONSOR 2"
+          data-contribution="$5,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/platinum-2.png"
+        >
+
+          <img
+            src="../image/sponsors/platinum-2.png"
+            alt="PLATINUM SPONSOR 2"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="PLATINUM SPONSOR 3"
+          data-contribution="$5,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/platinum-3.png"
+        >
+
+          <img
+            src="../image/sponsors/platinum-3.png"
+            alt="PLATINUM SPONSOR 3"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <div class="sponsor-detail-panel"></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GOLD
+    ================================================== -->
+
+    <section
+      class="sponsor-tier-section tier-section-gold"
+      data-tier="GOLD"
+      data-range="$1,000+"
+    >
+
+      <div class="tier-section-heading">
+
+        <div class="tier-title-group">
+
+          <h2>
+            GOLD
+          </h2>
+
+          <p>
+            $1,000+
+          </p>
+
+        </div>
+
+        <div class="tier-heading-line"></div>
+
+      </div>
+
+
+      <div class="tier-sponsor-grid">
+
+        <button
+          class="sponsor-company-card"
+          data-name="GOLD SPONSOR 1"
+          data-contribution="$1,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/gold-1.png"
+        >
+
+          <img
+            src="../image/sponsors/gold-1.png"
+            alt="GOLD SPONSOR 1"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="GOLD SPONSOR 2"
+          data-contribution="$1,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/gold-2.png"
+        >
+
+          <img
+            src="../image/sponsors/gold-2.png"
+            alt="GOLD SPONSOR 2"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="GOLD SPONSOR 3"
+          data-contribution="$1,000+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/gold-3.png"
+        >
+
+          <img
+            src="../image/sponsors/gold-3.png"
+            alt="GOLD SPONSOR 3"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <div class="sponsor-detail-panel"></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SILVER
+    ================================================== -->
+
+    <section
+      class="sponsor-tier-section tier-section-silver"
+      data-tier="SILVER"
+      data-range="$500+"
+    >
+
+      <div class="tier-section-heading">
+
+        <div class="tier-title-group">
+
+          <h2>
+            SILVER
+          </h2>
+
+          <p>
+            $500+
+          </p>
+
+        </div>
+
+        <div class="tier-heading-line"></div>
+
+      </div>
+
+
+      <div class="tier-sponsor-grid">
+
+        <button
+          class="sponsor-company-card"
+          data-name="SILVER SPONSOR 1"
+          data-contribution="$500+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/silver-1.png"
+        >
+
+          <img
+            src="../image/sponsors/silver-1.png"
+            alt="SILVER SPONSOR 1"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="SILVER SPONSOR 2"
+          data-contribution="$500+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/silver-2.png"
+        >
+
+          <img
+            src="../image/sponsors/silver-2.png"
+            alt="SILVER SPONSOR 2"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="SILVER SPONSOR 3"
+          data-contribution="$500+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/silver-3.png"
+        >
+
+          <img
+            src="../image/sponsors/silver-3.png"
+            alt="SILVER SPONSOR 3"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <div class="sponsor-detail-panel"></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BRONZE
+    ================================================== -->
+
+    <section
+      class="sponsor-tier-section tier-section-bronze"
+      data-tier="BRONZE"
+      data-range="$100+"
+    >
+
+      <div class="tier-section-heading">
+
+        <div class="tier-title-group">
+
+          <h2>
+            BRONZE
+          </h2>
+
+          <p>
+            $100+
+          </p>
+
+        </div>
+
+        <div class="tier-heading-line"></div>
+
+      </div>
+
+
+      <div class="tier-sponsor-grid">
+
+        <button
+          class="sponsor-company-card"
+          data-name="BRONZE SPONSOR 1"
+          data-contribution="$100+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/bronze-1.png"
+        >
+
+          <img
+            src="../image/sponsors/bronze-1.png"
+            alt="BRONZE SPONSOR 1"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="BRONZE SPONSOR 2"
+          data-contribution="$100+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/bronze-2.png"
+        >
+
+          <img
+            src="../image/sponsors/bronze-2.png"
+            alt="BRONZE SPONSOR 2"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <button
+          class="sponsor-company-card"
+          data-name="BRONZE SPONSOR 3"
+          data-contribution="$100+"
+          data-description="Add a description about this sponsor here."
+          data-website="https://example.com"
+          data-logo="../image/sponsors/bronze-3.png"
+        >
+
+          <img
+            src="../image/sponsors/bronze-3.png"
+            alt="BRONZE SPONSOR 3"
+            class="sponsor-full-logo"
+          >
+
+        </button>
+
+
+        <div class="sponsor-detail-panel"></div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       EXISTING WEBSITE JS
+  ====================================================== -->
+
+  <script src="../script.js"></script>
+
+
+
+  <!-- =====================================================
+       SPONSOR INTERACTION
+  ====================================================== -->
+
+  <script>
+
+    const sponsorCards =
+      document.querySelectorAll(
+        ".sponsor-company-card"
+      );
+
+
+    sponsorCards.forEach((card) => {
+
+      card.addEventListener(
+        "click",
+        () => {
+
+          openSponsorDetails(card);
+
+        }
+      );
+
+
+      /*
+        Desktop hover.
+
+        Remove these two lines if you eventually
+        decide you only want click interaction.
+      */
+
+      card.addEventListener(
+        "mouseenter",
+        () => {
+
+          if (
+            window.innerWidth > 900
+          ) {
+
+            openSponsorDetails(card);
+
+          }
+
+        }
+      );
+
+    });
+
+
+
+    function openSponsorDetails(card) {
+
+      const section =
+        card.closest(
+          ".sponsor-tier-section"
+        );
+
+
+      const grid =
+        card.closest(
+          ".tier-sponsor-grid"
+        );
+
+
+      const detailPanel =
+        grid.querySelector(
+          ".sponsor-detail-panel"
+        );
+
+
+      const tier =
+        section.dataset.tier;
+
+
+      const name =
+        card.dataset.name;
+
+
+      const contribution =
+        card.dataset.contribution;
+
+
+      const description =
+        card.dataset.description;
+
+
+      const website =
+        card.dataset.website;
+
+
+      const logo =
+        card.dataset.logo;
+
+
+
+      /*
+        Remove active card from this tier
+      */
+
+      grid
+        .querySelectorAll(
+          ".sponsor-company-card"
+        )
+        .forEach(
+          (item) => {
+
+            item.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+
+      card.classList.add(
+        "active"
+      );
+
+
+
+      /*
+        Create panel
+      */
+
+      detailPanel.innerHTML = `
+
+        <div class="sponsor-detail-content">
+
+
+          <div class="detail-logo">
+
+            <img
+              src="${logo}"
+              alt="${name}"
+            >
+
+          </div>
+
+
+
+          <div class="detail-company">
+
+
+            <span class="detail-company-label">
+
+              ${tier} SPONSOR
+
+            </span>
+
+
+            <h3>
+
+              ${name}
+
+            </h3>
+
+
+            <p>
+
+              ${description}
+
+            </p>
+
+
+            <a
+              href="${website}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="detail-learn-more"
+            >
+
+              <span>
+                LEARN MORE
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </a>
+
+
+          </div>
+
+
+
+          <div class="detail-stats">
+
+
+            <div class="detail-stat">
+
+              <span>
+                CONTRIBUTION
+              </span>
+
+              <strong>
+
+                ${contribution}
+
+              </strong>
+
+            </div>
+
+
+            <div class="detail-stat">
+
+              <span>
+                SPONSOR TIER
+              </span>
+
+              <strong>
+
+                ${tier}
+
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      `;
+
+
+      detailPanel.classList.add(
+        "open"
+      );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
