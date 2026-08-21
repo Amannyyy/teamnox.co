@@ -1,0 +1,1401 @@
+/* =========================================================
+   TEAM NOX
+   FOUNDERS PAGE
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.founders-hero {
+  width: 100%;
+
+  height: calc(100vh - 88px);
+  min-height: calc(100vh - 88px);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid #3b3b3b;
+
+  background:
+    radial-gradient(
+      circle at 53% 40%,
+      rgba(255, 255, 255, 0.065),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #101010 52%,
+      #070707 100%
+    );
+}
+
+
+
+/* =========================================================
+   HERO TECHNICAL GRID
+========================================================= */
+
+.founders-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    );
+
+  background-size: 75px 75px;
+
+  opacity: 0.45;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+
+/* =========================================================
+   HERO WATERMARK
+========================================================= */
+
+.founders-hero-watermark {
+  width: min(800px, 57vw);
+
+  position: absolute;
+
+  right: -155px;
+  bottom: -190px;
+
+  opacity: 0.11;
+
+  filter:
+    grayscale(1)
+    brightness(0.82);
+
+  pointer-events: none;
+  user-select: none;
+
+  z-index: 1;
+}
+
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.founders-hero-content {
+  width: min(950px, 92%);
+
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
+.founders-hero-eyebrow {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #7d7d7d;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.founders-hero h1 {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #f5f5f5;
+
+  font-family: "Montserrat", sans-serif;
+
+  line-height: 1;
+}
+
+
+.founders-title-top {
+  display: block;
+
+  margin-bottom: 19px;
+
+  font-size: clamp(
+    34px,
+    3.8vw,
+    51px
+  );
+
+  font-weight: 400;
+
+  letter-spacing: 13px;
+}
+
+
+.founders-title-main {
+  display: block;
+
+  font-size: clamp(
+    66px,
+    7vw,
+    100px
+  );
+
+  font-weight: 400;
+
+  letter-spacing: 12px;
+}
+
+
+
+/* =========================================================
+   HERO DIVIDER
+========================================================= */
+
+.founders-hero-divider {
+  width: min(600px, 75%);
+
+  margin: 42px auto 31px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    22px
+    1fr;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+.founders-hero-divider span {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.42)
+    );
+}
+
+
+.founders-hero-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.42),
+      transparent
+    );
+}
+
+
+.founders-hero-divider img {
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+
+  opacity: 0.8;
+
+  filter: grayscale(1);
+}
+
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.founders-hero-description {
+  width: min(760px, 92%);
+
+  margin: 0 auto;
+
+  color: #9b9b9b;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.85;
+
+  letter-spacing: 2.4px;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   SCROLL CUE
+========================================================= */
+
+.founders-scroll {
+  width: max-content;
+
+  margin: 115px auto 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  color: #8e8e8e;
+
+  text-decoration: none;
+}
+
+
+.founders-scroll-text {
+  display: block;
+
+  font-size: 10px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 3px;
+
+  text-align: center;
+}
+
+
+
+/* =========================================================
+   CENTERED CSS ARROW
+========================================================= */
+
+.founders-scroll-arrow {
+  width: 44px;
+  height: 44px;
+
+  position: relative;
+
+  display: block;
+
+  margin: 0 auto;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.015);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.founders-scroll-arrow::before {
+  content: "";
+
+  width: 1px;
+  height: 13px;
+
+  position: absolute;
+
+  left: 50%;
+  top: 12px;
+
+  transform: translateX(-50%);
+
+  background: #fff;
+}
+
+
+.founders-scroll-arrow::after {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  position: absolute;
+
+  left: 50%;
+  top: 20px;
+
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+.founders-scroll:hover
+.founders-scroll-arrow {
+  transform: translateY(5px);
+
+  background: #f5f5f5;
+
+  border-color: #f5f5f5;
+}
+
+
+.founders-scroll:hover
+.founders-scroll-arrow::before {
+  background: #050505;
+}
+
+
+.founders-scroll:hover
+.founders-scroll-arrow::after {
+  border-color: #050505;
+}
+
+
+
+/* =========================================================
+   FULL SCREEN FOUNDERS SECTION
+========================================================= */
+
+.founder-bios {
+  width: 100%;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid #363636;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 255, 255, 0.05),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #060606 0%,
+      #111111 50%,
+      #070707 100%
+    );
+}
+
+
+
+/* =========================================================
+   BIOS BACKGROUND GRID
+========================================================= */
+
+.founder-bios::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    );
+
+  background-size: 75px 75px;
+
+  opacity: 0.4;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+
+/* =========================================================
+   OLD HEADING AREA
+   HIDDEN IN CASE IT STILL EXISTS IN HTML
+========================================================= */
+
+.founder-bios-heading {
+  display: none !important;
+}
+
+
+
+/* =========================================================
+   FOUNDERS GRID
+   FILLS ENTIRE SECTION
+========================================================= */
+
+.founder-bios-grid {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  gap: 0;
+
+  padding: 0;
+}
+
+
+
+/* =========================================================
+   FOUNDER CARD
+========================================================= */
+
+.founder-bio-card {
+  min-width: 0;
+
+  height: 100%;
+
+  flex: 1 1 33.333%;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.25);
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(255, 255, 255, 0.055),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      #171717,
+      #090909
+    );
+
+  transition:
+    flex
+    0.65s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+    border-color
+    0.35s
+    ease,
+    box-shadow
+    0.35s
+    ease;
+}
+
+
+.founder-bio-card:last-child {
+  border-right: none;
+}
+
+
+
+/* =========================================================
+   ACTIVE / HOVERED CARD
+========================================================= */
+
+.founder-bio-card:hover,
+.founder-bio-card.is-active {
+  flex-grow: 1.5;
+
+  border-color:
+    rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0
+    25px
+    80px
+    rgba(0, 0, 0, 0.45);
+}
+
+
+
+/* =========================================================
+   SHRINK OTHER CARDS
+========================================================= */
+
+.founder-bios-grid:has(
+  .founder-bio-card:hover
+)
+.founder-bio-card:not(:hover) {
+  flex-grow: 0.82;
+}
+
+
+.founder-bios-grid:has(
+  .founder-bio-card.is-active
+)
+.founder-bio-card:not(.is-active) {
+  flex-grow: 0.82;
+}
+
+
+
+/* =========================================================
+   DEFAULT CARD GLOW
+========================================================= */
+
+.founder-bio-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 24%,
+      rgba(255, 255, 255, 0.055),
+      transparent 38%
+    );
+
+  z-index: 0;
+
+  transition:
+    opacity 0.4s ease;
+}
+
+
+.founder-bio-card:hover::before,
+.founder-bio-card.is-active::before {
+  opacity: 0;
+}
+
+
+
+/* =========================================================
+   BACKGROUND IMAGE SLIDER
+========================================================= */
+
+.founder-background-slider {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  opacity: 0;
+
+  transform: scale(1.04);
+
+  transition:
+    opacity 0.55s ease,
+    transform 1.2s ease;
+}
+
+
+.founder-bio-card:hover
+.founder-background-slider,
+.founder-bio-card.is-active
+.founder-background-slider {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+
+
+/* =========================================================
+   SLIDES
+========================================================= */
+
+.founder-bg-slide {
+  position: absolute;
+
+  inset: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+
+  transform: scale(1.03);
+
+  transition:
+    opacity 1.1s ease,
+    transform 6s ease;
+}
+
+
+.founder-bg-slide.active {
+  opacity: 1;
+
+  transform: scale(1.08);
+}
+
+
+
+/* =========================================================
+   FALLBACK IF IMAGE IS MISSING
+========================================================= */
+
+.founder-bg-slide::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(90, 90, 90, 0.3),
+      transparent 45%
+    );
+}
+
+
+
+/* =========================================================
+   DARK ACTIVE OVERLAY
+========================================================= */
+
+.founder-card-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  opacity: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.52) 42%,
+      rgba(0, 0, 0, 0.94) 100%
+    );
+
+  transition:
+    opacity 0.45s ease;
+}
+
+
+.founder-bio-card:hover
+.founder-card-overlay,
+.founder-bio-card.is-active
+.founder-card-overlay {
+  opacity: 1;
+}
+
+
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.founder-bio-content {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  z-index: 4;
+
+  padding:
+    50px
+    32px
+    40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+
+/* =========================================================
+   FOUNDER PORTRAIT
+========================================================= */
+
+.founder-bio-photo {
+  width:
+    clamp(
+      175px,
+      13vw,
+      230px
+    );
+
+  height:
+    clamp(
+      175px,
+      13vw,
+      230px
+    );
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border:
+    2px solid
+    rgba(255, 255, 255, 0.55);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      #2b2b2b,
+      #141414 62%,
+      #090909
+    );
+
+  color: #aaa;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  letter-spacing: 1px;
+
+  transition:
+    width
+    0.55s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+    height
+    0.55s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+    transform
+    0.55s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.founder-bio-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    grayscale(1)
+    brightness(0.82);
+}
+
+
+
+/* =========================================================
+   ACTIVE PORTRAIT
+========================================================= */
+
+.founder-bio-card:hover
+.founder-bio-photo,
+.founder-bio-card.is-active
+.founder-bio-photo {
+  width: 110px;
+  height: 110px;
+
+  transform: translateY(-8px);
+}
+
+
+
+/* =========================================================
+   MINI DIVIDER
+========================================================= */
+
+.founder-mini-divider {
+  width: 56%;
+
+  margin:
+    30px
+    0
+    22px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    14px
+    1fr;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.founder-mini-divider span {
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.24);
+}
+
+
+.founder-mini-divider img {
+  width: 14px;
+  height: 14px;
+
+  object-fit: contain;
+
+  opacity: 0.65;
+
+  filter: grayscale(1);
+}
+
+
+
+/* =========================================================
+   FOUNDER NAME
+========================================================= */
+
+.founder-bio-name {
+  flex-shrink: 0;
+}
+
+
+.founder-bio-name > span {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: #777;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  letter-spacing: 6px;
+}
+
+
+.founder-bio-name h3 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size:
+    clamp(
+      34px,
+      3.3vw,
+      52px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 8px;
+
+  transition:
+    font-size 0.5s ease,
+    letter-spacing 0.5s ease;
+}
+
+
+
+/* =========================================================
+   ACTIVE NAME
+========================================================= */
+
+.founder-bio-card:hover
+.founder-bio-name > span,
+.founder-bio-card.is-active
+.founder-bio-name > span {
+  font-size: 8px;
+
+  letter-spacing: 4px;
+}
+
+
+.founder-bio-card:hover
+.founder-bio-name h3,
+.founder-bio-card.is-active
+.founder-bio-name h3 {
+  font-size: 30px;
+
+  letter-spacing: 6px;
+}
+
+
+
+/* =========================================================
+   BIO DETAILS
+========================================================= */
+
+.founder-bio-details {
+  width: 100%;
+
+  max-height: 0;
+
+  margin-top: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    max-height
+    0.7s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+    opacity
+    0.4s
+    ease,
+    transform
+    0.55s
+    ease,
+    margin
+    0.55s
+    ease;
+}
+
+
+.founder-bio-card:hover
+.founder-bio-details,
+.founder-bio-card.is-active
+.founder-bio-details {
+  max-height: 520px;
+
+  margin-top: 20px;
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+
+/* =========================================================
+   POSITION
+========================================================= */
+
+.founder-position {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #c1c1c1;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 3px;
+}
+
+
+
+/* =========================================================
+   BIO TEXT
+========================================================= */
+
+.founder-bio-details p {
+  max-width: 460px;
+
+  margin: 0 auto 14px;
+
+  color: rgba(245, 245, 245, 0.88);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.15px;
+}
+
+
+
+/* =========================================================
+   HOVER HINT
+========================================================= */
+
+.founder-interaction-hint {
+  position: absolute;
+
+  left: 50%;
+  bottom: 27px;
+
+  transform: translateX(-50%);
+
+  color: #555;
+
+  font-size: 7px;
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+
+.founder-bio-card:hover
+.founder-interaction-hint,
+.founder-bio-card.is-active
+.founder-interaction-hint {
+  opacity: 0;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .founder-bio-content {
+    padding:
+      40px
+      22px
+      35px;
+  }
+
+
+  .founder-bio-photo {
+    width: 165px;
+    height: 165px;
+  }
+
+
+  .founder-bio-name h3 {
+    font-size: 31px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .founder-bio-details p {
+    font-size: 9px;
+  }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* HERO */
+
+  .founders-hero {
+    height:
+      calc(
+        100svh - 90px
+      );
+
+    min-height:
+      calc(
+        100svh - 90px
+      );
+
+    padding:
+      0
+      22px;
+  }
+
+
+  .founders-hero-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+  }
+
+
+  .founders-title-top {
+    font-size: 24px;
+
+    letter-spacing: 8px;
+  }
+
+
+  .founders-title-main {
+    font-size: 46px;
+
+    letter-spacing: 6px;
+  }
+
+
+  .founders-hero-divider {
+    width: 86%;
+  }
+
+
+  .founders-hero-description {
+    width: 95%;
+
+    font-size: 9px;
+
+    letter-spacing: 1.6px;
+  }
+
+
+  .founders-scroll {
+    margin-top: 80px;
+  }
+
+
+  .founders-hero-watermark {
+    width: 560px;
+
+    right: -340px;
+    bottom: -110px;
+
+    opacity: 0.07;
+  }
+
+
+
+  /* FOUNDERS SECTION */
+
+  .founder-bios {
+    height: auto;
+
+    min-height: 100vh;
+
+    overflow: visible;
+  }
+
+
+  .founder-bios-grid {
+    height: auto;
+
+    flex-direction: column;
+  }
+
+
+  .founder-bio-card {
+    width: 100%;
+
+    min-height: 600px;
+
+    flex: none;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.22);
+  }
+
+
+  .founder-bio-card:last-child {
+    border-bottom: none;
+  }
+
+
+  .founder-bio-card:hover,
+  .founder-bio-card.is-active {
+    flex-grow: 1;
+  }
+
+
+  .founder-bio-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+
+  .founder-bio-details p {
+    font-size: 10px;
+
+    max-width: 480px;
+  }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .founders-hero-eyebrow {
+    font-size: 9px;
+  }
+
+
+  .founders-title-top {
+    font-size: 20px;
+
+    letter-spacing: 6px;
+  }
+
+
+  .founders-title-main {
+    font-size: 38px;
+
+    letter-spacing: 4px;
+  }
+
+
+  .founders-hero-description {
+    font-size: 8px;
+  }
+
+
+  .founders-scroll {
+    margin-top: 65px;
+  }
+
+
+  .founder-bio-card {
+    min-height: 560px;
+  }
+
+
+  .founder-bio-content {
+    padding:
+      35px
+      20px
+      30px;
+  }
+
+
+  .founder-bio-photo {
+    width: 155px;
+    height: 155px;
+  }
+
+
+  .founder-bio-name h3 {
+    font-size: 28px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .founder-bio-card:hover
+  .founder-bio-name h3,
+  .founder-bio-card.is-active
+  .founder-bio-name h3 {
+    font-size: 24px;
+  }
+
+}

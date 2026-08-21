@@ -1,0 +1,1383 @@
+/* =========================================================
+   TEAM NOX
+   MENTORS PAGE
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.mentors-hero {
+  width: 100%;
+  height: calc(100vh - 88px);
+  min-height: calc(100vh - 88px);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid #3b3b3b;
+
+  background:
+    radial-gradient(
+      circle at 53% 40%,
+      rgba(255, 255, 255, 0.065),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #101010 52%,
+      #070707 100%
+    );
+}
+
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.mentors-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    );
+
+  background-size: 75px 75px;
+
+  opacity: 0.45;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+
+/* =========================================================
+   HERO WATERMARK
+========================================================= */
+
+.mentors-hero-watermark {
+  width: min(800px, 57vw);
+
+  position: absolute;
+
+  right: -155px;
+  bottom: -190px;
+
+  z-index: 1;
+
+  opacity: 0.11;
+
+  filter:
+    grayscale(1)
+    brightness(0.82);
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.mentors-hero-content {
+  width: min(950px, 92%);
+
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
+.mentors-hero-eyebrow {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #7d7d7d;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.mentors-hero h1 {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #f5f5f5;
+
+  line-height: 1;
+}
+
+.mentors-title-top {
+  display: block;
+
+  margin-bottom: 19px;
+
+  font-size: clamp(34px, 3.8vw, 51px);
+  font-weight: 400;
+
+  letter-spacing: 13px;
+}
+
+.mentors-title-main {
+  display: block;
+
+  font-size: clamp(66px, 7vw, 100px);
+  font-weight: 400;
+
+  letter-spacing: 12px;
+}
+
+
+
+/* =========================================================
+   HERO DIVIDER
+========================================================= */
+
+.mentors-hero-divider {
+  width: min(600px, 75%);
+
+  margin: 42px auto 31px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    22px
+    1fr;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.mentors-hero-divider span {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.42)
+    );
+}
+
+.mentors-hero-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.42),
+      transparent
+    );
+}
+
+.mentors-hero-divider img {
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+
+  opacity: 0.8;
+
+  filter: grayscale(1);
+}
+
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.mentors-hero-description {
+  width: min(760px, 92%);
+
+  margin: 0 auto;
+
+  color: #9b9b9b;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.85;
+
+  letter-spacing: 2.4px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.mentors-scroll {
+  width: max-content;
+
+  margin: 115px auto 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  color: #8e8e8e;
+
+  text-decoration: none;
+}
+
+.mentors-scroll-text {
+  display: block;
+
+  font-size: 10px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 3px;
+
+  text-align: center;
+}
+
+
+
+/* =========================================================
+   SCROLL ARROW
+========================================================= */
+
+.mentors-scroll-arrow {
+  width: 44px;
+  height: 44px;
+
+  position: relative;
+
+  display: block;
+
+  margin: 0 auto;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.015);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.mentors-scroll-arrow::before {
+  content: "";
+
+  width: 1px;
+  height: 13px;
+
+  position: absolute;
+
+  left: 50%;
+  top: 12px;
+
+  transform: translateX(-50%);
+
+  background: #fff;
+}
+
+.mentors-scroll-arrow::after {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  position: absolute;
+
+  left: 50%;
+  top: 20px;
+
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+.mentors-scroll:hover .mentors-scroll-arrow {
+  transform: translateY(5px);
+
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+.mentors-scroll:hover .mentors-scroll-arrow::before {
+  background: #050505;
+}
+
+.mentors-scroll:hover .mentors-scroll-arrow::after {
+  border-color: #050505;
+}
+
+
+
+/* =========================================================
+   MENTOR SHOWCASE
+========================================================= */
+
+.mentor-showcase {
+  width: 100%;
+
+  height: 100vh;
+  min-height: 760px;
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-rows:
+    1fr
+    1fr;
+
+  overflow: hidden;
+
+  border-top: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+
+  background: #090909;
+}
+
+
+
+/* =========================================================
+   SHOWCASE GRID
+========================================================= */
+
+.mentor-showcase::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.011) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.011) 1px,
+      transparent 1px
+    );
+
+  background-size: 75px 75px;
+
+  opacity: 0.35;
+
+  pointer-events: none;
+}
+
+
+
+/* =========================================================
+   MENTOR ROW
+========================================================= */
+
+.mentor-row {
+  width: 100%;
+
+  min-height: 0;
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+.mentor-row:first-child {
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.24);
+}
+
+
+
+/* =========================================================
+   MENTOR PANEL
+========================================================= */
+
+.mentor-panel {
+  width: 50%;
+  height: 100%;
+
+  min-width: 0;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.24);
+
+  transition:
+    width 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.45s ease,
+    box-shadow 0.4s ease,
+    border-color 0.35s ease;
+}
+
+.mentor-row .mentor-panel:last-child {
+  border-right: none;
+}
+
+
+
+/* =========================================================
+   DARK PANELS
+   ISAIAH + NIKHIL
+========================================================= */
+
+.mentor-panel.mentor-dark {
+  background:
+    radial-gradient(
+      circle at 35% 32%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0.03) 22%,
+      transparent 48%
+    ),
+    linear-gradient(
+      145deg,
+      #181818 0%,
+      #111111 38%,
+      #090909 72%,
+      #050505 100%
+    );
+}
+
+
+
+/* =========================================================
+   LIGHT PANELS
+   MOSTAFA + SHEIKH
+========================================================= */
+
+.mentor-panel.mentor-light {
+  background:
+    radial-gradient(
+      circle at 35% 32%,
+      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.045) 24%,
+      transparent 50%
+    ),
+    linear-gradient(
+      145deg,
+      #242424 0%,
+      #1b1b1b 38%,
+      #111111 72%,
+      #090909 100%
+    );
+}
+
+
+
+/* =========================================================
+   PANEL AMBIENT
+========================================================= */
+
+.mentor-panel-ambient {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.025),
+      transparent 58%
+    );
+
+  opacity: 1;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease;
+}
+
+
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+.mentor-preview {
+  width: 100%;
+
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  transition:
+    opacity 0.28s ease,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+
+/* =========================================================
+   PREVIEW LABEL
+========================================================= */
+
+.mentor-preview-label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #8f8f8f;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  letter-spacing: 7px;
+}
+
+
+
+/* =========================================================
+   PREVIEW NAME
+========================================================= */
+
+.mentor-preview h2 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size: clamp(31px, 3.25vw, 50px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 8px;
+}
+
+
+
+/* =========================================================
+   HOVER / CLICK HINT
+========================================================= */
+
+.mentor-preview-hint {
+  position: absolute;
+
+  top: calc(100% + 36px);
+
+  color: rgba(220, 220, 220, 0.58);
+
+  font-size: 9px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 2.4px;
+
+  white-space: nowrap;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.mentor-panel:hover .mentor-preview-hint {
+  color: rgba(245, 245, 245, 0.82);
+}
+
+
+
+/* =========================================================
+   EXPANDED BIO
+========================================================= */
+
+.mentor-expanded {
+  width: min(780px, 84%);
+
+  position: absolute;
+
+  left: 8%;
+  top: 50%;
+
+  z-index: 5;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform:
+    translateY(-42%)
+    translateX(35px);
+
+  text-align: left;
+
+  transition:
+    opacity 0.36s ease 0.13s,
+    visibility 0.36s ease,
+    transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+
+/* =========================================================
+   TEAM MENTOR LABEL
+   BIGGER + MORE VISIBLE
+========================================================= */
+
+.mentor-expanded-label {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: rgba(230, 230, 230, 0.72);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   EXPANDED NAME
+========================================================= */
+
+.mentor-expanded h2 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size: clamp(28px, 3vw, 46px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 7px;
+}
+
+
+
+/* =========================================================
+   EXPANDED DIVIDER
+========================================================= */
+
+.mentor-expanded-line {
+  width: 100%;
+
+  margin: 20px 0 22px;
+}
+
+.mentor-expanded-line span {
+  display: block;
+
+  width: 95px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.95),
+      transparent
+    );
+}
+
+
+
+/* =========================================================
+   BIO TEXT
+========================================================= */
+
+.mentor-expanded p {
+  max-width: 720px;
+
+  margin: 0 0 14px;
+
+  color: rgba(245, 245, 245, 0.86);
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.72;
+
+  letter-spacing: 0.1px;
+}
+
+
+
+/* =========================================================
+   COLLAPSED VERTICAL NAME
+========================================================= */
+
+.mentor-collapsed-name {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  z-index: 6;
+
+  opacity: 0;
+  visibility: hidden;
+
+  color: #f5f5f5;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  letter-spacing: 6px;
+
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    opacity 0.3s ease 0.2s,
+    visibility 0.3s ease;
+}
+
+
+
+/* =========================================================
+   CLICKED / LOCKED STATE
+========================================================= */
+
+.mentor-row.has-active
+.mentor-panel.is-active {
+  width: 82%;
+}
+
+.mentor-row.has-active
+.mentor-panel:not(.is-active) {
+  width: 18%;
+}
+
+
+
+/* =========================================================
+   ACTIVE PREVIEW
+========================================================= */
+
+.mentor-panel.is-active
+.mentor-preview {
+  opacity: 0;
+
+  transform: translateX(-25px);
+
+  pointer-events: none;
+}
+
+
+
+/* =========================================================
+   ACTIVE BIO
+========================================================= */
+
+.mentor-panel.is-active
+.mentor-expanded {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(-50%)
+    translateX(0);
+}
+
+
+
+/* =========================================================
+   COLLAPSED SIBLING
+========================================================= */
+
+.mentor-row.has-active
+.mentor-panel:not(.is-active)
+.mentor-preview {
+  opacity: 0;
+
+  transform: scale(0.92);
+
+  pointer-events: none;
+}
+
+.mentor-row.has-active
+.mentor-panel:not(.is-active)
+.mentor-expanded {
+  opacity: 0;
+
+  visibility: hidden;
+}
+
+.mentor-row.has-active
+.mentor-panel:not(.is-active)
+.mentor-collapsed-name {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+
+
+/* =========================================================
+   ACTIVE DARK
+   ISAIAH + NIKHIL
+========================================================= */
+
+.mentor-panel.mentor-dark.is-active {
+  background:
+    radial-gradient(
+      circle at 35% 32%,
+      rgba(255, 255, 255, 0.095) 0%,
+      rgba(255, 255, 255, 0.04) 25%,
+      transparent 50%
+    ),
+    linear-gradient(
+      145deg,
+      #181818 0%,
+      #111111 38%,
+      #090909 72%,
+      #050505 100%
+    );
+
+  box-shadow:
+    inset 0 0 80px rgba(255, 255, 255, 0.018),
+    0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+
+/* =========================================================
+   ACTIVE LIGHT
+========================================================= */
+
+.mentor-panel.mentor-light.is-active {
+  background:
+    radial-gradient(
+      circle at 35% 32%,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      transparent 50%
+    ),
+    linear-gradient(
+      145deg,
+      #242424 0%,
+      #1b1b1b 38%,
+      #111111 72%,
+      #090909 100%
+    );
+
+  box-shadow:
+    inset 0 0 80px rgba(255, 255, 255, 0.02),
+    0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+
+/* =========================================================
+   FULL DESKTOP HOVER
+========================================================= */
+
+@media (hover: hover) {
+
+
+  /* LEFT PANEL HOVER */
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:first-child:hover
+  )
+  .mentor-panel:first-child {
+    width: 82%;
+  }
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:first-child:hover
+  )
+  .mentor-panel:last-child {
+    width: 18%;
+  }
+
+
+
+  /* RIGHT PANEL HOVER */
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:last-child:hover
+  )
+  .mentor-panel:first-child {
+    width: 18%;
+  }
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:last-child:hover
+  )
+  .mentor-panel:last-child {
+    width: 82%;
+  }
+
+
+
+  /* HIDE HOVERED PREVIEW */
+
+  .mentor-row:not(.has-active)
+  .mentor-panel:hover
+  .mentor-preview {
+    opacity: 0;
+
+    transform: translateX(-25px);
+
+    pointer-events: none;
+  }
+
+
+
+  /* SHOW HOVERED BIO */
+
+  .mentor-row:not(.has-active)
+  .mentor-panel:hover
+  .mentor-expanded {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+      translateY(-50%)
+      translateX(0);
+  }
+
+
+
+  /* HIDE OTHER PREVIEW */
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:first-child:hover
+  )
+  .mentor-panel:last-child
+  .mentor-preview,
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:last-child:hover
+  )
+  .mentor-panel:first-child
+  .mentor-preview {
+    opacity: 0;
+
+    transform: scale(0.92);
+
+    pointer-events: none;
+  }
+
+
+
+  /* HIDE OTHER BIO */
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:first-child:hover
+  )
+  .mentor-panel:last-child
+  .mentor-expanded,
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:last-child:hover
+  )
+  .mentor-panel:first-child
+  .mentor-expanded {
+    opacity: 0;
+
+    visibility: hidden;
+  }
+
+
+
+  /* SHOW COLLAPSED VERTICAL NAME */
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:first-child:hover
+  )
+  .mentor-panel:last-child
+  .mentor-collapsed-name,
+
+  .mentor-row:not(.has-active):has(
+    .mentor-panel:last-child:hover
+  )
+  .mentor-panel:first-child
+  .mentor-collapsed-name {
+    opacity: 1;
+
+    visibility: visible;
+  }
+
+
+
+  /* DARK HOVER
+     ISAIAH + NIKHIL */
+
+  .mentor-row:not(.has-active)
+  .mentor-panel.mentor-dark:hover {
+    background:
+      radial-gradient(
+        circle at 35% 32%,
+        rgba(255, 255, 255, 0.095) 0%,
+        rgba(255, 255, 255, 0.04) 25%,
+        transparent 50%
+      ),
+      linear-gradient(
+        145deg,
+        #181818 0%,
+        #111111 38%,
+        #090909 72%,
+        #050505 100%
+      );
+
+    box-shadow:
+      inset 0 0 80px rgba(255, 255, 255, 0.018),
+      0 20px 70px rgba(0, 0, 0, 0.35);
+  }
+
+
+
+  /* LIGHT HOVER */
+
+  .mentor-row:not(.has-active)
+  .mentor-panel.mentor-light:hover {
+    background:
+      radial-gradient(
+        circle at 35% 32%,
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0.05) 25%,
+        transparent 50%
+      ),
+      linear-gradient(
+        145deg,
+        #242424 0%,
+        #1b1b1b 38%,
+        #111111 72%,
+        #090909 100%
+      );
+
+    box-shadow:
+      inset 0 0 80px rgba(255, 255, 255, 0.02),
+      0 20px 70px rgba(0, 0, 0, 0.35);
+  }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .mentors-hero {
+    height: calc(100svh - 90px);
+    min-height: calc(100svh - 90px);
+
+    padding: 0 22px;
+  }
+
+  .mentors-hero-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+  }
+
+  .mentors-title-top {
+    font-size: 24px;
+
+    letter-spacing: 8px;
+  }
+
+  .mentors-title-main {
+    font-size: 46px;
+
+    letter-spacing: 6px;
+  }
+
+  .mentors-hero-description {
+    width: 95%;
+
+    font-size: 9px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .mentors-scroll {
+    margin-top: 80px;
+  }
+
+  .mentors-hero-watermark {
+    width: 560px;
+
+    right: -340px;
+    bottom: -110px;
+
+    opacity: 0.07;
+  }
+
+
+
+  /* SHOWCASE */
+
+  .mentor-showcase {
+    height: auto;
+
+    min-height: 100vh;
+
+    display: block;
+
+    overflow: visible;
+  }
+
+  .mentor-row {
+    min-height: 850px;
+
+    flex-direction: column;
+  }
+
+  .mentor-panel {
+    width: 100% !important;
+
+    min-height: 425px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.24);
+  }
+
+  .mentor-row .mentor-panel:last-child {
+    border-bottom: none;
+  }
+
+
+
+  /* ACTIVE MOBILE */
+
+  .mentor-row.has-active
+  .mentor-panel.is-active {
+    width: 100% !important;
+
+    min-height: 650px;
+  }
+
+  .mentor-row.has-active
+  .mentor-panel:not(.is-active) {
+    width: 100% !important;
+
+    min-height: 100px;
+  }
+
+
+
+  /* COLLAPSED NAME */
+
+  .mentor-collapsed-name {
+    writing-mode: horizontal-tb;
+
+    text-orientation: mixed;
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+  }
+
+
+
+  /* EXPANDED */
+
+  .mentor-expanded {
+    width: 86%;
+
+    left: 7%;
+  }
+
+  .mentor-expanded-label {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+  }
+
+  .mentor-expanded h2 {
+    font-size: 30px;
+
+    letter-spacing: 5px;
+  }
+
+  .mentor-expanded p {
+    font-size: 11px;
+  }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .mentors-hero-eyebrow {
+    font-size: 9px;
+  }
+
+  .mentors-title-top {
+    font-size: 20px;
+
+    letter-spacing: 6px;
+  }
+
+  .mentors-title-main {
+    font-size: 38px;
+
+    letter-spacing: 4px;
+  }
+
+  .mentors-hero-description {
+    font-size: 8px;
+  }
+
+  .mentors-scroll {
+    margin-top: 65px;
+  }
+
+  .mentor-preview h2 {
+    font-size: 28px;
+
+    letter-spacing: 5px;
+  }
+
+  .mentor-preview-hint {
+    top: calc(100% + 30px);
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .mentor-expanded-label {
+    font-size: 10px;
+
+    letter-spacing: 3.5px;
+
+    margin-bottom: 13px;
+  }
+
+  .mentor-expanded h2 {
+    font-size: 25px;
+
+    letter-spacing: 4px;
+  }
+
+  .mentor-expanded p {
+    font-size: 10px;
+
+    line-height: 1.6;
+  }
+
+}
