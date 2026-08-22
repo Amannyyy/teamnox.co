@@ -11,7 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   margin: 0;
 
@@ -21,7 +20,6 @@ body {
 
   font-family: "Montserrat", sans-serif;
 }
-
 
 
 /* =========================================================
@@ -34,16 +32,16 @@ body {
   position: relative;
 
   padding:
-    62px
-    4vw
-    100px;
+    42px
+    3vw
+    70px;
 
   overflow: hidden;
 
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.05),
       transparent 30%
     ),
     linear-gradient(
@@ -57,7 +55,6 @@ body {
     1px solid
     #343434;
 }
-
 
 
 /* =========================================================
@@ -92,17 +89,16 @@ body {
 }
 
 
-
 /* =========================================================
    PAGE HEADING
 ========================================================= */
 
 .calendar-page-heading {
-  width: min(1500px, 100%);
+  width: min(1320px, 100%);
 
   margin:
     0 auto
-    46px;
+    32px;
 
   position: relative;
 
@@ -111,21 +107,19 @@ body {
   text-align: center;
 }
 
-
 .calendar-page-eyebrow {
   display: block;
 
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 
   color: #737373;
 
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: 400;
 
-  letter-spacing: 5.5px;
+  letter-spacing: 4.5px;
 }
-
 
 .calendar-page-heading h1 {
   margin: 0;
@@ -134,18 +128,17 @@ body {
 
   font-size:
     clamp(
-      40px,
-      4.5vw,
-      62px
+      34px,
+      3.8vw,
+      52px
     );
 
   font-weight: 400;
 
   line-height: 1;
 
-  letter-spacing: 10px;
+  letter-spacing: 8px;
 }
-
 
 
 /* =========================================================
@@ -153,10 +146,10 @@ body {
 ========================================================= */
 
 .calendar-heading-divider {
-  width: min(500px, 70%);
+  width: min(430px, 65%);
 
   margin:
-    25px
+    20px
     auto
     0;
 
@@ -164,14 +157,13 @@ body {
 
   grid-template-columns:
     1fr
-    20px
+    18px
     1fr;
 
   align-items: center;
 
-  gap: 14px;
+  gap: 12px;
 }
-
 
 .calendar-heading-divider span {
   height: 1px;
@@ -180,25 +172,23 @@ body {
     linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.35)
+      rgba(255, 255, 255, 0.34)
     );
 }
-
 
 .calendar-heading-divider span:last-child {
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.35),
+      rgba(255, 255, 255, 0.34),
       transparent
     );
 }
 
-
 .calendar-heading-divider img {
-  width: 20px;
+  width: 18px;
 
-  height: 20px;
+  height: 18px;
 
   object-fit: contain;
 
@@ -208,13 +198,12 @@ body {
 }
 
 
-
 /* =========================================================
    CALENDAR SHELL
 ========================================================= */
 
 .calendar-shell {
-  width: min(1500px, 100%);
+  width: min(1320px, 100%);
 
   margin: 0 auto;
 
@@ -225,14 +214,13 @@ body {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 2.55fr)
-    minmax(330px, 0.85fr);
+    minmax(0, 2.65fr)
+    minmax(290px, 0.8fr);
 
-  gap: 20px;
+  gap: 18px;
 
   align-items: stretch;
 }
-
 
 
 /* =========================================================
@@ -258,11 +246,10 @@ body {
 
   box-shadow:
     0
-    25px
-    70px
-    rgba(0, 0, 0, 0.32);
+    22px
+    60px
+    rgba(0, 0, 0, 0.3);
 }
-
 
 
 /* =========================================================
@@ -270,11 +257,11 @@ body {
 ========================================================= */
 
 .calendar-toolbar {
-  min-height: 102px;
+  min-height: 82px;
 
   padding:
     0
-    29px;
+    22px;
 
   display: flex;
 
@@ -282,13 +269,12 @@ body {
 
   justify-content: space-between;
 
-  gap: 25px;
+  gap: 20px;
 
   border-bottom:
     1px solid
-    rgba(255, 255, 255, 0.15);
+    rgba(255, 255, 255, 0.14);
 }
-
 
 
 /* =========================================================
@@ -300,29 +286,26 @@ body {
 
   align-items: center;
 
-  gap: 20px;
+  gap: 16px;
 }
-
 
 .month-heading {
-  min-width: 245px;
+  min-width: 210px;
 }
-
 
 .month-label {
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
-  color: #686868;
+  color: #707070;
 
   font-size: 8px;
 
   font-weight: 400;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.8px;
 }
-
 
 .month-heading h2 {
   margin: 0;
@@ -331,28 +314,27 @@ body {
 
   font-size:
     clamp(
-      20px,
-      2vw,
-      28px
+      19px,
+      1.8vw,
+      25px
     );
 
   font-weight: 400;
 
   line-height: 1;
 
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
 
 
-
 /* =========================================================
-   ARROWS
+   MONTH ARROWS
 ========================================================= */
 
 .month-arrow {
-  width: 42px;
+  width: 36px;
 
-  height: 42px;
+  height: 36px;
 
   padding: 0;
 
@@ -373,7 +355,7 @@ body {
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 27px;
+  font-size: 23px;
 
   font-weight: 300;
 
@@ -387,7 +369,6 @@ body {
     color 0.25s ease;
 }
 
-
 .month-arrow:hover {
   border-color:
     rgba(255, 255, 255, 0.6);
@@ -398,17 +379,16 @@ body {
 }
 
 
-
 /* =========================================================
    TODAY BUTTON
 ========================================================= */
 
 .today-button {
-  height: 39px;
+  height: 35px;
 
   padding:
     0
-    24px;
+    20px;
 
   border:
     1px solid
@@ -424,7 +404,7 @@ body {
 
   font-weight: 500;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.7px;
 
   cursor: pointer;
 
@@ -434,7 +414,6 @@ body {
     border-color 0.25s ease;
 }
 
-
 .today-button:hover {
   background: #f5f5f5;
 
@@ -442,7 +421,6 @@ body {
 
   border-color: #f5f5f5;
 }
-
 
 
 /* =========================================================
@@ -460,26 +438,24 @@ body {
 
   border-bottom:
     1px solid
-    rgba(255, 255, 255, 0.14);
+    rgba(255, 255, 255, 0.13);
 }
-
 
 .weekday-row span {
   padding:
-    14px
-    8px;
+    11px
+    6px;
 
-  color: #949494;
+  color: #9b9b9b;
 
   font-size: 9px;
 
   font-weight: 500;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 
   text-align: center;
 }
-
 
 
 /* =========================================================
@@ -487,7 +463,7 @@ body {
 ========================================================= */
 
 .calendar-grid {
-  min-height: 672px;
+  min-height: 540px;
 
   display: grid;
 
@@ -500,10 +476,9 @@ body {
   grid-template-rows:
     repeat(
       6,
-      112px
+      90px
     );
 }
-
 
 
 /* =========================================================
@@ -515,17 +490,17 @@ body {
 
   position: relative;
 
-  padding: 11px;
+  padding: 8px;
 
   overflow: hidden;
 
   border-right:
     1px solid
-    rgba(255, 255, 255, 0.085);
+    rgba(255, 255, 255, 0.08);
 
   border-bottom:
     1px solid
-    rgba(255, 255, 255, 0.085);
+    rgba(255, 255, 255, 0.08);
 
   background:
     rgba(255, 255, 255, 0.004);
@@ -534,17 +509,14 @@ body {
     background 0.2s ease;
 }
 
-
 .calendar-day:nth-child(7n) {
   border-right: none;
 }
 
-
 .calendar-day:hover {
   background:
-    rgba(255, 255, 255, 0.025);
+    rgba(255, 255, 255, 0.024);
 }
-
 
 
 /* =========================================================
@@ -556,19 +528,17 @@ body {
 
   margin-bottom: 7px;
 
-  color: #b8b8b8;
+  color: #c4c4c4;
 
   font-size: 11px;
 
   font-weight: 500;
 }
 
-
 .calendar-day.other-month
 .day-number {
-  color: #414141;
+  color: #494949;
 }
-
 
 
 /* =========================================================
@@ -587,17 +557,18 @@ body {
 
   justify-content: center;
 
-  margin-top: -3px;
+  margin-top: -2px;
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.65);
+    rgba(255, 255, 255, 0.68);
 
   border-radius: 50%;
 
   color: #ffffff;
-}
 
+  font-size: 11px;
+}
 
 
 /* =========================================================
@@ -607,11 +578,11 @@ body {
 .calendar-event {
   width: 100%;
 
-  margin-top: 5px;
+  margin-top: 4px;
 
   padding:
-    7px
-    8px;
+    6px
+    7px;
 
   display: block;
 
@@ -619,7 +590,7 @@ body {
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.16);
+    rgba(255, 255, 255, 0.15);
 
   border-left:
     2px solid
@@ -642,7 +613,6 @@ body {
     border-color 0.2s ease;
 }
 
-
 .calendar-event:hover {
   transform:
     translateY(-2px);
@@ -654,13 +624,12 @@ body {
     rgba(255, 255, 255, 0.42);
 }
 
-
 .calendar-event-title {
   display: block;
 
   overflow: hidden;
 
-  color: #dddddd;
+  color: #e2e2e2;
 
   font-size: 9px;
 
@@ -673,17 +642,15 @@ body {
   text-overflow: ellipsis;
 }
 
-
 .calendar-event-time {
   display: block;
 
   margin-top: 4px;
 
-  color: #757575;
+  color: #7d7d7d;
 
   font-size: 8px;
 }
-
 
 
 /* =========================================================
@@ -695,18 +662,15 @@ body {
     rgba(255, 255, 255, 0.9);
 }
 
-
 .calendar-event.ftc {
   border-left-color:
     rgba(255, 255, 255, 0.67);
 }
 
-
 .calendar-event.outreach {
   border-left-color:
     rgba(255, 255, 255, 0.42);
 }
-
 
 .calendar-event.general {
   border-left-color:
@@ -714,17 +678,16 @@ body {
 }
 
 
-
 /* =========================================================
    FILTERS
 ========================================================= */
 
 .calendar-filters {
-  min-height: 84px;
+  min-height: 68px;
 
   padding:
-    18px
-    24px;
+    14px
+    20px;
 
   display: flex;
 
@@ -732,18 +695,17 @@ body {
 
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 16px;
 
   border-top:
     1px solid
-    rgba(255, 255, 255, 0.13);
+    rgba(255, 255, 255, 0.12);
 }
 
-
 .filter-title {
-  color: #696969;
+  color: #747474;
 
-  font-size: 9px;
+  font-size: 10px;
 
   font-weight: 400;
 
@@ -752,7 +714,6 @@ body {
   white-space: nowrap;
 }
 
-
 .filter-buttons {
   display: flex;
 
@@ -760,18 +721,17 @@ body {
 
   justify-content: flex-end;
 
-  gap: 7px;
+  gap: 6px;
 }
 
-
 .calendar-filter {
-  min-width: 74px;
+  min-width: 72px;
 
-  height: 32px;
+  height: 31px;
 
   padding:
     0
-    12px;
+    11px;
 
   border:
     1px solid
@@ -779,7 +739,7 @@ body {
 
   background: transparent;
 
-  color: #818181;
+  color: #8a8a8a;
 
   font-family: "Montserrat", sans-serif;
 
@@ -787,7 +747,7 @@ body {
 
   font-weight: 500;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.9px;
 
   cursor: pointer;
 
@@ -796,7 +756,6 @@ body {
     border-color 0.2s ease,
     background 0.2s ease;
 }
-
 
 .calendar-filter:hover,
 .calendar-filter.active {
@@ -810,54 +769,50 @@ body {
 }
 
 
-
 /* =========================================================
    UPCOMING PANEL
 ========================================================= */
 
 .upcoming-panel {
   padding:
-    30px
-    26px;
+    24px
+    22px;
 
   display: flex;
 
   flex-direction: column;
 }
 
-
 .upcoming-heading > span {
   display: block;
 
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 
-  color: #676767;
+  color: #727272;
 
   font-size: 8px;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.8px;
 }
-
 
 .upcoming-heading h2 {
   margin: 0;
 
-  color: #f0f0f0;
+  color: #f3f3f3;
 
   font-size:
     clamp(
-      19px,
+      20px,
       1.7vw,
-      27px
+      26px
     );
 
   font-weight: 400;
 
   line-height: 1.2;
 
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
-
 
 .upcoming-divider {
   width: 100%;
@@ -865,18 +820,17 @@ body {
   height: 1px;
 
   margin:
-    24px
+    20px
     0
-    7px;
+    6px;
 
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.42),
+      rgba(255, 255, 255, 0.4),
       transparent
     );
 }
-
 
 
 /* =========================================================
@@ -888,27 +842,26 @@ body {
 }
 
 
-
 /* =========================================================
    UPCOMING EVENT
 ========================================================= */
 
 .upcoming-item {
   padding:
-    21px
+    18px
     0;
 
   display: grid;
 
   grid-template-columns:
     minmax(0, 1fr)
-    58px;
+    56px;
 
-  gap: 14px;
+  gap: 13px;
 
   border-bottom:
     1px solid
-    rgba(255, 255, 255, 0.085);
+    rgba(255, 255, 255, 0.08);
 
   cursor: pointer;
 
@@ -917,25 +870,23 @@ body {
     background 0.2s ease;
 }
 
-
 .upcoming-item:hover {
-  padding-left: 7px;
+  padding-left: 6px;
 
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.023),
+      rgba(255, 255, 255, 0.022),
       transparent
     );
 }
-
 
 .upcoming-category {
   display: block;
 
   margin-bottom: 7px;
 
-  color: #6d6d6d;
+  color: #757575;
 
   font-size: 8px;
 
@@ -944,11 +895,10 @@ body {
   letter-spacing: 2px;
 }
 
-
 .upcoming-title {
   margin: 0;
 
-  color: #d9d9d9;
+  color: #e3e3e3;
 
   font-size: 12px;
 
@@ -957,20 +907,18 @@ body {
   line-height: 1.45;
 }
 
-
 .upcoming-time,
 .upcoming-location {
   display: block;
 
   margin-top: 6px;
 
-  color: #797979;
+  color: #838383;
 
   font-size: 9px;
 
   line-height: 1.5;
 }
-
 
 
 /* =========================================================
@@ -993,31 +941,28 @@ body {
   text-align: center;
 }
 
-
 .upcoming-month {
-  color: #707070;
+  color: #777777;
 
   font-size: 8px;
 
   letter-spacing: 2px;
 }
 
-
 .upcoming-day {
   margin:
     5px
     0;
 
-  color: #ebebeb;
+  color: #f0f0f0;
 
   font-size: 24px;
 
   font-weight: 300;
 }
 
-
 .upcoming-weekday {
-  color: #6d6d6d;
+  color: #737373;
 
   font-size: 8px;
 
@@ -1025,15 +970,14 @@ body {
 }
 
 
-
 /* =========================================================
    GOOGLE CALENDAR SOURCE
 ========================================================= */
 
 .calendar-source {
-  margin-top: 27px;
+  margin-top: 22px;
 
-  padding: 20px;
+  padding: 17px;
 
   border:
     1px solid
@@ -1043,7 +987,6 @@ body {
     rgba(255, 255, 255, 0.012);
 }
 
-
 .calendar-source-top {
   display: flex;
 
@@ -1052,17 +995,15 @@ body {
   justify-content: space-between;
 }
 
-
 .source-label {
-  color: #696969;
+  color: #727272;
 
   font-size: 8px;
 
   font-weight: 400;
 
-  letter-spacing: 2.5px;
+  letter-spacing: 2.2px;
 }
-
 
 .source-dot {
   width: 5px;
@@ -1076,37 +1017,34 @@ body {
   box-shadow:
     0
     0
-    9px
-    rgba(255, 255, 255, 0.25);
+    8px
+    rgba(255, 255, 255, 0.22);
 }
-
 
 .calendar-source p {
   margin:
-    10px
+    8px
     0
-    12px;
+    10px;
 
-  color: #c4c4c4;
+  color: #c8c8c8;
 
   font-size: 10px;
 
   font-weight: 400;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 }
 
-
 .source-status {
-  color: #797979;
+  color: #7d7d7d;
 
   font-size: 8px;
 
   font-weight: 400;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 }
-
 
 
 /* =========================================================
@@ -1116,18 +1054,17 @@ body {
 .calendar-loading,
 .calendar-empty {
   padding:
-    34px
+    28px
     4px;
 
-  color: #696969;
+  color: #707070;
 
   font-size: 9px;
 
   font-weight: 400;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.6px;
 }
-
 
 .calendar-grid > .calendar-loading {
   grid-column:
@@ -1142,7 +1079,6 @@ body {
 
   justify-content: center;
 }
-
 
 .calendar-error {
   grid-column:
@@ -1163,11 +1099,10 @@ body {
 
   font-weight: 400;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.6px;
 
   text-align: center;
 }
-
 
 
 /* =========================================================
@@ -1198,7 +1133,6 @@ body {
     visibility 0.28s ease;
 }
 
-
 .event-modal.open {
   opacity: 1;
 
@@ -1206,7 +1140,6 @@ body {
 
   pointer-events: auto;
 }
-
 
 
 /* =========================================================
@@ -1229,24 +1162,23 @@ body {
 }
 
 
-
 /* =========================================================
    MODAL CARD
 ========================================================= */
 
 .event-modal-card {
-  width: min(620px, 90%);
+  width: min(560px, 90%);
 
   position: relative;
 
   z-index: 2;
 
   padding:
-    44px;
+    36px;
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.25);
+    rgba(255, 255, 255, 0.24);
 
   background:
     linear-gradient(
@@ -1257,11 +1189,10 @@ body {
 
   box-shadow:
     0
-    40px
-    100px
-    rgba(0, 0, 0, 0.68);
+    35px
+    90px
+    rgba(0, 0, 0, 0.65);
 }
-
 
 
 /* =========================================================
@@ -1271,9 +1202,9 @@ body {
 .event-modal-close {
   position: absolute;
 
-  top: 13px;
+  top: 12px;
 
-  right: 18px;
+  right: 16px;
 
   padding: 0;
 
@@ -1285,13 +1216,12 @@ body {
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 26px;
+  font-size: 23px;
 
   font-weight: 300;
 
   cursor: pointer;
 }
-
 
 
 /* =========================================================
@@ -1301,15 +1231,14 @@ body {
 .event-modal-category {
   display: block;
 
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
-  color: #696969;
+  color: #707070;
 
-  font-size: 9px;
+  font-size: 8px;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.6px;
 }
-
 
 
 /* =========================================================
@@ -1323,18 +1252,17 @@ body {
 
   font-size:
     clamp(
-      26px,
-      3vw,
-      40px
+      23px,
+      2.6vw,
+      34px
     );
 
   font-weight: 400;
 
   line-height: 1.1;
 
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
-
 
 
 /* =========================================================
@@ -1347,17 +1275,16 @@ body {
   height: 1px;
 
   margin:
-    25px
+    20px
     0;
 
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0.43),
       transparent
     );
 }
-
 
 
 /* =========================================================
@@ -1366,43 +1293,40 @@ body {
 
 .event-detail-row {
   padding:
-    13px
+    11px
     0;
 
   display: grid;
 
   grid-template-columns:
-    120px
+    100px
     1fr;
 
-  gap: 20px;
+  gap: 18px;
 
   border-bottom:
     1px solid
-    rgba(255, 255, 255, 0.075);
+    rgba(255, 255, 255, 0.07);
 }
-
 
 .event-detail-row span,
 .event-description > span {
-  color: #666666;
+  color: #6d6d6d;
 
   font-size: 8px;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 }
-
 
 .event-detail-row p {
   margin: 0;
 
-  color: #c5c5c5;
+  color: #c9c9c9;
 
   font-size: 11px;
 
-  line-height: 1.6;
+  line-height: 1.5;
 }
-
 
 
 /* =========================================================
@@ -1410,23 +1334,21 @@ body {
 ========================================================= */
 
 .event-description {
-  margin-top: 23px;
+  margin-top: 20px;
 }
-
 
 .event-description p {
   margin:
-    12px
+    10px
     0
     0;
 
-  color: #9c9c9c;
+  color: #a0a0a0;
 
   font-size: 11px;
 
-  line-height: 1.8;
+  line-height: 1.7;
 }
-
 
 
 /* =========================================================
@@ -1436,9 +1358,10 @@ body {
 @media (max-width: 1100px) {
 
   .calendar-shell {
+    width: min(980px, 100%);
+
     grid-template-columns: 1fr;
   }
-
 
   .upcoming-list {
     display: grid;
@@ -1449,16 +1372,14 @@ body {
         minmax(0, 1fr)
       );
 
-    column-gap: 25px;
+    column-gap: 22px;
   }
 
-
   .calendar-source {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
 }
-
 
 
 /* =========================================================
@@ -1474,54 +1395,47 @@ body {
       );
 
     padding:
-      45px
-      17px
-      70px;
+      38px
+      16px
+      60px;
   }
-
 
   .calendar-page-heading {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
-
 
   .calendar-page-eyebrow {
     font-size: 9px;
 
-    letter-spacing: 4px;
+    letter-spacing: 3.5px;
   }
-
 
   .calendar-page-heading h1 {
-    font-size: 37px;
+    font-size: 33px;
 
-    letter-spacing: 6px;
+    letter-spacing: 5px;
   }
-
 
   .calendar-heading-divider {
-    width: 85%;
+    width: 82%;
   }
-
 
   .calendar-toolbar {
     min-height: 0;
 
     padding:
-      19px;
+      16px;
 
     flex-direction: column;
 
     align-items: stretch;
   }
 
-
   .month-controls {
     justify-content: space-between;
 
-    gap: 10px;
+    gap: 8px;
   }
-
 
   .month-heading {
     min-width: 0;
@@ -1531,55 +1445,51 @@ body {
     text-align: center;
   }
 
-
   .today-button {
     width: 100%;
   }
 
-
   .weekday-row span {
     padding:
-      11px
+      10px
       2px;
 
     font-size: 8px;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
   }
 
-
   .calendar-grid {
-    min-height: 522px;
+    min-height: 468px;
 
     grid-template-rows:
       repeat(
         6,
-        87px
+        78px
       );
   }
 
-
   .calendar-day {
-    padding: 6px;
+    padding: 5px;
   }
 
+  .day-number {
+    font-size: 10px;
+  }
 
   .calendar-event {
     padding:
-      5px
-      6px;
+      4px
+      5px;
   }
-
 
   .calendar-event-title {
     font-size: 8px;
   }
 
-
   .calendar-event-time {
     display: none;
   }
-
 
   .calendar-filters {
     flex-direction: column;
@@ -1587,11 +1497,9 @@ body {
     align-items: flex-start;
   }
 
-
   .filter-title {
     font-size: 9px;
   }
-
 
   .filter-buttons {
     width: 100%;
@@ -1599,28 +1507,32 @@ body {
     justify-content: flex-start;
   }
 
-
   .calendar-filter {
     flex: 1;
 
-    min-width: 84px;
+    min-width: 78px;
 
     font-size: 8px;
   }
-
 
   .upcoming-list {
     display: block;
   }
 
+  .upcoming-heading h2 {
+    font-size: 21px;
+  }
 
-  .calendar-empty,
-  .calendar-loading {
+  .upcoming-title {
+    font-size: 12px;
+  }
+
+  .upcoming-time,
+  .upcoming-location {
     font-size: 9px;
   }
 
 }
-
 
 
 /* =========================================================
@@ -1630,77 +1542,77 @@ body {
 @media (max-width: 480px) {
 
   .calendar-page-heading h1 {
-    font-size: 30px;
+    font-size: 28px;
 
     letter-spacing: 4px;
   }
 
-
   .month-heading h2 {
     font-size: 15px;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
   }
-
 
   .month-label {
     font-size: 7px;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
   }
-
 
   .month-arrow {
-    width: 34px;
+    width: 32px;
 
-    height: 34px;
+    height: 32px;
 
-    font-size: 22px;
+    font-size: 20px;
   }
 
-
   .calendar-grid {
-    min-height: 432px;
+    min-height: 396px;
 
     grid-template-rows:
       repeat(
         6,
-        72px
+        66px
       );
   }
-
 
   .day-number {
     font-size: 9px;
   }
 
-
   .calendar-event {
-    padding: 4px;
+    padding: 3px;
   }
-
 
   .calendar-event-title {
     font-size: 7px;
   }
 
+  .upcoming-title {
+    font-size: 11px;
+  }
+
+  .upcoming-time,
+  .upcoming-location {
+    font-size: 8px;
+  }
 
   .event-modal-card {
     width:
       calc(
-        100% - 32px
+        100% - 30px
       );
 
     padding:
-      35px
-      23px;
+      30px
+      20px;
   }
-
 
   .event-detail-row {
     grid-template-columns: 1fr;
 
-    gap: 6px;
+    gap: 5px;
   }
 
 }
