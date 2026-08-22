@@ -1,0 +1,1370 @@
+/* =========================================================
+   TEAM NOX
+   OUR PROGRAMS
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #050505;
+
+  color: #f5f5f5;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.programs-hero {
+  width: 100%;
+
+  height: calc(100vh - 88px);
+  min-height: calc(100vh - 88px);
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid
+    #353535;
+
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(255, 255, 255, 0.06),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #101010 52%,
+      #070707 100%
+    );
+}
+
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.programs-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    75px
+    75px;
+
+  opacity: 0.45;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+
+/* =========================================================
+   HERO WATERMARK
+========================================================= */
+
+.programs-watermark {
+  width:
+    min(
+      760px,
+      55vw
+    );
+
+  position: absolute;
+
+  right: -175px;
+  bottom: -200px;
+
+  opacity: 0.1;
+
+  filter:
+    grayscale(1)
+    brightness(0.85);
+
+  pointer-events: none;
+
+  user-select: none;
+
+  z-index: 1;
+}
+
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.programs-hero-content {
+  width:
+    min(
+      920px,
+      90%
+    );
+
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
+.programs-eyebrow {
+  display: block;
+
+  margin-bottom: 27px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  letter-spacing: 7px;
+}
+
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.programs-hero h1 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size:
+    clamp(
+      58px,
+      6.5vw,
+      96px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 12px;
+}
+
+
+
+/* =========================================================
+   HERO DIVIDER
+========================================================= */
+
+.programs-divider {
+  width:
+    min(
+      620px,
+      78%
+    );
+
+  margin:
+    40px
+    auto
+    30px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    22px
+    1fr;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+.programs-divider span {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4)
+    );
+}
+
+
+.programs-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+}
+
+
+.programs-divider img {
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+
+  opacity: 0.78;
+
+  filter: grayscale(1);
+}
+
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.programs-hero-content > p {
+  width:
+    min(
+      720px,
+      92%
+    );
+
+  margin: 0;
+
+  color: #8f8f8f;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+
+  letter-spacing: 2.5px;
+}
+
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.programs-scroll {
+  margin-top: 95px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #777;
+
+  text-decoration: none;
+}
+
+
+.programs-scroll > span {
+  font-size: 9px;
+
+  font-weight: 400;
+
+  letter-spacing: 3px;
+}
+
+
+
+/* =========================================================
+   SCROLL ARROW
+========================================================= */
+
+.programs-scroll-arrow {
+  width: 42px;
+  height: 42px;
+
+  position: relative;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.4);
+
+  border-radius: 50%;
+}
+
+
+.programs-scroll-arrow::before {
+  content: "";
+
+  width: 1px;
+  height: 13px;
+
+  position: absolute;
+
+  left: 50%;
+  top: 11px;
+
+  transform:
+    translateX(-50%);
+
+  background: #fff;
+}
+
+
+.programs-scroll-arrow::after {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  position: absolute;
+
+  left: 50%;
+  top: 19px;
+
+  border-right:
+    1px solid
+    #fff;
+
+  border-bottom:
+    1px solid
+    #fff;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+
+/* =========================================================
+   PROGRAM SHOWCASE
+========================================================= */
+
+.program-showcase {
+  width: 100%;
+
+  height: 100vh;
+
+  min-height: 760px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid
+    #363636;
+
+  background: #070707;
+}
+
+
+
+/* =========================================================
+   PROGRAM PANEL
+========================================================= */
+
+.program-panel {
+  width: 50%;
+  height: 100%;
+
+  min-width: 0;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.24);
+
+  transition:
+    width
+    0.65s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+
+    background
+    0.4s
+    ease,
+
+    box-shadow
+    0.4s
+    ease;
+}
+
+
+.program-panel:last-child {
+  border-right: none;
+}
+
+
+
+/* =========================================================
+   FRC BACKGROUND
+========================================================= */
+
+.program-frc {
+  background:
+    radial-gradient(
+      circle at 35% 28%,
+      rgba(255, 255, 255, 0.065),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #171717 0%,
+      #101010 45%,
+      #070707 100%
+    );
+}
+
+
+
+/* =========================================================
+   FTC BACKGROUND
+========================================================= */
+
+.program-ftc {
+  background:
+    radial-gradient(
+      circle at 40% 28%,
+      rgba(255, 255, 255, 0.085),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #202020 0%,
+      #151515 45%,
+      #090909 100%
+    );
+}
+
+
+
+/* =========================================================
+   GRID OVERLAY
+========================================================= */
+
+.program-grid-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    75px
+    75px;
+
+  opacity: 0.28;
+
+  pointer-events: none;
+}
+
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.program-main {
+  width: 84%;
+
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  transition:
+    transform
+    0.55s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+
+    opacity
+    0.35s
+    ease;
+}
+
+
+
+/* =========================================================
+   FIRST PROGRAM NAME
+   SMALLER + GRAY
+========================================================= */
+
+.program-label {
+  margin-bottom: 26px;
+
+  color: #8b8b8b;
+
+  font-size:
+    clamp(
+      10px,
+      0.9vw,
+      13px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  letter-spacing: 3.5px;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   PROGRAM LOGO
+========================================================= */
+
+.program-logo-wrap {
+  width: 330px;
+
+  max-width: 74%;
+
+  height: 220px;
+
+  margin-bottom: 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.program-logo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  opacity: 0.9;
+
+  filter:
+    grayscale(0.08)
+    brightness(0.9);
+
+  transition:
+    transform
+    0.45s
+    ease,
+
+    opacity
+    0.45s
+    ease,
+
+    filter
+    0.45s
+    ease;
+}
+
+
+.program-panel:hover
+.program-logo,
+.program-panel.is-active
+.program-logo {
+  transform:
+    scale(1.045);
+
+  opacity: 1;
+
+  filter:
+    grayscale(0)
+    brightness(1);
+}
+
+
+
+/* =========================================================
+   FRC / FTC + TEAM NUMBER
+========================================================= */
+
+.program-title {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+
+/* FRC / FTC
+   SMALLER + GRAY */
+
+.program-title span {
+  color: #969696;
+
+  font-size:
+    clamp(
+      22px,
+      2vw,
+      31px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 8px;
+}
+
+
+
+/* TEAM NUMBER */
+
+.program-title h2 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size:
+    clamp(
+      65px,
+      6vw,
+      96px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: 11px;
+}
+
+
+
+/* =========================================================
+   SMALL DIVIDER
+========================================================= */
+
+.program-small-line {
+  width: 60px;
+  height: 1px;
+
+  margin:
+    30px
+    0
+    0;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+
+  transition:
+    width
+    0.35s
+    ease;
+}
+
+
+.program-panel:hover
+.program-small-line,
+.program-panel.is-active
+.program-small-line {
+  width: 100px;
+}
+
+
+
+/* =========================================================
+   HOVER / CLICK
+========================================================= */
+
+.program-hint {
+  margin-top: 32px;
+
+  color:
+    rgba(
+      220,
+      220,
+      220,
+      0.55
+    );
+
+  font-size: 9px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 2.8px;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   SLIDE-UP DRAWER
+========================================================= */
+
+.program-drawer {
+  width: 100%;
+
+  height: 67%;
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  z-index: 8;
+
+  transform:
+    translateY(100%);
+
+  background:
+    rgba(
+      8,
+      8,
+      8,
+      0.98
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.35
+    );
+
+  box-shadow:
+    0
+    -30px
+    70px
+    rgba(
+      0,
+      0,
+      0,
+      0.45
+    );
+
+  backdrop-filter:
+    blur(16px);
+
+  -webkit-backdrop-filter:
+    blur(16px);
+
+  transition:
+    transform
+    0.7s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+
+/* =========================================================
+   DRAWER HANDLE
+========================================================= */
+
+.program-drawer-handle {
+  width: 45px;
+  height: 2px;
+
+  margin:
+    13px
+    auto
+    0;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.55
+    );
+}
+
+
+
+/* =========================================================
+   DRAWER CONTENT
+========================================================= */
+
+.program-drawer-content {
+  width: 90%;
+
+  margin:
+    24px
+    auto
+    0;
+}
+
+
+
+/* =========================================================
+   DRAWER HEADING
+========================================================= */
+
+.program-drawer-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+.drawer-eyebrow {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color:
+    rgba(
+      245,
+      245,
+      245,
+      0.82
+    );
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+.program-drawer-heading h3 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size:
+    clamp(
+      32px,
+      2.9vw,
+      46px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 7px;
+}
+
+
+.drawer-program-type {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   DRAWER DIVIDER
+========================================================= */
+
+.drawer-divider {
+  width: 100%;
+  height: 1px;
+
+  margin:
+    22px
+    0
+    24px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(
+        255,
+        255,
+        255,
+        0.5
+      ),
+      transparent
+    );
+}
+
+
+
+/* =========================================================
+   DRAWER TEXT
+========================================================= */
+
+.program-drawer p {
+  margin:
+    0
+    0
+    18px;
+
+  color:
+    rgba(
+      245,
+      245,
+      245,
+      0.9
+    );
+
+  font-size:
+    clamp(
+      14px,
+      1vw,
+      17px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.1px;
+}
+
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+@media (hover: hover) {
+
+  .program-panel:hover
+  .program-drawer {
+    transform:
+      translateY(0);
+  }
+
+
+  .program-panel:hover
+  .program-main {
+    transform:
+      translateY(-17%);
+  }
+
+}
+
+
+
+/* =========================================================
+   CLICK STATE
+========================================================= */
+
+.program-panel.is-active
+.program-drawer {
+  transform:
+    translateY(0);
+}
+
+
+.program-panel.is-active
+.program-main {
+  transform:
+    translateY(-17%);
+}
+
+
+
+/* =========================================================
+   ACTIVE BACKGROUND
+========================================================= */
+
+.program-panel:hover,
+.program-panel.is-active {
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(
+        255,
+        255,
+        255,
+        0.09
+      ),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      #191919,
+      #090909
+    );
+
+  box-shadow:
+    inset
+    0
+    0
+    100px
+    rgba(
+      255,
+      255,
+      255,
+      0.012
+    );
+}
+
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .programs-hero {
+    min-height:
+      calc(
+        100svh - 90px
+      );
+
+    height:
+      calc(
+        100svh - 90px
+      );
+
+    padding:
+      0
+      22px;
+  }
+
+
+  .programs-hero h1 {
+    font-size: 48px;
+
+    letter-spacing: 7px;
+  }
+
+
+  .programs-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .programs-hero-content > p {
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+  }
+
+
+  .programs-scroll {
+    margin-top: 75px;
+  }
+
+
+  .programs-watermark {
+    width: 560px;
+
+    right: -340px;
+
+    bottom: -110px;
+  }
+
+
+  .program-showcase {
+    height: auto;
+
+    min-height: 0;
+
+    display: block;
+  }
+
+
+  .program-panel {
+    width: 100%;
+
+    min-height: 800px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.25
+      );
+  }
+
+
+  .program-panel:last-child {
+    border-bottom: none;
+  }
+
+
+  .program-label {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .program-logo-wrap {
+    width: 270px;
+
+    height: 185px;
+  }
+
+
+  .program-title span {
+    font-size: 26px;
+
+    letter-spacing: 7px;
+  }
+
+
+  .program-title h2 {
+    font-size: 66px;
+
+    letter-spacing: 8px;
+  }
+
+
+  .program-drawer {
+    height: 70%;
+  }
+
+
+  .program-drawer-content {
+    width: 88%;
+  }
+
+
+  .drawer-eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .program-drawer p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .programs-hero h1 {
+    font-size: 37px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .programs-divider {
+    width: 90%;
+  }
+
+
+  .program-panel {
+    min-height: 750px;
+  }
+
+
+  .program-label {
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    letter-spacing: 2.3px;
+
+    margin-bottom: 22px;
+  }
+
+
+  .program-logo-wrap {
+    width: 225px;
+
+    height: 155px;
+  }
+
+
+  .program-title {
+    gap: 10px;
+  }
+
+
+  .program-title span {
+    font-size: 23px;
+
+    letter-spacing: 6px;
+  }
+
+
+  .program-title h2 {
+    font-size: 53px;
+
+    letter-spacing: 6px;
+  }
+
+
+  .program-small-line {
+    margin-top: 25px;
+  }
+
+
+  .program-hint {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .program-drawer {
+    height: 73%;
+  }
+
+
+  .program-drawer-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .program-drawer-heading h3 {
+    font-size: 27px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .drawer-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2.6px;
+  }
+
+
+  .drawer-program-type {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .program-drawer p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+}
