@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Calendar | Team Nox</title>
+
+  <!-- MONTSERRAT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- GLOBAL NOX CSS -->
+  <link
+    rel="stylesheet"
+    href="../style.css"
+  >
+
+  <!-- CALENDAR CSS -->
+  <link
+    rel="stylesheet"
+    href="./calendar.css"
+  >
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
+
+  <nav class="navbar">
+
+    <a
+      href="../index.html"
+      class="brand"
+    >
+
+      <img
+        src="../image/Nox Transparent Logo.png"
+        alt="Team Nox"
+        class="nav-logo"
+      >
+
+      <span class="brand-name">
+        TEAM NOX
+      </span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="../index.html">
+        Home
+      </a>
+
+
+      <!-- ABOUT US -->
+
+      <div class="nav-dropdown">
+
+        <button class="dropdown-button">
+
+          About Us
+
+          <span class="arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="../About Us/founders.html">
+            Meet the Founders
+          </a>
+
+          <a href="../About Us/mentors.html">
+            Meet the Mentors
+          </a>
+
+          <a href="../About Us/story.html">
+            Our Story
+          </a>
+
+          <a href="../About Us/programs.html">
+            Our Programs
+          </a>
+
+          <a href="../About Us/divisions.html">
+            Divisions
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- RESOURCES -->
+
+      <div class="nav-dropdown">
+
+        <button class="dropdown-button">
+
+          Resources
+
+          <span class="arrow">
+            ▼
+          </span>
+
+        </button>
+
+
+        <div class="dropdown-menu">
+
+          <a href="./calendar.html">
+            Calendar
+          </a>
+
+          <a href="./grant-tracker.html">
+            Grant Tracker
+          </a>
+
+          <a href="./sponsor-packet.html">
+            Sponsor Packet
+          </a>
+
+          <a href="./team-forms.html">
+            Team Forms
+          </a>
+
+          <a href="./team-handbook.html">
+            Team Handbook
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a href="../index.html#highlights">
+        Highlights
+      </a>
+
+
+      <a href="../Sponsor/sponsor.html">
+        Sponsors
+      </a>
+
+
+      <a
+        href="https://forms.gle/ervGAU6oZejsxP3p8"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Join Us
+      </a>
+
+
+      <a href="../index.html#donate">
+        Donate
+      </a>
+
+    </div>
+
+
+    <div class="nav-spacer"></div>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       CALENDAR PAGE
+  ====================================================== -->
+
+  <main
+    class="calendar-page"
+    id="calendar"
+  >
+
+
+    <!-- ===================================================
+         PAGE HEADING
+    ==================================================== -->
+
+    <header class="calendar-page-heading">
+
+      <span class="calendar-page-eyebrow">
+        TEAM NOX SCHEDULE
+      </span>
+
+
+      <h1>
+        NOX CALENDAR
+      </h1>
+
+
+      <div class="calendar-heading-divider">
+
+        <span></span>
+
+        <img
+          src="../image/Nox Transparent Logo.png"
+          alt=""
+        >
+
+        <span></span>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- ===================================================
+         CALENDAR DASHBOARD
+    ==================================================== -->
+
+    <div class="calendar-shell">
+
+
+      <!-- =================================================
+           MONTH VIEW
+      ================================================== -->
+
+      <section class="calendar-main">
+
+
+        <!-- TOOLBAR -->
+
+        <div class="calendar-toolbar">
+
+
+          <div class="month-controls">
+
+            <button
+              class="month-arrow"
+              id="prevMonth"
+              type="button"
+              aria-label="Previous month"
+            >
+              ‹
+            </button>
+
+
+            <div class="month-heading">
+
+              <span class="month-label">
+                CURRENT SCHEDULE
+              </span>
+
+              <h2 id="monthTitle">
+                AUGUST 2026
+              </h2>
+
+            </div>
+
+
+            <button
+              class="month-arrow"
+              id="nextMonth"
+              type="button"
+              aria-label="Next month"
+            >
+              ›
+            </button>
+
+          </div>
+
+
+          <button
+            class="today-button"
+            id="todayButton"
+            type="button"
+          >
+            TODAY
+          </button>
+
+        </div>
+
+
+
+        <!-- WEEKDAYS -->
+
+        <div class="weekday-row">
+
+          <span>SUN</span>
+          <span>MON</span>
+          <span>TUE</span>
+          <span>WED</span>
+          <span>THU</span>
+          <span>FRI</span>
+          <span>SAT</span>
+
+        </div>
+
+
+
+        <!-- GENERATED CALENDAR -->
+
+        <div
+          class="calendar-grid"
+          id="calendarGrid"
+        >
+
+          <div class="calendar-loading">
+            LOADING CALENDAR...
+          </div>
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div class="calendar-filters">
+
+          <span class="filter-title">
+            FILTER EVENTS
+          </span>
+
+
+          <div class="filter-buttons">
+
+            <button
+              type="button"
+              class="calendar-filter active"
+              data-filter="all"
+            >
+              ALL
+            </button>
+
+
+            <button
+              type="button"
+              class="calendar-filter"
+              data-filter="frc"
+            >
+              FRC
+            </button>
+
+
+            <button
+              type="button"
+              class="calendar-filter"
+              data-filter="ftc"
+            >
+              FTC
+            </button>
+
+
+            <button
+              type="button"
+              class="calendar-filter"
+              data-filter="outreach"
+            >
+              OUTREACH
+            </button>
+
+
+            <button
+              type="button"
+              class="calendar-filter"
+              data-filter="general"
+            >
+              GENERAL
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           UPCOMING EVENTS
+      ================================================== -->
+
+      <aside class="upcoming-panel">
+
+
+        <div class="upcoming-heading">
+
+          <span>
+            NEXT UP
+          </span>
+
+
+          <h2>
+            UPCOMING EVENTS
+          </h2>
+
+        </div>
+
+
+        <div class="upcoming-divider"></div>
+
+
+        <div
+          class="upcoming-list"
+          id="upcomingList"
+        >
+
+          <div class="calendar-loading">
+            LOADING EVENTS...
+          </div>
+
+        </div>
+
+
+
+        <!-- GOOGLE CALENDAR STATUS -->
+
+        <div class="calendar-source">
+
+          <div class="calendar-source-top">
+
+            <span class="source-label">
+              CALENDAR SOURCE
+            </span>
+
+            <span class="source-dot"></span>
+
+          </div>
+
+
+          <p>
+            GOOGLE CALENDAR
+          </p>
+
+
+          <span class="source-status">
+            LIVE SCHEDULE
+          </span>
+
+        </div>
+
+      </aside>
+
+
+    </div>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       EVENT MODAL
+  ====================================================== -->
+
+  <div
+    class="event-modal"
+    id="eventModal"
+    aria-hidden="true"
+  >
+
+    <div class="event-modal-backdrop"></div>
+
+
+    <div class="event-modal-card">
+
+
+      <button
+        class="event-modal-close"
+        id="eventModalClose"
+        type="button"
+        aria-label="Close event"
+      >
+        ×
+      </button>
+
+
+      <span
+        class="event-modal-category"
+        id="modalCategory"
+      >
+        TEAM EVENT
+      </span>
+
+
+      <h2 id="modalTitle">
+        EVENT TITLE
+      </h2>
+
+
+      <div class="event-modal-divider"></div>
+
+
+
+      <div class="event-detail-row">
+
+        <span>
+          DATE
+        </span>
+
+        <p id="modalDate"></p>
+
+      </div>
+
+
+
+      <div class="event-detail-row">
+
+        <span>
+          TIME
+        </span>
+
+        <p id="modalTime"></p>
+
+      </div>
+
+
+
+      <div class="event-detail-row">
+
+        <span>
+          LOCATION
+        </span>
+
+        <p id="modalLocation"></p>
+
+      </div>
+
+
+
+      <div class="event-description">
+
+        <span>
+          DETAILS
+        </span>
+
+        <p id="modalDescription"></p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="site-footer">
+
+
+    <div class="footer-main">
+
+
+      <!-- SUPPORT -->
+
+      <div class="footer-support">
+
+        <div class="footer-qr">
+
+          <img
+            src="../image/SupportQR.png"
+            alt="Support Team Nox QR Code"
+          >
+
+        </div>
+
+
+        <span>
+          SUPPORT US
+        </span>
+
+      </div>
+
+
+
+      <!-- SOCIALS -->
+
+      <div class="footer-socials">
+
+
+        <a
+          href="https://www.youtube.com/@Nox11702"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+
+          <img
+            src="../image/Youtube.png"
+            alt="YouTube"
+          >
+
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/company/team-nox/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+
+          <img
+            src="../image/Linkedin.png"
+            alt="LinkedIn"
+          >
+
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/nox11702"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+
+          <img
+            src="../image/Instagram.png"
+            alt="Instagram"
+          >
+
+        </a>
+
+
+        <a
+          href="https://www.tiktok.com/@teamnox11702"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+
+          <img
+            src="../image/TikTok.png"
+            alt="TikTok"
+          >
+
+        </a>
+
+
+        <a
+          href="https://www.thebluealliance.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="The Blue Alliance"
+        >
+
+          <img
+            src="../image/TBA.png"
+            alt="The Blue Alliance"
+          >
+
+        </a>
+
+
+        <a
+          href="https://github.com/Nox11702"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+
+          <img
+            src="../image/Github.png"
+            alt="GitHub"
+          >
+
+        </a>
+
+
+      </div>
+
+
+
+      <!-- CONTACT -->
+
+      <div class="footer-contact">
+
+        <div class="footer-contact-line"></div>
+
+
+        <div class="footer-contact-content">
+
+          <h3>
+            CONTACT US
+          </h3>
+
+
+          <a href="mailto:noxnycfirst@gmail.com">
+
+            <span class="footer-mail-icon">
+              ✉
+            </span>
+
+            <span>
+              noxnycfirst@gmail.com
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="footer-copyright">
+      © 2026-2027 Team Nox
+    </div>
+
+  </footer>
+
+
+
+  <!-- CALENDAR JS -->
+
+  <script src="./calendar.js"></script>
+
+
+  <!-- GLOBAL JS -->
+
+  <script src="../script.js"></script>
+
+
+</body>
+
+</html>
