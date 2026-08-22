@@ -31,8 +31,7 @@ export default {
             "Content-Type":
               "text/calendar; charset=utf-8",
 
-            "Cache-Control":
-              "public, max-age=300"
+            "Cache-Control": "no-cache"
           }
         });
       }
