@@ -1,0 +1,513 @@
+/* =========================================================
+   TEAM NOX
+   SPONSOR PACKET
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background: #050505;
+
+  color: #f5f5f5;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.packet-page {
+  min-height: calc(100vh - 88px);
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding:
+    90px
+    30px;
+
+  border-bottom:
+    1px solid
+    #343434;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 255, 255, 0.055),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #101010 50%,
+      #070707 100%
+    );
+}
+
+
+
+/* =========================================================
+   TECHNICAL GRID
+========================================================= */
+
+.packet-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    75px
+    75px;
+
+  opacity: 0.4;
+
+  pointer-events: none;
+}
+
+
+
+/* =========================================================
+   WATERMARK
+========================================================= */
+
+.packet-watermark {
+  width:
+    min(
+      650px,
+      46vw
+    );
+
+  position: absolute;
+
+  right: -165px;
+
+  bottom: -200px;
+
+  opacity: 0.065;
+
+  filter:
+    grayscale(1)
+    brightness(0.9);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.packet-content {
+  width:
+    min(
+      820px,
+      92%
+    );
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.packet-eyebrow {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #737373;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 5px;
+}
+
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.packet-content h1 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size:
+    clamp(
+      44px,
+      5vw,
+      72px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 10px;
+}
+
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.packet-divider {
+  width:
+    min(
+      500px,
+      75%
+    );
+
+  margin:
+    32px
+    auto
+    28px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    20px
+    1fr;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+.packet-divider span {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35)
+    );
+}
+
+
+.packet-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+}
+
+
+.packet-divider img {
+  width: 20px;
+
+  height: 20px;
+
+  object-fit: contain;
+
+  opacity: 0.7;
+
+  filter: grayscale(1);
+}
+
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.packet-status {
+  margin-bottom: 22px;
+
+  color: #8a8a8a;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+}
+
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.packet-content p {
+  width:
+    min(
+      650px,
+      100%
+    );
+
+  margin:
+    0
+    auto;
+
+  color: #a0a0a0;
+
+  font-size:
+    13px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.5px;
+}
+
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.packet-contact {
+  min-width: 175px;
+
+  height: 44px;
+
+  margin-top: 36px;
+
+  padding:
+    0
+    24px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.35);
+
+  background: transparent;
+
+  color: #f0f0f0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.packet-contact:hover {
+  transform:
+    translateY(-2px);
+
+  background: #f5f5f5;
+
+  color: #050505;
+
+  border-color: #f5f5f5;
+}
+
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.packet-email {
+  margin-top: 18px;
+
+  color: #737373;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 1.6px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.packet-email:hover {
+  color: #d5d5d5;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .packet-page {
+    min-height:
+      calc(
+        100svh - 90px
+      );
+
+    padding:
+      70px
+      22px;
+  }
+
+
+  .packet-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 4px;
+  }
+
+
+  .packet-content h1 {
+    font-size: 43px;
+
+    letter-spacing: 7px;
+  }
+
+
+  .packet-watermark {
+    width: 500px;
+
+    right: -300px;
+
+    bottom: -90px;
+  }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .packet-page {
+    padding:
+      60px
+      18px;
+  }
+
+
+  .packet-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .packet-content h1 {
+    font-size: 32px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .packet-divider {
+    width: 88%;
+
+    margin:
+      26px
+      auto
+      24px;
+  }
+
+
+  .packet-status {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .packet-content p {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+
+  .packet-contact {
+    min-width: 160px;
+
+    height: 42px;
+
+    margin-top: 30px;
+
+    font-size: 9px;
+  }
+
+
+  .packet-email {
+    font-size: 9px;
+  }
+
+}
