@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -10,878 +9,34 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Sponsors | Team NOX</title>
+  <title>Sponsors | Team Nox</title>
 
-
-  <!-- MONTSERRAT -->
+  <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   >
 
-
-  <!-- EXISTING TEAM NOX STYLES -->
+  <!-- GLOBAL CSS -->
   <link
-  rel="stylesheet"
-  href="../style.css"
->
-
-<link
-  rel="stylesheet"
-  href="sponsor.css"
->
-
-
-  <style>
-
-    /* =========================================================
-       SPONSOR PAGE
-    ========================================================= */
-
-    .sponsor-page {
-      min-height: 100vh;
-
-      padding-bottom: 100px;
-
-      color: #f5f5f5;
-
-      font-family:
-        "Montserrat",
-        sans-serif;
-
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(255,255,255,0.045),
-          transparent 30%
-        ),
-        #050505;
-    }
-
-
-
-    /* subtle background grid */
-
-    .sponsor-page::before {
-      content: "";
-
-      position: fixed;
-      inset: 0;
-
-      pointer-events: none;
-
-      background-image:
-        linear-gradient(
-          rgba(255,255,255,0.012) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,0.012) 1px,
-          transparent 1px
-        );
-
-      background-size:
-        80px
-        80px;
-
-      opacity: 0.25;
-    }
-
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-    .sponsor-hero {
-      width: min(1500px, 90%);
-
-      margin: 0 auto;
-
-      padding:
-        70px
-        0
-        65px;
-
-      position: relative;
-      z-index: 2;
-
-      text-align: center;
-    }
-
-
-    .sponsor-hero h1 {
-      margin: 0;
-
-      font-size:
-        clamp(
-          40px,
-          5vw,
-          68px
-        );
-
-      font-weight: 600;
-
-      letter-spacing: 11px;
-    }
-
-
-    .sponsor-hero p {
-      margin-top: 18px;
-
-      color: #888;
-
-      font-size: 10px;
-
-      letter-spacing: 3px;
-    }
-
-
-    .sponsor-hero-divider {
-      width: min(700px, 90%);
-
-      margin:
-        32px
-        auto
-        0;
-
-      display: grid;
-
-      grid-template-columns:
-        1fr
-        18px
-        1fr;
-
-      align-items: center;
-
-      gap: 16px;
-    }
-
-
-    .sponsor-hero-divider span {
-      height: 1px;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          rgba(255,255,255,0.35)
-        );
-    }
-
-
-    .sponsor-hero-divider span:last-child {
-      background:
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,0.35),
-          transparent
-        );
-    }
-
-
-    .sponsor-hero-divider img {
-      width: 18px;
-      height: 18px;
-
-      object-fit: contain;
-
-      opacity: 0.7;
-    }
-
-
-
-    /* =========================================================
-       TIER SECTION
-    ========================================================= */
-
-    .sponsor-tier-section {
-      --tier-color: #ffffff;
-      --tier-rgb: 255,255,255;
-
-      width: min(1500px, 92%);
-
-      margin:
-        0
-        auto
-        85px;
-
-      position: relative;
-      z-index: 2;
-    }
-
-
-
-    /* =========================================================
-       COLORS
-    ========================================================= */
-
-    .tier-section-onyx {
-      --tier-color: #eeeeee;
-      --tier-rgb: 238,238,238;
-    }
-
-
-    .tier-section-diamond {
-      --tier-color: #b98cff;
-      --tier-rgb: 185,140,255;
-    }
-
-
-    .tier-section-platinum {
-      --tier-color: #76dce7;
-      --tier-rgb: 118,220,231;
-    }
-
-
-    .tier-section-gold {
-      --tier-color: #e7b84d;
-      --tier-rgb: 231,184,77;
-    }
-
-
-    .tier-section-silver {
-      --tier-color: #c8c8c8;
-      --tier-rgb: 200,200,200;
-    }
-
-
-    .tier-section-bronze {
-      --tier-color: #c9824f;
-      --tier-rgb: 201,130,79;
-    }
-
-
-
-    /* =========================================================
-       TIER HEADING
-    ========================================================= */
-
-    .tier-section-heading {
-      display: grid;
-
-      grid-template-columns:
-        auto
-        1fr;
-
-      align-items: center;
-
-      gap: 25px;
-
-      margin-bottom: 22px;
-    }
-
-
-    .tier-title-group h2 {
-      margin: 0;
-
-      color: var(--tier-color);
-
-      font-size: 22px;
-
-      font-weight: 600;
-
-      letter-spacing: 5px;
-    }
-
-
-    .tier-title-group p {
-      margin-top: 5px;
-
-      color: var(--tier-color);
-
-      font-size: 11px;
-
-      font-weight: 500;
-
-      letter-spacing: 2px;
-
-      opacity: 0.9;
-    }
-
-
-    .tier-heading-line {
-      height: 1px;
-
-      position: relative;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(var(--tier-rgb),0.8),
-          rgba(var(--tier-rgb),0.15),
-          transparent
-        );
-    }
-
-
-    .tier-heading-line::before {
-      content: "";
-
-      width: 5px;
-      height: 5px;
-
-      position: absolute;
-
-      left: 0;
-      top: 50%;
-
-      transform:
-        translateY(-50%)
-        rotate(45deg);
-
-      background:
-        var(--tier-color);
-    }
-
-
-
-    /* =========================================================
-       SPONSOR GRID
-    ========================================================= */
-
-    .tier-sponsor-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          5,
-          minmax(0,1fr)
-        );
-
-      gap: 15px;
-    }
-
-
-
-    /* =========================================================
-       SPONSOR CARD — FULL IMAGE
-    ========================================================= */
-
-    .sponsor-company-card {
-      min-height: 155px;
-      padding: 0;
-
-      position: relative;
-      overflow: hidden;
-
-      display: block;
-
-      border:
-        1px solid
-        rgba(255,255,255,0.16);
-
-      background: #0d0d0d;
-
-      font-family:
-        "Montserrat",
-        sans-serif;
-
-      cursor: pointer;
-
-      transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-    }
-
-
-    .sponsor-company-card::before {
-      content: "";
-
-      width: 100%;
-      height: 2px;
-
-      position: absolute;
-      left: 0;
-      top: 0;
-
-      z-index: 3;
-
-      opacity: 0;
-
-      background: var(--tier-color);
-
-      transition:
-        opacity 0.3s ease;
-    }
-
-
-    .sponsor-company-card::after {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      z-index: 2;
-
-      pointer-events: none;
-
-      background:
-        rgba(0,0,0,0);
-
-      transition:
-        background 0.3s ease;
-    }
-
-
-    .sponsor-full-logo {
-      width: 100%;
-      height: 100%;
-
-      position: absolute;
-      inset: 0;
-
-      display: block;
-
-      object-fit: cover;
-
-      transition:
-        transform 0.35s ease,
-        filter 0.35s ease,
-        opacity 0.35s ease;
-    }
-
-
-    .sponsor-company-card:hover,
-    .sponsor-company-card.active {
-      transform:
-        translateY(-5px);
-
-      border-color:
-        rgba(var(--tier-rgb),0.65);
-
-      box-shadow:
-        0 0 22px
-        rgba(var(--tier-rgb),0.12);
-    }
-
-
-    .sponsor-company-card:hover::before,
-    .sponsor-company-card.active::before {
-      opacity: 1;
-    }
-
-
-    .sponsor-company-card:hover::after,
-    .sponsor-company-card.active::after {
-      background:
-        rgba(0,0,0,0.08);
-    }
-
-
-    .sponsor-company-card:hover .sponsor-full-logo,
-    .sponsor-company-card.active .sponsor-full-logo {
-      transform:
-        scale(1.04);
-    }
-
-
-    /* =========================================================
-       DETAIL DROPDOWN
-    ========================================================= */
-
-    .sponsor-detail-panel {
-      grid-column:
-        1 / -1;
-
-      max-height: 0;
-
-      margin-top: 0;
-
-      overflow: hidden;
-
-      opacity: 0;
-
-      transform:
-        translateY(-15px);
-
-      border:
-        1px solid
-        transparent;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(24,24,24,0.99),
-          rgba(7,7,7,0.99)
-        );
-
-      transition:
-        max-height 0.6s cubic-bezier(0.22,1,0.36,1),
-        opacity 0.4s ease,
-        transform 0.5s ease,
-        margin 0.5s ease,
-        padding 0.5s ease,
-        border-color 0.5s ease;
-    }
-
-
-    .sponsor-detail-panel.open {
-      max-height: 420px;
-
-      margin-top: 5px;
-
-      padding: 28px;
-
-      opacity: 1;
-
-      transform:
-        translateY(0);
-
-      border-color:
-        rgba(var(--tier-rgb),0.4);
-
-      box-shadow:
-        inset
-        3px
-        0
-        0
-        var(--tier-color);
-    }
-
-
-
-    /* =========================================================
-       DETAIL PANEL CONTENT
-    ========================================================= */
-
-    .sponsor-detail-content {
-      display: grid;
-
-      grid-template-columns:
-        150px
-        1fr
-        0.75fr;
-
-      gap: 35px;
-
-      align-items: center;
-    }
-
-
-    .detail-logo {
-      width: 150px;
-      height: 150px;
-
-      display: grid;
-
-      place-items: center;
-
-      overflow: hidden;
-
-      border:
-        1px solid
-        rgba(255,255,255,0.2);
-
-      background:
-        #050505;
-
-      color: #777;
-
-      font-size: 9px;
-
-      letter-spacing: 2px;
-    }
-
-
-    .detail-logo img {
-      width: 100%;
-      height: 100%;
-
-      padding: 16px;
-
-      object-fit: contain;
-    }
-
-
-
-    /* =========================================================
-       COMPANY INFO
-    ========================================================= */
-
-    .detail-company-label {
-      color:
-        var(--tier-color);
-
-      font-size:
-        8px;
-
-      font-weight:
-        500;
-
-      letter-spacing:
-        3px;
-    }
-
-
-    .detail-company h3 {
-      margin:
-        9px
-        0
-        14px;
-
-      color:
-        #f5f5f5;
-
-      font-size:
-        25px;
-
-      font-weight:
-        500;
-
-      letter-spacing:
-        2px;
-    }
-
-
-    .detail-company p {
-      max-width:
-        600px;
-
-      color:
-        #aaa;
-
-      font-size:
-        11px;
-
-      line-height:
-        1.8;
-    }
-
-
-
-    /* =========================================================
-       CONTRIBUTION INFO
-    ========================================================= */
-
-    .detail-stats {
-      padding-left:
-        30px;
-
-      border-left:
-        1px solid
-        rgba(255,255,255,0.15);
-    }
-
-
-    .detail-stat {
-      margin-bottom:
-        23px;
-    }
-
-
-    .detail-stat:last-child {
-      margin-bottom:
-        0;
-    }
-
-
-    .detail-stat span {
-      display:
-        block;
-
-      color:
-        #777;
-
-      font-size:
-        8px;
-
-      font-weight:
-        500;
-
-      letter-spacing:
-        2px;
-    }
-
-
-    .detail-stat strong {
-      display:
-        block;
-
-      margin-top:
-        7px;
-
-      color:
-        #f5f5f5;
-
-      font-size:
-        13px;
-
-      font-weight:
-        500;
-
-      letter-spacing:
-        1px;
-    }
-
-
-
-    /* =========================================================
-       LEARN MORE
-    ========================================================= */
-
-    .detail-learn-more {
-      width:
-        230px;
-
-      height:
-        52px;
-
-      margin-top:
-        25px;
-
-      padding:
-        0
-        18px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-
-      border:
-        1px solid
-        rgba(var(--tier-rgb),0.55);
-
-      color:
-        #f5f5f5;
-
-      background:
-        transparent;
-
-      font-size:
-        10px;
-
-      font-weight:
-        500;
-
-      letter-spacing:
-        2px;
-
-      transition:
-        color 0.3s ease,
-        background 0.3s ease,
-        border-color 0.3s ease;
-    }
-
-
-    .detail-learn-more:hover {
-      color:
-        #050505;
-
-      background:
-        var(--tier-color);
-
-      border-color:
-        var(--tier-color);
-    }
-
-
-
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
-
-    @media (max-width: 1200px) {
-
-      .tier-sponsor-grid {
-        grid-template-columns:
-          repeat(
-            3,
-            1fr
-          );
-      }
-
-
-      .sponsor-detail-content {
-        grid-template-columns:
-          120px
-          1fr;
-      }
-
-
-      .detail-stats {
-        grid-column:
-          1 / -1;
-
-        padding:
-          20px
-          0
-          0;
-
-        border-left:
-          0;
-
-        border-top:
-          1px solid
-          rgba(255,255,255,0.15);
-      }
-
-    }
-
-
-
-    @media (max-width: 700px) {
-
-      .sponsor-hero h1 {
-        font-size:
-          30px;
-
-        letter-spacing:
-          6px;
-      }
-
-
-      .tier-sponsor-grid {
-        grid-template-columns:
-          repeat(
-            2,
-            1fr
-          );
-      }
-
-
-      .sponsor-detail-content {
-        grid-template-columns:
-          1fr;
-      }
-
-
-      .detail-logo {
-        width:
-          110px;
-
-        height:
-          110px;
-      }
-
-
-      .detail-stats {
-        grid-column:
-          auto;
-      }
-
-
-      .detail-learn-more {
-        width:
-          100%;
-      }
-
-    }
-
-  </style>
-
+    rel="stylesheet"
+    href="../style.css"
+  >
+
+  <!-- PAGE CSS -->
+  <link
+    rel="stylesheet"
+    href="./sponsor.css"
+  >
 </head>
-
 
 
 <body>
@@ -900,7 +55,7 @@
 
       <img
         src="../image/Nox Transparent Logo.png"
-        alt="Team NOX Logo"
+        alt="Team Nox Logo"
         class="nav-logo"
       >
 
@@ -918,19 +73,19 @@
       </a>
 
 
+      <!-- ABOUT US -->
+
       <div class="nav-dropdown">
 
         <button
           class="dropdown-button"
           type="button"
         >
-
           About Us
 
           <span class="arrow">
             ▼
           </span>
-
         </button>
 
 
@@ -944,7 +99,7 @@
             Meet the Mentors
           </a>
 
-          <a href="../story.html">
+          <a href="../About Us/story.html">
             Our Story
           </a>
 
@@ -961,42 +116,34 @@
       </div>
 
 
+      <!-- RESOURCES -->
+
       <div class="nav-dropdown">
 
         <button
           class="dropdown-button"
           type="button"
         >
-
           Resources
 
           <span class="arrow">
             ▼
           </span>
-
         </button>
 
 
         <div class="dropdown-menu">
 
-          <a href="../Resources/grant-tracker.html">
-            Grant Tracker
+          <a href="../Resources/calendar.html">
+            Calendar
           </a>
 
           <a href="../Resources/sponsor-packet.html">
             Sponsor Packet
           </a>
 
-          <a href="../Resources/team-handbook.html">
-            Team Handbook
-          </a>
-
-          <a href="../Resources/team-forms.html">
-            Team Forms
-          </a>
-
-          <a href="../Resources/calendar.html">
-            Calendar
+          <a href="../Resources/team-documents.html">
+            Team Documents
           </a>
 
         </div>
@@ -1004,19 +151,30 @@
       </div>
 
 
-      <a href="../index.html#highlights">
+      <a href="../Highlights/highlights.html">
         Highlights
       </a>
 
-      <a href="sponsor.html">
+
+      <a href="./sponsor.html">
         Sponsors
       </a>
 
-      <a href="../index.html#join">
+
+      <a
+        href="https://forms.gle/ervGAU6oZejsxP3p8"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Join Us
       </a>
 
-      <a href="../index.html#donate">
+
+      <a
+        href="https://hcb.hackclub.com/donations/start/nox"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Donate
       </a>
 
@@ -1030,137 +188,581 @@
 
 
   <!-- =====================================================
-       SPONSOR PAGE
+       MAIN
   ====================================================== -->
 
   <main class="sponsor-page">
 
 
-    <!-- =================================================
+    <!-- ===================================================
          HERO
-    ================================================== -->
+    ==================================================== -->
 
     <section class="sponsor-hero">
 
-  <!-- FADED BACKGROUND LOGO -->
-
-  <img
-    src="../image/Nox Transparent Logo.png"
-    alt=""
-    class="sponsor-hero-watermark"
-  >
+      <div class="technical-grid"></div>
 
 
-  <div class="sponsor-hero-content">
-
-    <h1>
-      SPONSOR PARTNERS
-    </h1>
-
-    <p>
-      THANK YOU FOR POWERING OUR JOURNEY.
-    </p>
+      <img
+        src="../image/Nox Transparent Logo.png"
+        alt=""
+        class="hero-watermark"
+      >
 
 
-    <div class="sponsor-hero-divider">
-  <img
-    src="../image/Nox Transparent Logo.png"
-    alt="Team NOX"
-  >
-</div>
+      <div class="hero-content">
 
-  </div>
-
-</section>
+        <span class="hero-eyebrow">
+          SUPPORT TEAM NOX
+        </span>
 
 
+        <h1>
+          OUR
+          <br>
+          SPONSORS
+        </h1>
 
-    <!-- =================================================
-         ONYX
-    ================================================== -->
 
-    <section
-      class="sponsor-tier-section tier-section-onyx"
-      data-tier="ONYX"
-      data-range="$15,000+"
-    >
+        <div class="hero-line"></div>
 
-      <div class="tier-section-heading">
 
-        <div class="tier-title-group">
+        <p>
+          Thank you for powering our journey.
+        </p>
 
-          <h2>
-            ONYX
-          </h2>
 
-          <p>
-            $15,000+
-          </p>
+        <div class="hero-actions">
+
+          <a
+            href="#become-sponsor"
+            class="primary-button"
+          >
+            BECOME A SPONSOR
+          </a>
+
+
+          <a
+            href="https://hcb.hackclub.com/donations/start/nox"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="secondary-button"
+          >
+            DONATE TO THE TEAM
+          </a>
 
         </div>
-
-        <div class="tier-heading-line"></div>
 
       </div>
 
 
-      <div class="tier-sponsor-grid">
+      <a
+        href="#sponsorship-tiers"
+        class="sponsor-scroll"
+      >
 
-        <button
-          class="sponsor-company-card"
-          data-name="ONYX SPONSOR 1"
-          data-contribution="$15,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/onyx-1.png"
-        >
+        <span class="sponsor-scroll-text">
+          SCROLL DOWN
+        </span>
 
-          <img
-            src="../image/sponsors/onyx-1.png"
-            alt="ONYX SPONSOR 1"
-            class="sponsor-full-logo"
-          >
+        <span class="sponsor-scroll-arrow"></span>
 
-        </button>
+      </a>
+
+    </section>
 
 
-        <button
-          class="sponsor-company-card"
-          data-name="ONYX SPONSOR 2"
-          data-contribution="$15,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/onyx-2.png"
-        >
 
-          <img
-            src="../image/sponsors/onyx-2.png"
-            alt="ONYX SPONSOR 2"
-            class="sponsor-full-logo"
-          >
+    <!-- ===================================================
+         SPONSORSHIP TIERS
+    ==================================================== -->
 
-        </button>
+    <section
+      class="tiers-section"
+      id="sponsorship-tiers"
+    >
+
+      <div class="technical-grid"></div>
 
 
-        <button
-          class="sponsor-company-card"
-          data-name="ONYX SPONSOR 3"
-          data-contribution="$15,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/onyx-3.png"
-        >
+      <div class="tiers-wrapper">
 
-          <img
-            src="../image/sponsors/onyx-3.png"
-            alt="ONYX SPONSOR 3"
-            class="sponsor-full-logo"
-          >
-
-        </button>
+        <span class="section-eyebrow">
+          SUPPORT OUR PROGRAM
+        </span>
 
 
-        <div class="sponsor-detail-panel"></div>
+        <h2>
+          SPONSORSHIP TIERS
+        </h2>
+
+
+        <div class="section-divider"></div>
+
+
+        <p class="tiers-intro">
+          Every sponsorship helps Team Nox provide students with
+          hands-on engineering opportunities, competition resources,
+          mentorship, outreach programs, and access to STEM education.
+        </p>
+
+
+
+        <!-- =================================================
+             ONYX
+        ================================================== -->
+
+        <article class="tier-card tier-onyx">
+
+          <div class="tier-main">
+
+            <div class="tier-header">
+
+              <h3>
+                ONYX
+              </h3>
+
+
+              <div class="tier-price tier-price-single">
+
+                <strong>
+                  $15,000+
+                </strong>
+
+                <span class="tier-price-label">
+                  TITLE SPONSOR
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <button
+              class="tier-benefits-button"
+              type="button"
+              aria-expanded="false"
+            >
+              TIER BENEFITS
+            </button>
+
+
+            <div class="tier-empty">
+              Team Nox currently has no Onyx sponsors
+            </div>
+
+          </div>
+
+
+          <div class="tier-benefits">
+
+            <div class="tier-benefits-inner">
+
+              <p>
+                Our premier sponsorship level, designed for organizations
+                seeking the highest visibility and strongest partnership
+                with Team Nox. Onyx sponsors receive recognition across
+                our robots, apparel, website, events, and digital platforms.
+              </p>
+
+              <ul>
+                <li>Large logo displayed on team shirts</li>
+                <li>Large logo prominently displayed on the robot</li>
+                <li>Logo featured on the team pit banner</li>
+                <li>Recognition on the Team Nox website</li>
+                <li>Recognition through a dedicated social media post</li>
+                <li>Recognition as an Onyx Team Nox sponsor</li>
+                <li>Maximum brand visibility throughout the competition season</li>
+                <li>Recognition at team events, outreach programs, and competitions</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             DIAMOND
+        ================================================== -->
+
+        <article class="tier-card tier-diamond">
+
+          <div class="tier-main">
+
+            <div class="tier-header">
+
+              <h3>
+                DIAMOND
+              </h3>
+
+
+              <div class="tier-price">
+
+                <strong>
+                  $10,000
+                </strong>
+
+                <span class="price-dash">
+                  —
+                </span>
+
+                <strong>
+                  $14,999
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <button
+              class="tier-benefits-button"
+              type="button"
+              aria-expanded="false"
+            >
+              TIER BENEFITS
+            </button>
+
+
+            <div class="tier-empty">
+              Team Nox currently has no Diamond sponsors
+            </div>
+
+          </div>
+
+
+          <div class="tier-benefits">
+
+            <div class="tier-benefits-inner">
+
+              <p>
+                Our Diamond Tier provides outstanding brand visibility
+                across Team Nox's robots, apparel, online platforms,
+                and competition spaces.
+              </p>
+
+              <ul>
+                <li>Large logo displayed on the robot</li>
+                <li>Medium logo featured on Team T-shirts</li>
+                <li>Logo featured on the team pit banner</li>
+                <li>Recognition on the Team Nox website</li>
+                <li>Recognition through a dedicated social media post</li>
+                <li>Recognition as a premier Diamond Team Nox sponsor</li>
+                <li>Recognition at team events, outreach programs, and competitions</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             PLATINUM
+        ================================================== -->
+
+        <article class="tier-card tier-platinum">
+
+          <div class="tier-main">
+
+            <div class="tier-header">
+
+              <h3>
+                PLATINUM
+              </h3>
+
+
+              <div class="tier-price">
+
+                <strong>
+                  $5,000
+                </strong>
+
+                <span class="price-dash">
+                  —
+                </span>
+
+                <strong>
+                  $9,999
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <button
+              class="tier-benefits-button"
+              type="button"
+              aria-expanded="false"
+            >
+              TIER BENEFITS
+            </button>
+
+
+            <div class="tier-empty">
+              Team Nox currently has no Platinum sponsors
+            </div>
+
+          </div>
+
+
+          <div class="tier-benefits">
+
+            <div class="tier-benefits-inner">
+
+              <p>
+                Our Platinum Tier provides strong brand visibility
+                across Team Nox's robots, apparel, online platforms,
+                and competition spaces.
+              </p>
+
+              <ul>
+                <li>Medium logo displayed on the robot</li>
+                <li>Medium logo on Team T-shirts</li>
+                <li>Logo displayed on the team pit banner</li>
+                <li>Recognition on the Team Nox website</li>
+                <li>Recognition through a social media post</li>
+                <li>Recognition as a Platinum Team Nox sponsor</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             GOLD
+        ================================================== -->
+
+        <article class="tier-card tier-gold">
+
+          <div class="tier-main">
+
+            <div class="tier-header">
+
+              <h3>
+                GOLD
+              </h3>
+
+
+              <div class="tier-price">
+
+                <strong>
+                  $1,000
+                </strong>
+
+                <span class="price-dash">
+                  —
+                </span>
+
+                <strong>
+                  $4,999
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <button
+              class="tier-benefits-button"
+              type="button"
+              aria-expanded="false"
+            >
+              TIER BENEFITS
+            </button>
+
+
+            <div class="tier-empty">
+              Team Nox currently has no Gold sponsors
+            </div>
+
+          </div>
+
+
+          <div class="tier-benefits">
+
+            <div class="tier-benefits-inner">
+
+              <p>
+                Our Gold Tier offers meaningful brand exposure across
+                Team Nox's robots, apparel, website, and social media
+                platforms.
+              </p>
+
+              <ul>
+                <li>Medium logo displayed on the robot</li>
+                <li>Medium logo on Team T-shirts</li>
+                <li>Recognition on the Team Nox website</li>
+                <li>Recognition through a social media post</li>
+                <li>Recognition as a Gold Team Nox sponsor</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SILVER
+        ================================================== -->
+
+        <article class="tier-card tier-silver">
+
+          <div class="tier-main">
+
+            <div class="tier-header">
+
+              <h3>
+                SILVER
+              </h3>
+
+
+              <div class="tier-price">
+
+                <strong>
+                  $500
+                </strong>
+
+                <span class="price-dash">
+                  —
+                </span>
+
+                <strong>
+                  $999
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <button
+              class="tier-benefits-button"
+              type="button"
+              aria-expanded="false"
+            >
+              TIER BENEFITS
+            </button>
+
+
+            <div class="tier-empty">
+              Team Nox currently has no Silver sponsors
+            </div>
+
+          </div>
+
+
+          <div class="tier-benefits">
+
+            <div class="tier-benefits-inner">
+
+              <p>
+                Our Silver Tier offers valuable recognition while
+                helping Team Nox provide students with hands-on STEM
+                and robotics opportunities.
+              </p>
+
+              <ul>
+                <li>Small logo displayed on the robot</li>
+                <li>Small logo on Team T-shirts</li>
+                <li>Recognition on the Team Nox website</li>
+                <li>Recognition through a social media post</li>
+                <li>Recognition as a Silver Team Nox sponsor</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BRONZE
+        ================================================== -->
+
+        <article class="tier-card tier-bronze">
+
+          <div class="tier-main">
+
+            <div class="tier-header">
+
+              <h3>
+                BRONZE
+              </h3>
+
+
+              <div class="tier-price">
+
+                <strong>
+                  $100
+                </strong>
+
+                <span class="price-dash">
+                  —
+                </span>
+
+                <strong>
+                  $499
+                </strong>
+
+              </div>
+
+            </div>
+
+
+            <button
+              class="tier-benefits-button"
+              type="button"
+              aria-expanded="false"
+            >
+              TIER BENEFITS
+            </button>
+
+
+            <div class="tier-empty">
+              Team Nox currently has no Bronze sponsors
+            </div>
+
+          </div>
+
+
+          <div class="tier-benefits">
+
+            <div class="tier-benefits-inner">
+
+              <p>
+                Our Bronze Tier is an accessible way to support Team
+                Nox while receiving recognition for your contribution
+                to student robotics and STEM education.
+              </p>
+
+              <ul>
+                <li>Recognition on the Team Nox website</li>
+                <li>Recognition through a social media post</li>
+                <li>Recognition as a Bronze Team Nox sponsor</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </article>
+
 
       </div>
 
@@ -1168,464 +770,121 @@
 
 
 
-    <!-- =================================================
-         DIAMOND
-    ================================================== -->
+    <!-- ===================================================
+         BECOME A SPONSOR
+         TRUE FULL SCREEN
+    ==================================================== -->
 
     <section
-      class="sponsor-tier-section tier-section-diamond"
-      data-tier="DIAMOND"
-      data-range="$10,000+"
+      class="become-sponsor-section"
+      id="become-sponsor"
     >
 
-      <div class="tier-section-heading">
+      <div class="technical-grid"></div>
 
-        <div class="tier-title-group">
 
-          <h2>
-            DIAMOND
-          </h2>
+      <img
+        src="../image/Nox Transparent Logo.png"
+        alt=""
+        class="become-watermark"
+      >
 
-          <p>
-            $10,000+
-          </p>
+
+      <div class="become-content">
+
+        <span class="become-eyebrow">
+          WANT TO MAKE A DIFFERENCE?
+        </span>
+
+
+        <h2>
+          BECOME A SPONSOR
+        </h2>
+
+
+        <div class="become-divider"></div>
+
+
+        <p>
+          Your support empowers students to design, build, and compete
+          at the highest level of robotics. Together, we're building
+          more than robots; we're developing skills, confidence, and
+          a future of limitless possibilities. Support Team Nox and help
+          expand STEM programs in our community.
+        </p>
+
+
+        <div class="become-actions">
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=noxnycfirst@gmail.com&su=Team%20Nox%20Sponsorship%20Inquiry"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="primary-button"
+          >
+            CONTACT US
+          </a>
+
+
+          <a
+            href="https://hcb.hackclub.com/donations/start/nox"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="secondary-button"
+          >
+            DONATE
+          </a>
 
         </div>
 
-        <div class="tier-heading-line"></div>
 
-      </div>
+        <div class="sponsor-stats">
 
+          <div class="stat">
 
-      <div class="tier-sponsor-grid">
+            <strong>
+              2
+            </strong>
 
-        <button
-          class="sponsor-company-card"
-          data-name="DIAMOND SPONSOR 1"
-          data-contribution="$10,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/diamond-1.png"
-        >
+            <span>
+              TEAMS
+            </span>
 
-          <img
-            src="../image/sponsors/diamond-1.png"
-            alt="DIAMOND SPONSOR 1"
-            class="sponsor-full-logo"
-          >
-
-        </button>
+          </div>
 
 
-        <button
-          class="sponsor-company-card"
-          data-name="DIAMOND SPONSOR 2"
-          data-contribution="$10,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/diamond-2.png"
-        >
-
-          <img
-            src="../image/sponsors/diamond-2.png"
-            alt="DIAMOND SPONSOR 2"
-            class="sponsor-full-logo"
-          >
-
-        </button>
+          <div class="stat-divider"></div>
 
 
-        <button
-          class="sponsor-company-card"
-          data-name="DIAMOND SPONSOR 3"
-          data-contribution="$10,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/diamond-3.png"
-        >
+          <div class="stat">
 
-          <img
-            src="../image/sponsors/diamond-3.png"
-            alt="DIAMOND SPONSOR 3"
-            class="sponsor-full-logo"
-          >
+            <strong>
+              40+
+            </strong>
 
-        </button>
+            <span>
+              STUDENTS
+            </span>
+
+          </div>
 
 
-        <div class="sponsor-detail-panel"></div>
-
-      </div>
-
-    </section>
+          <div class="stat-divider"></div>
 
 
+          <div class="stat">
 
-    <!-- =================================================
-         PLATINUM
-    ================================================== -->
+            <strong>
+              1
+            </strong>
 
-    <section
-      class="sponsor-tier-section tier-section-platinum"
-      data-tier="PLATINUM"
-      data-range="$5,000+"
-    >
+            <span>
+              SHARED MISSION
+            </span>
 
-      <div class="tier-section-heading">
-
-        <div class="tier-title-group">
-
-          <h2>
-            PLATINUM
-          </h2>
-
-          <p>
-            $5,000+
-          </p>
+          </div>
 
         </div>
-
-        <div class="tier-heading-line"></div>
-
-      </div>
-
-
-      <div class="tier-sponsor-grid">
-
-        <button
-          class="sponsor-company-card"
-          data-name="PLATINUM SPONSOR 1"
-          data-contribution="$5,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/platinum-1.png"
-        >
-
-          <img
-            src="../image/sponsors/platinum-1.png"
-            alt="PLATINUM SPONSOR 1"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <button
-          class="sponsor-company-card"
-          data-name="PLATINUM SPONSOR 2"
-          data-contribution="$5,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/platinum-2.png"
-        >
-
-          <img
-            src="../image/sponsors/platinum-2.png"
-            alt="PLATINUM SPONSOR 2"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <button
-          class="sponsor-company-card"
-          data-name="PLATINUM SPONSOR 3"
-          data-contribution="$5,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/platinum-3.png"
-        >
-
-          <img
-            src="../image/sponsors/platinum-3.png"
-            alt="PLATINUM SPONSOR 3"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <div class="sponsor-detail-panel"></div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         GOLD
-    ================================================== -->
-
-    <section
-      class="sponsor-tier-section tier-section-gold"
-      data-tier="GOLD"
-      data-range="$1,000+"
-    >
-
-      <div class="tier-section-heading">
-
-        <div class="tier-title-group">
-
-          <h2>
-            GOLD
-          </h2>
-
-          <p>
-            $1,000+
-          </p>
-
-        </div>
-
-        <div class="tier-heading-line"></div>
-
-      </div>
-
-
-      <div class="tier-sponsor-grid">
-
-        <button
-          class="sponsor-company-card"
-          data-name="GOLD SPONSOR 1"
-          data-contribution="$1,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/gold-1.png"
-        >
-
-          <img
-            src="../image/sponsors/gold-1.png"
-            alt="GOLD SPONSOR 1"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <button
-          class="sponsor-company-card"
-          data-name="GOLD SPONSOR 2"
-          data-contribution="$1,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/gold-2.png"
-        >
-
-          <img
-            src="../image/sponsors/gold-2.png"
-            alt="GOLD SPONSOR 2"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <button
-          class="sponsor-company-card"
-          data-name="GOLD SPONSOR 3"
-          data-contribution="$1,000+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/gold-3.png"
-        >
-
-          <img
-            src="../image/sponsors/gold-3.png"
-            alt="GOLD SPONSOR 3"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <div class="sponsor-detail-panel"></div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         SILVER
-    ================================================== -->
-
-    <section
-      class="sponsor-tier-section tier-section-silver"
-      data-tier="SILVER"
-      data-range="$500+"
-    >
-
-      <div class="tier-section-heading">
-
-        <div class="tier-title-group">
-
-          <h2>
-            SILVER
-          </h2>
-
-          <p>
-            $500+
-          </p>
-
-        </div>
-
-        <div class="tier-heading-line"></div>
-
-      </div>
-
-
-      <div class="tier-sponsor-grid">
-
-        <button
-          class="sponsor-company-card"
-          data-name="SILVER SPONSOR 1"
-          data-contribution="$500+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/silver-1.png"
-        >
-
-          <img
-            src="../image/sponsors/silver-1.png"
-            alt="SILVER SPONSOR 1"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <button
-          class="sponsor-company-card"
-          data-name="SILVER SPONSOR 2"
-          data-contribution="$500+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/silver-2.png"
-        >
-
-          <img
-            src="../image/sponsors/silver-2.png"
-            alt="SILVER SPONSOR 2"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <button
-          class="sponsor-company-card"
-          data-name="SILVER SPONSOR 3"
-          data-contribution="$500+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/silver-3.png"
-        >
-
-          <img
-            src="../image/sponsors/silver-3.png"
-            alt="SILVER SPONSOR 3"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <div class="sponsor-detail-panel"></div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         BRONZE
-    ================================================== -->
-
-    <section
-      class="sponsor-tier-section tier-section-bronze"
-      data-tier="BRONZE"
-      data-range="$100+"
-    >
-
-      <div class="tier-section-heading">
-
-        <div class="tier-title-group">
-
-          <h2>
-            BRONZE
-          </h2>
-
-          <p>
-            $100+
-          </p>
-
-        </div>
-
-        <div class="tier-heading-line"></div>
-
-      </div>
-
-
-      <div class="tier-sponsor-grid">
-
-        <button
-          class="sponsor-company-card"
-          data-name="BRONZE SPONSOR 1"
-          data-contribution="$100+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/bronze-1.png"
-        >
-
-          <img
-            src="../image/sponsors/bronze-1.png"
-            alt="BRONZE SPONSOR 1"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <button
-          class="sponsor-company-card"
-          data-name="BRONZE SPONSOR 2"
-          data-contribution="$100+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/bronze-2.png"
-        >
-
-          <img
-            src="../image/sponsors/bronze-2.png"
-            alt="BRONZE SPONSOR 2"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <button
-          class="sponsor-company-card"
-          data-name="BRONZE SPONSOR 3"
-          data-contribution="$100+"
-          data-description="Add a description about this sponsor here."
-          data-website="https://example.com"
-          data-logo="../image/sponsors/bronze-3.png"
-        >
-
-          <img
-            src="../image/sponsors/bronze-3.png"
-            alt="BRONZE SPONSOR 3"
-            class="sponsor-full-logo"
-          >
-
-        </button>
-
-
-        <div class="sponsor-detail-panel"></div>
 
       </div>
 
@@ -1637,245 +896,204 @@
 
 
   <!-- =====================================================
-       EXISTING WEBSITE JS
+       FOOTER
   ====================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-main">
+
+
+      <div class="footer-support">
+
+        <div class="footer-qr">
+
+          <img
+            src="../image/SupportQR.png"
+            alt="Support Team Nox QR Code"
+          >
+
+        </div>
+
+        <span>
+          SUPPORT US
+        </span>
+
+      </div>
+
+
+
+      <div class="footer-socials">
+
+        <a
+          href="https://www.youtube.com/@Nox11702"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <img src="../image/Youtube.png" alt="YouTube">
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/company/team-nox/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <img src="../image/Linkedin.png" alt="LinkedIn">
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/nox11702"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <img src="../image/Instagram.png" alt="Instagram">
+        </a>
+
+
+        <a
+          href="https://www.tiktok.com/@teamnox11702"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <img src="../image/TikTok.png" alt="TikTok">
+        </a>
+
+
+        <a
+          href="https://www.thebluealliance.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="The Blue Alliance"
+        >
+          <img src="../image/TBA.png" alt="The Blue Alliance">
+        </a>
+
+
+        <a
+          href="https://github.com/Nox11702"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <img src="../image/Github.png" alt="GitHub">
+        </a>
+
+      </div>
+
+
+
+      <div class="footer-contact">
+
+        <div class="footer-contact-line"></div>
+
+
+        <div class="footer-contact-content">
+
+          <h3>
+            CONTACT US
+          </h3>
+
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=noxnycfirst@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <span class="footer-mail-icon">
+              ✉
+            </span>
+
+            <span>
+              noxnycfirst@gmail.com
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-copyright">
+      © 2026-2027 Team Nox
+    </div>
+
+  </footer>
+
+
+
+  <!-- GLOBAL SCRIPT -->
 
   <script src="../script.js"></script>
 
 
 
   <!-- =====================================================
-       SPONSOR INTERACTION
+       TIER ACCORDION
   ====================================================== -->
 
   <script>
 
-    const sponsorCards =
-      document.querySelectorAll(
-        ".sponsor-company-card"
-      );
+    const tierButtons =
+      document.querySelectorAll(".tier-benefits-button");
 
 
-    sponsorCards.forEach((card) => {
+    tierButtons.forEach((button) => {
 
-      card.addEventListener(
-        "click",
-        () => {
+      button.addEventListener("click", () => {
 
-          openSponsorDetails(card);
+        const card =
+          button.closest(".tier-card");
+
+        const wasOpen =
+          card.classList.contains("is-open");
+
+
+        document
+          .querySelectorAll(".tier-card")
+          .forEach((tier) => {
+
+            tier.classList.remove("is-open");
+
+            const tierButton =
+              tier.querySelector(".tier-benefits-button");
+
+            if (tierButton) {
+
+              tierButton.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+            }
+
+          });
+
+
+        if (!wasOpen) {
+
+          card.classList.add("is-open");
+
+          button.setAttribute(
+            "aria-expanded",
+            "true"
+          );
 
         }
-      );
 
-
-      /*
-        Desktop hover.
-
-        Remove these two lines if you eventually
-        decide you only want click interaction.
-      */
-
-      card.addEventListener(
-        "mouseenter",
-        () => {
-
-          if (
-            window.innerWidth > 900
-          ) {
-
-            openSponsorDetails(card);
-
-          }
-
-        }
-      );
+      });
 
     });
-
-
-
-    function openSponsorDetails(card) {
-
-      const section =
-        card.closest(
-          ".sponsor-tier-section"
-        );
-
-
-      const grid =
-        card.closest(
-          ".tier-sponsor-grid"
-        );
-
-
-      const detailPanel =
-        grid.querySelector(
-          ".sponsor-detail-panel"
-        );
-
-
-      const tier =
-        section.dataset.tier;
-
-
-      const name =
-        card.dataset.name;
-
-
-      const contribution =
-        card.dataset.contribution;
-
-
-      const description =
-        card.dataset.description;
-
-
-      const website =
-        card.dataset.website;
-
-
-      const logo =
-        card.dataset.logo;
-
-
-
-      /*
-        Remove active card from this tier
-      */
-
-      grid
-        .querySelectorAll(
-          ".sponsor-company-card"
-        )
-        .forEach(
-          (item) => {
-
-            item.classList.remove(
-              "active"
-            );
-
-          }
-        );
-
-
-      card.classList.add(
-        "active"
-      );
-
-
-
-      /*
-        Create panel
-      */
-
-      detailPanel.innerHTML = `
-
-        <div class="sponsor-detail-content">
-
-
-          <div class="detail-logo">
-
-            <img
-              src="${logo}"
-              alt="${name}"
-            >
-
-          </div>
-
-
-
-          <div class="detail-company">
-
-
-            <span class="detail-company-label">
-
-              ${tier} SPONSOR
-
-            </span>
-
-
-            <h3>
-
-              ${name}
-
-            </h3>
-
-
-            <p>
-
-              ${description}
-
-            </p>
-
-
-            <a
-              href="${website}"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="detail-learn-more"
-            >
-
-              <span>
-                LEARN MORE
-              </span>
-
-              <span>
-                ↗
-              </span>
-
-            </a>
-
-
-          </div>
-
-
-
-          <div class="detail-stats">
-
-
-            <div class="detail-stat">
-
-              <span>
-                CONTRIBUTION
-              </span>
-
-              <strong>
-
-                ${contribution}
-
-              </strong>
-
-            </div>
-
-
-            <div class="detail-stat">
-
-              <span>
-                SPONSOR TIER
-              </span>
-
-              <strong>
-
-                ${tier}
-
-              </strong>
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-      `;
-
-
-      detailPanel.classList.add(
-        "open"
-      );
-
-    }
 
   </script>
 

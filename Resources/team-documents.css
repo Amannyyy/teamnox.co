@@ -1,0 +1,1399 @@
+/* =========================================================
+   TEAM NOX
+   TEAM DOCUMENTS
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #050505;
+
+  color: #f5f5f5;
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+}
+
+.documents-page {
+  overflow: hidden;
+
+  background: #050505;
+}
+
+
+/* =========================================================
+   TECHNICAL GRID
+========================================================= */
+
+.technical-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    75px
+    75px;
+
+  opacity: 0.42;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SHARED EYEBROW
+========================================================= */
+
+.section-eyebrow {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #686868;
+
+  font-size: 9px;
+
+  font-weight: 400;
+
+  letter-spacing: 5px;
+}
+
+
+/* =========================================================
+   SHARED DIVIDER
+========================================================= */
+
+.section-divider {
+  width: 150px;
+
+  height: 1px;
+
+  margin:
+    28px
+    0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.58),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   SHARED BUTTONS
+========================================================= */
+
+.document-button {
+  width: 176px;
+
+  height: 42px;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  flex: 0 0 176px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 2.3px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.document-button:hover {
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+========================================================= */
+
+.document-button-outline {
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.38);
+
+  background:
+    rgba(255, 255, 255, 0.005);
+
+  color: #e2e2e2;
+}
+
+.document-button-outline:hover {
+  border-color:
+    rgba(255, 255, 255, 0.78);
+
+  background:
+    rgba(255, 255, 255, 0.045);
+}
+
+
+/* =========================================================
+   SOLID BUTTON
+========================================================= */
+
+.document-button-solid {
+  border:
+    1px solid
+    #eeeeee;
+
+  background: #eeeeee;
+
+  color: #050505;
+}
+
+.document-button-solid:hover {
+  border-color: #ffffff;
+
+  background: #ffffff;
+
+  color: #000000;
+}
+
+
+/* =========================================================
+   SECTION 1
+   HANDBOOK
+========================================================= */
+
+.handbook-section {
+  width: 100%;
+
+  height:
+    calc(
+      100vh - 88px
+    );
+
+  min-height:
+    calc(
+      100vh - 88px
+    );
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border-bottom:
+    1px solid
+    #3b3b3b;
+
+  background:
+    radial-gradient(
+      circle at 53% 40%,
+      rgba(255, 255, 255, 0.055),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #101010 52%,
+      #070707 100%
+    );
+}
+
+
+/* =========================================================
+   HANDBOOK GRID OVERLAY
+========================================================= */
+
+.handbook-section .technical-grid {
+  z-index: 0;
+}
+
+
+/* =========================================================
+   HANDBOOK WATERMARK
+========================================================= */
+
+.handbook-watermark {
+  width:
+    min(
+      800px,
+      57vw
+    );
+
+  position: absolute;
+
+  right: -170px;
+
+  bottom: -190px;
+
+  z-index: 1;
+
+  opacity: 0.07;
+
+  filter:
+    grayscale(1)
+    brightness(0.82);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   HANDBOOK CONTENT
+========================================================= */
+
+.handbook-content {
+  width:
+    min(
+      1420px,
+      90%
+    );
+
+  position: relative;
+
+  z-index: 3;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    470px;
+
+  align-items: center;
+
+  gap: 95px;
+}
+
+
+/* =========================================================
+   HANDBOOK LEFT
+========================================================= */
+
+.handbook-copy {
+  width: 100%;
+
+  max-width: 700px;
+}
+
+
+/* =========================================================
+   HANDBOOK TITLE
+========================================================= */
+
+.handbook-copy h1 {
+  margin: 0;
+
+  color: #f3f3f3;
+
+  font-size:
+    clamp(
+      56px,
+      5.3vw,
+      82px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.04;
+
+  letter-spacing: 9px;
+}
+
+
+/* =========================================================
+   HANDBOOK DESCRIPTION
+========================================================= */
+
+.handbook-copy p {
+  width: 100%;
+
+  max-width: 670px;
+
+  margin: 0;
+
+  color: #b3b3b3;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HANDBOOK ACTIONS
+========================================================= */
+
+.handbook-actions {
+  margin-top: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   PDF PREVIEW
+========================================================= */
+
+.handbook-preview {
+  width: 470px;
+
+  position: relative;
+
+  justify-self: end;
+
+  margin-right: 15px;
+}
+
+
+/* =========================================================
+   PDF LABEL
+========================================================= */
+
+.pdf-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #747474;
+
+  font-size: 9px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   PDF IFRAME
+========================================================= */
+
+.handbook-preview iframe {
+  width: 100%;
+
+  height: 650px;
+
+  display: block;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.35);
+
+  background: #ffffff;
+
+  box-shadow:
+    0
+    28px
+    70px
+    rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   SCROLL
+   SAME STRUCTURE/STYLING AS MENTORS
+========================================================= */
+
+.documents-scroll {
+  width: max-content;
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 28px;
+
+  z-index: 10;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  color: #8e8e8e;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   SCROLL TEXT
+========================================================= */
+
+.documents-scroll-text {
+  display: block;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 3px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SCROLL ARROW
+========================================================= */
+
+.documents-scroll-arrow {
+  width: 44px;
+
+  height: 44px;
+
+  position: relative;
+
+  display: block;
+
+  margin: 0 auto;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.015);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* ARROW STEM */
+
+.documents-scroll-arrow::before {
+  content: "";
+
+  width: 1px;
+
+  height: 13px;
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 12px;
+
+  transform:
+    translateX(-50%);
+
+  background: #ffffff;
+}
+
+
+/* ARROW HEAD */
+
+.documents-scroll-arrow::after {
+  content: "";
+
+  width: 7px;
+
+  height: 7px;
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 20px;
+
+  border-right:
+    1px solid
+    #ffffff;
+
+  border-bottom:
+    1px solid
+    #ffffff;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+/* =========================================================
+   SCROLL HOVER
+========================================================= */
+
+.documents-scroll:hover
+.documents-scroll-arrow {
+  transform:
+    translateY(5px);
+
+  background: #f5f5f5;
+
+  border-color: #f5f5f5;
+}
+
+.documents-scroll:hover
+.documents-scroll-arrow::before {
+  background: #050505;
+}
+
+.documents-scroll:hover
+.documents-scroll-arrow::after {
+  border-color: #050505;
+}
+
+
+/* =========================================================
+   SECTION 2
+   TEAM FORMS
+========================================================= */
+
+.forms-section {
+  min-height: 100vh;
+
+  position: relative;
+
+  padding:
+    90px
+    4vw
+    110px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 255, 255, 0.05),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 8% 75%,
+      rgba(255, 255, 255, 0.026),
+      transparent 24%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #101010 50%,
+      #060606 100%
+    );
+}
+
+
+/* =========================================================
+   FORMS WATERMARK
+========================================================= */
+
+.forms-watermark {
+  width: 650px;
+
+  position: absolute;
+
+  left: -280px;
+
+  bottom: -190px;
+
+  z-index: 0;
+
+  opacity: 0.035;
+
+  filter:
+    grayscale(1);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   FORMS WRAPPER
+========================================================= */
+
+.forms-wrapper {
+  width:
+    min(
+      1420px,
+      100%
+    );
+
+  margin:
+    0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   FORMS HEADING
+========================================================= */
+
+.forms-heading {
+  width: 100%;
+
+  max-width: 770px;
+
+  margin-bottom: 48px;
+}
+
+
+/* =========================================================
+   FORMS TITLE
+========================================================= */
+
+.forms-heading h2 {
+  margin: 0;
+
+  color: #f3f3f3;
+
+  font-size:
+    clamp(
+      48px,
+      4.8vw,
+      70px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 9px;
+}
+
+
+/* =========================================================
+   FORMS DESCRIPTION
+========================================================= */
+
+.forms-heading p {
+  width: 100%;
+
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #a5a5a5;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FORMS GRID
+========================================================= */
+
+.forms-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.form-card {
+  min-height: 330px;
+
+  position: relative;
+
+  padding:
+    34px
+    36px
+    32px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.19);
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255, 255, 255, 0.024),
+      transparent 32%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(17, 17, 17, 0.96),
+      rgba(5, 5, 5, 0.99)
+    );
+
+  box-shadow:
+    0
+    22px
+    55px
+    rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =========================================================
+   CARD ACCENT
+========================================================= */
+
+.form-card::before {
+  content: "";
+
+  width: 155px;
+
+  height: 1px;
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.form-card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(255, 255, 255, 0.42);
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255, 255, 255, 0.04),
+      transparent 34%
+    ),
+    linear-gradient(
+      145deg,
+      #151515,
+      #070707
+    );
+}
+
+.form-card:hover::before {
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.form-card-content {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    minmax(0, 1fr);
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   DOCUMENT ICON
+========================================================= */
+
+.document-icon {
+  width: 70px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+}
+
+.document-icon svg {
+  width: 58px;
+
+  height: auto;
+
+  overflow: visible;
+
+  fill: none;
+
+  stroke:
+    rgba(255, 255, 255, 0.67);
+
+  stroke-width: 2;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   FORM INFO
+========================================================= */
+
+.form-info {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   FORM NUMBER
+========================================================= */
+
+.form-number {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: #4e4e4e;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   FORM TITLE
+========================================================= */
+
+.form-info h3 {
+  min-height: 34px;
+
+  margin:
+    0
+    0
+    14px;
+
+  color: #e8e8e8;
+
+  font-size:
+    clamp(
+      19px,
+      1.65vw,
+      25px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  letter-spacing: 3.5px;
+}
+
+
+/* =========================================================
+   REQUIRED TAG
+========================================================= */
+
+.required-tag {
+  height: 28px;
+
+  padding:
+    0
+    11px;
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.3);
+
+  color: #aaaaaa;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   FORM DESCRIPTION
+========================================================= */
+
+.form-info p {
+  max-width: 520px;
+
+  min-height: 62px;
+
+  margin: 0;
+
+  color: #8f8f8f;
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.form-actions {
+  margin-top: 30px;
+
+  padding-left: 104px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+
+  .handbook-content {
+    width:
+      min(
+        1500px,
+        90%
+      );
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      500px;
+
+    gap: 105px;
+  }
+
+
+  .handbook-preview {
+    width: 500px;
+
+    margin-right: 15px;
+  }
+
+
+  .handbook-preview iframe {
+    height: 690px;
+  }
+
+
+  .forms-wrapper {
+    width:
+      min(
+        1500px,
+        100%
+      );
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .handbook-section {
+    height: auto;
+
+    min-height: auto;
+
+    padding:
+      70px
+      28px
+      130px;
+  }
+
+
+  .handbook-content {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .handbook-copy {
+    max-width: 760px;
+  }
+
+
+  .handbook-preview {
+    width:
+      min(
+        620px,
+        100%
+      );
+
+    margin: 0;
+
+    justify-self: center;
+  }
+
+
+  .handbook-preview iframe {
+    height: 760px;
+  }
+
+
+  .documents-scroll {
+    bottom: 30px;
+  }
+
+
+  .forms-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .form-card {
+    min-height: 310px;
+  }
+
+
+  .form-info p {
+    max-width: 670px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .handbook-section {
+    padding:
+      55px
+      18px
+      125px;
+  }
+
+
+  .handbook-copy h1 {
+    font-size: 42px;
+
+    letter-spacing: 6px;
+  }
+
+
+  .handbook-copy p {
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+
+  .handbook-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .handbook-actions
+  .document-button {
+    width: 100%;
+
+    flex-basis: auto;
+  }
+
+
+  .handbook-preview {
+    width: 100%;
+  }
+
+
+  .handbook-preview iframe {
+    height: 600px;
+  }
+
+
+  .documents-scroll {
+    bottom: 28px;
+  }
+
+
+  .documents-scroll-text {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .forms-section {
+    padding:
+      65px
+      18px
+      80px;
+  }
+
+
+  .forms-heading {
+    margin-bottom: 38px;
+  }
+
+
+  .forms-heading h2 {
+    font-size: 37px;
+
+    letter-spacing: 6px;
+  }
+
+
+  .forms-heading p {
+    font-size: 12px;
+  }
+
+
+  .form-card {
+    min-height: 0;
+
+    padding:
+      28px
+      22px;
+  }
+
+
+  .form-card-content {
+    grid-template-columns:
+      62px
+      minmax(0, 1fr);
+
+    gap: 18px;
+  }
+
+
+  .document-icon {
+    width: 55px;
+  }
+
+
+  .document-icon svg {
+    width: 46px;
+  }
+
+
+  .form-info h3 {
+    min-height: 0;
+
+    font-size: 18px;
+
+    letter-spacing: 2.7px;
+  }
+
+
+  .form-info p {
+    min-height: 0;
+  }
+
+
+  .form-actions {
+    padding-left: 80px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .form-actions
+  .document-button {
+    width: 100%;
+
+    flex-basis: auto;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .section-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .handbook-copy h1 {
+    font-size: 34px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .handbook-preview iframe {
+    height: 450px;
+  }
+
+
+  .documents-scroll-text {
+    font-size: 8px;
+  }
+
+
+  .documents-scroll-arrow {
+    width: 42px;
+
+    height: 42px;
+  }
+
+
+  .forms-heading h2 {
+    font-size: 30px;
+
+    letter-spacing: 4px;
+  }
+
+
+  .form-card-content {
+    grid-template-columns: 1fr;
+  }
+
+
+  .document-icon {
+    width: 48px;
+
+    justify-content: flex-start;
+  }
+
+
+  .document-icon svg {
+    width: 42px;
+  }
+
+
+  .form-actions {
+    padding-left: 0;
+  }
+
+}

@@ -9,23 +9,29 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Sponsor Packet | Team Nox</title>
+  <title>Highlights | Team Nox</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   >
 
-  <!-- GLOBAL WEBSITE CSS -->
   <link
     rel="stylesheet"
     href="../style.css"
   >
 
-  <!-- PAGE CSS -->
   <link
     rel="stylesheet"
-    href="sponsor-packet.css"
+    href="./highlights.css"
   >
 </head>
 
@@ -37,7 +43,7 @@
        NAVBAR
   ====================================================== -->
 
-  <nav class="navbar">
+  <header class="navbar">
 
     <a
       href="../index.html"
@@ -46,7 +52,7 @@
 
       <img
         src="../image/Nox Transparent Logo.png"
-        alt="Team Nox"
+        alt="Team Nox Logo"
         class="nav-logo"
       >
 
@@ -57,18 +63,19 @@
     </a>
 
 
-    <div class="nav-links">
+    <nav class="nav-links">
 
       <a href="../index.html">
         Home
       </a>
 
 
-      <!-- ABOUT US -->
-
       <div class="nav-dropdown">
 
-        <button class="dropdown-button">
+        <button
+          class="dropdown-button"
+          type="button"
+        >
           About Us
           <span class="arrow">▼</span>
         </button>
@@ -101,40 +108,42 @@
       </div>
 
 
-      <!-- RESOURCES -->
-
       <div class="nav-dropdown">
 
-  <button class="dropdown-button">
-    Resources
-    <span class="arrow">▼</span>
-  </button>
-
-  <div class="dropdown-menu">
-
-    <a href="../Resources/calendar.html">
-      Calendar
-    </a>
-
-    <a href="sponsor-packet.html">
-      Sponsor Packet
-    </a>
-
-    <a href="../Resources/team-documents.html">
-  Team Documents
-</a>
-
-  </div>
-
-</div>
+        <button
+          class="dropdown-button"
+          type="button"
+        >
+          Resources
+          <span class="arrow">▼</span>
+        </button>
 
 
-      <a href="../Highlights/highlights.html">
+        <div class="dropdown-menu">
+
+          <a href="../Resources/calendar.html">
+            Calendar
+          </a>
+
+          <a href="../Resources/sponsor-packet.html">
+            Sponsor Packet
+          </a>
+
+          <a href="../Resources/team-documents.html">
+            Team Documents
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a href="./highlights.html">
   Highlights
 </a>
 
 
-      <a href="sponsor.html">
+      <a href="../Sponsor/sponsor.html">
         Sponsors
       </a>
 
@@ -152,46 +161,46 @@
         Donate
       </a>
 
-    </div>
+    </nav>
 
 
     <div class="nav-spacer"></div>
 
-  </nav>
+  </header>
 
 
 
   <!-- =====================================================
-       SPONSOR PACKET PLACEHOLDER
+       HIGHLIGHTS
   ====================================================== -->
 
-  <main class="packet-page">
+  <main class="highlights-page">
 
 
-    <div class="packet-grid"></div>
+    <div class="highlights-grid"></div>
 
 
     <img
       src="../image/Nox Transparent Logo.png"
       alt=""
-      class="packet-watermark"
+      class="highlights-watermark"
     >
 
 
-    <section class="packet-content">
+    <section class="highlights-content">
 
 
-      <span class="packet-eyebrow">
-        TEAM NOX SPONSORSHIP
+      <span class="highlights-eyebrow">
+        TEAM NOX SEASON
       </span>
 
 
       <h1>
-        SPONSOR PACKET
+        HIGHLIGHTS
       </h1>
 
 
-      <div class="packet-divider">
+      <div class="highlights-divider">
 
         <span></span>
 
@@ -205,43 +214,25 @@
       </div>
 
 
-      <span class="packet-status">
+      <span class="highlights-status">
         COMING SOON
       </span>
 
 
       <p>
-        Our sponsorship packet is currently being finalized.
-        Please check back soon, or contact us directly to discuss
-        sponsorship opportunities with Team Nox.
+        Our highlights are coming soon. Check back throughout
+        the season for competition moments, team milestones,
+        outreach, and behind-the-scenes progress from Team Nox.
       </p>
 
 
-      <!-- =================================================
-           GMAIL CONTACT BUTTON
-      ================================================== -->
-
       <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=noxnycfirst@gmail.com&su=Team%20Nox%20Sponsorship%20Inquiry"
+        href="https://www.instagram.com/nox11702"
         target="_blank"
         rel="noopener noreferrer"
-        class="packet-contact"
+        class="highlights-button"
       >
-        CONTACT US
-      </a>
-
-
-      <!-- =================================================
-           GMAIL EMAIL LINK
-      ================================================== -->
-
-      <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=noxnycfirst@gmail.com&su=Team%20Nox%20Sponsorship%20Inquiry"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="packet-email"
-      >
-        noxnycfirst@gmail.com
+        FOLLOW OUR SEASON
       </a>
 
 
@@ -262,10 +253,7 @@
     <div class="footer-main">
 
 
-      <!-- SUPPORT -->
-
       <div class="footer-support">
-
 
         <div class="footer-qr">
 
@@ -276,20 +264,15 @@
 
         </div>
 
-
         <span>
           SUPPORT US
         </span>
-
 
       </div>
 
 
 
-      <!-- SOCIALS -->
-
       <div class="footer-socials">
-
 
         <a
           href="https://www.youtube.com/@Nox11702"
@@ -297,12 +280,10 @@
           rel="noopener noreferrer"
           aria-label="YouTube"
         >
-
           <img
             src="../image/Youtube.png"
             alt="YouTube"
           >
-
         </a>
 
 
@@ -312,12 +293,10 @@
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
-
           <img
             src="../image/Linkedin.png"
             alt="LinkedIn"
           >
-
         </a>
 
 
@@ -327,12 +306,10 @@
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
-
           <img
             src="../image/Instagram.png"
             alt="Instagram"
           >
-
         </a>
 
 
@@ -342,12 +319,10 @@
           rel="noopener noreferrer"
           aria-label="TikTok"
         >
-
           <img
             src="../image/TikTok.png"
             alt="TikTok"
           >
-
         </a>
 
 
@@ -357,12 +332,10 @@
           rel="noopener noreferrer"
           aria-label="The Blue Alliance"
         >
-
           <img
             src="../image/TBA.png"
             alt="The Blue Alliance"
           >
-
         </a>
 
 
@@ -372,23 +345,17 @@
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
-
           <img
             src="../image/Github.png"
             alt="GitHub"
           >
-
         </a>
-
 
       </div>
 
 
 
-      <!-- CONTACT -->
-
       <div class="footer-contact">
-
 
         <div class="footer-contact-line"></div>
 
@@ -418,12 +385,10 @@
 
         </div>
 
-
       </div>
 
 
     </div>
-
 
 
     <div class="footer-copyright">
@@ -433,9 +398,6 @@
 
   </footer>
 
-
-
-  <!-- GLOBAL WEBSITE JS -->
 
   <script src="../script.js"></script>
 

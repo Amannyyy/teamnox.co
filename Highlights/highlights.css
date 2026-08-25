@@ -1,0 +1,496 @@
+/* =========================================================
+   TEAM NOX
+   HIGHLIGHTS
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #050505;
+
+  color: #f5f5f5;
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.highlights-page {
+  min-height:
+    calc(
+      100vh - 88px
+    );
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    80px
+    30px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border-bottom:
+    1px solid
+    #3b3b3b;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 255, 255, 0.065),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 255, 255, 0.025),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #101010 52%,
+      #070707 100%
+    );
+}
+
+
+/* =========================================================
+   TECHNICAL GRID
+========================================================= */
+
+.highlights-grid {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    75px
+    75px;
+
+  opacity: 0.45;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   WATERMARK
+========================================================= */
+
+.highlights-watermark {
+  width:
+    min(
+      800px,
+      57vw
+    );
+
+  position: absolute;
+
+  right: -180px;
+
+  bottom: -210px;
+
+  z-index: 1;
+
+  opacity: 0.09;
+
+  filter:
+    grayscale(1)
+    brightness(0.82);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.highlights-content {
+  width:
+    min(
+      900px,
+      92%
+    );
+
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.highlights-eyebrow {
+  display: block;
+
+  margin-bottom: 26px;
+
+  color: #7b7b7b;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.highlights-content h1 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-size:
+    clamp(
+      58px,
+      7vw,
+      100px
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 12px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.highlights-divider {
+  width:
+    min(
+      600px,
+      75%
+    );
+
+  margin:
+    40px
+    auto
+    30px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    22px
+    1fr;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+.highlights-divider span {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.42)
+    );
+}
+
+
+.highlights-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.42),
+      transparent
+    );
+}
+
+
+.highlights-divider img {
+  width: 22px;
+
+  height: 22px;
+
+  object-fit: contain;
+
+  opacity: 0.8;
+
+  filter:
+    grayscale(1);
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.highlights-status {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #8b8b8b;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.highlights-content p {
+  width:
+    min(
+      700px,
+      92%
+    );
+
+  margin:
+    0
+    auto;
+
+  color: #9d9d9d;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.highlights-button {
+  min-width: 205px;
+
+  height: 44px;
+
+  margin-top: 34px;
+
+  padding:
+    0
+    24px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.4);
+
+  background:
+    rgba(255, 255, 255, 0.01);
+
+  color: #eeeeee;
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 2.8px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.highlights-button:hover {
+  transform:
+    translateY(-3px);
+
+  background: #f5f5f5;
+
+  color: #050505;
+
+  border-color: #f5f5f5;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .highlights-page {
+    min-height:
+      calc(
+        100svh - 90px
+      );
+
+    padding:
+      60px
+      20px;
+  }
+
+
+  .highlights-eyebrow {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+  }
+
+
+  .highlights-content h1 {
+    font-size: 48px;
+
+    letter-spacing: 7px;
+  }
+
+
+  .highlights-divider {
+    width: 85%;
+
+    margin:
+      32px
+      auto
+      26px;
+  }
+
+
+  .highlights-content p {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+
+  .highlights-watermark {
+    width: 560px;
+
+    right: -340px;
+
+    bottom: -110px;
+
+    opacity: 0.07;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .highlights-content h1 {
+    font-size: 38px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .highlights-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .highlights-status {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .highlights-content p {
+    font-size: 11px;
+  }
+
+
+  .highlights-button {
+    width: 100%;
+
+    max-width: 260px;
+
+    font-size: 8px;
+  }
+
+}
