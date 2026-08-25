@@ -1,754 +1,425 @@
 /* =========================================================
+   TEAM NOX
    DIVISIONS PAGE
-   Uses existing Team NOX Montserrat + navbar/footer
+   IMAGE-FREE CONTENT DESIGN
 ========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background: #050505;
+
+  color: #f5f5f5;
+
+  font-family: "Montserrat", sans-serif;
+}
 
 
 .divisions-page {
   width: 100%;
+
+  overflow: hidden;
 
   background: #050505;
 }
 
 
 /* =========================================================
-   SPLIT LANDING SCREEN
+   SHARED GRID
 ========================================================= */
 
-.division-split {
-  width: 100%;
-
-  min-height: calc(100svh - 88px);
-
-  display: flex;
-
-  position: relative;
-
-  overflow: hidden;
-
-  border-bottom: 1px solid #363636;
-}
-
-
-/* =========================================================
-   BOTH PANELS
-========================================================= */
-
-.division-panel {
-  flex: 1;
-
-  min-width: 0;
-
-  position: relative;
-
-  overflow: hidden;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-
-  transition:
-    flex 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-    background 0.6s ease;
-
-  isolation: isolate;
-}
-
-
-/* thin center divider */
-
-.division-panel:first-child {
-  border-right: 1px solid rgba(255,255,255,0.16);
-}
-
-
-/* =========================================================
-   TECHNICAL BACKGROUND
-========================================================= */
-
-.technical-panel {
-  color: #f5f5f5;
-
-  background:
-    radial-gradient(
-      circle at 85% 45%,
-      rgba(255,255,255,0.045),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #050505,
-      #101010 55%,
-      #090909
-    );
-}
-
-
-/* technical grid */
-
-.technical-panel::before {
-  content: "";
-
+.page-grid {
   position: absolute;
 
   inset: 0;
 
+  z-index: 0;
+
   background-image:
     linear-gradient(
-      rgba(255,255,255,0.014) 1px,
+      rgba(255, 255, 255, 0.012) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255,255,255,0.014) 1px,
+      rgba(255, 255, 255, 0.012) 1px,
       transparent 1px
     );
 
-  background-size: 80px 80px;
+  background-size:
+    75px
+    75px;
 
-  opacity: 0.65;
+  opacity: 0.55;
 
   pointer-events: none;
-
-  z-index: -1;
 }
 
 
 /* =========================================================
-   OPERATIONS BACKGROUND
+   HERO
 ========================================================= */
 
-.operations-panel {
-  color: #efefef;
+.divisions-hero {
+  width: 100%;
+
+  height:
+    calc(
+      100vh - 88px
+    );
+
+  min-height: 650px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border-bottom:
+    1px solid
+    #343434;
 
   background:
     radial-gradient(
-      circle at 25% 45%,
-      rgba(255,255,255,0.055),
-      transparent 30%
+      circle at 28% 42%,
+      rgba(255, 255, 255, 0.055),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 88% 35%,
+      rgba(255, 255, 255, 0.035),
+      transparent 32%
     ),
     linear-gradient(
       135deg,
-      #151515,
-      #0e0e0e 58%,
-      #080808
+      #050505,
+      #101010 52%,
+      #060606
     );
 }
 
 
-/* subtle technical lines */
+/* =========================================================
+   HERO DECORATION
+========================================================= */
 
-.operations-panel::before {
-  content: "";
-
+.hero-decoration {
   position: absolute;
 
-  inset: 0;
-
-  background-image:
-    linear-gradient(
-      35deg,
-      transparent 48%,
-      rgba(255,255,255,0.018) 49%,
-      rgba(255,255,255,0.018) 50%,
-      transparent 51%
-    );
-
-  background-size: 160px 160px;
-
-  pointer-events: none;
-
-  z-index: -1;
-}
-
-
-/* =========================================================
-   HOVER WIDTH INTERACTION
-========================================================= */
-
-/*
-   When Technical is hovered:
-   Technical = 82%
-   Operations = 18%
-*/
-
-.division-split:has(.technical-panel:hover)
-.technical-panel {
-  flex: 5;
-}
-
-.division-split:has(.technical-panel:hover)
-.operations-panel {
-  flex: 1;
-}
-
-
-/*
-   Operations hovered
-*/
-
-.division-split:has(.operations-panel:hover)
-.operations-panel {
-  flex: 5;
-}
-
-.division-split:has(.operations-panel:hover)
-.technical-panel {
-  flex: 1;
-}
-
-
-/* keyboard support */
-
-.division-split:has(.technical-panel:focus)
-.technical-panel {
-  flex: 5;
-}
-
-.division-split:has(.technical-panel:focus)
-.operations-panel {
-  flex: 1;
-}
-
-.division-split:has(.operations-panel:focus)
-.operations-panel {
-  flex: 5;
-}
-
-.division-split:has(.operations-panel:focus)
-.technical-panel {
-  flex: 1;
-}
-
-
-/* =========================================================
-   DEFAULT / IDLE PANEL
-========================================================= */
-
-.division-idle {
-  position: absolute;
-
-  inset: 0;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
-
-  padding: 50px;
-
-  text-align: center;
-
-  transition:
-    opacity 0.4s ease,
-    transform 0.6s ease;
-}
-
-
-.division-small-label {
-  color: #666;
-
-  font-size: 10px;
-
-  font-weight: 500;
-
-  letter-spacing: 5px;
-
-  margin-bottom: 18px;
-}
-
-
-.division-idle h1 {
-  font-family: "Montserrat", sans-serif;
-
-  font-size: clamp(38px, 4.2vw, 68px);
-
-  font-weight: 500;
-
-  letter-spacing: 10px;
-
-  line-height: 1;
-
-  white-space: nowrap;
-}
-
-
-.division-divider {
-  width: 300px;
-
-  max-width: 75%;
-
-  margin: 35px auto 25px;
-
-  display: grid;
-
-  grid-template-columns: 1fr 22px 1fr;
-
-  align-items: center;
-
-  gap: 18px;
-}
-
-
-.division-divider span {
-  height: 1px;
-
-  background: rgba(255,255,255,0.32);
-}
-
-
-.division-divider img {
-  width: 22px;
-
-  opacity: 0.7;
-}
-
-
-.division-idle p {
-  color: #999;
-
-  font-size: 12px;
-
-  font-weight: 400;
-
-  letter-spacing: 4px;
-}
-
-
-/* operations divider uses same monochrome style */
-
-.operations-panel
-.division-divider span {
-  background: rgba(255,255,255,0.24);
-}
-
-
-/* =========================================================
-   EXPANDED PANEL
-========================================================= */
-
-.division-expanded {
-  width: min(1180px, 90%);
-
-  display: grid;
-
-  grid-template-columns: 0.9fr 1.1fr;
-
-  gap: clamp(45px, 6vw, 100px);
-
-  align-items: center;
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  transform: translateY(20px);
-
-  transition:
-    opacity 0.45s ease 0.15s,
-    transform 0.55s ease 0.15s,
-    visibility 0.45s ease;
-}
-
-
-/*
-   Operations is image then text.
-*/
-
-.operations-expanded {
-  grid-template-columns: 1.1fr 0.9fr;
-}
-
-
-/* =========================================================
-   IDLE -> EXPANDED SWITCH
-========================================================= */
-
-.division-panel:hover
-.division-idle,
-.division-panel:focus
-.division-idle {
-  opacity: 0;
-
-  transform: translateY(-16px);
+  z-index: 1;
 
   pointer-events: none;
 }
 
 
-.division-panel:hover
-.division-expanded,
-.division-panel:focus
-.division-expanded {
-  opacity: 1;
+.hero-decoration-one {
+  width: 520px;
 
-  visibility: visible;
+  height: 520px;
 
-  transform: translateY(0);
+  right: -145px;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
 }
 
 
-/*
-   Prevent collapsed panel text from looking crowded.
-*/
+.hero-decoration-two {
+  width: 350px;
 
-.division-split:has(.technical-panel:hover)
-.operations-panel .division-idle h1,
-.division-split:has(.operations-panel:hover)
-.technical-panel .division-idle h1 {
-  opacity: 0;
-}
+  height: 350px;
 
+  right: 40px;
 
-.division-split:has(.technical-panel:hover)
-.operations-panel .division-idle p,
-.division-split:has(.operations-panel:hover)
-.technical-panel .division-idle p,
-.division-split:has(.technical-panel:hover)
-.operations-panel .division-divider,
-.division-split:has(.operations-panel:hover)
-.technical-panel .division-divider {
-  opacity: 0;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.045);
 }
 
 
 /* =========================================================
-   EXPANDED TYPOGRAPHY
+   HERO CONTENT
 ========================================================= */
 
-.division-copy {
+.hero-content {
+  width:
+    min(
+      1380px,
+      88%
+    );
+
+  margin:
+    0 auto;
+
   position: relative;
+
+  z-index: 3;
 }
 
 
-.expanded-number {
+.hero-eyebrow {
   display: block;
 
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
-  color: #666;
+  color: #777777;
 
   font-size: 10px;
 
-  font-weight: 500;
-
-  letter-spacing: 3px;
-}
-
-
-.division-copy h2 {
-  font-family: "Montserrat", sans-serif;
-
-  font-size: clamp(38px, 4.5vw, 68px);
-
-  font-weight: 500;
-
-  letter-spacing: 9px;
-
-  line-height: 1;
-}
-
-
-.expanded-divider {
-  width: 330px;
-
-  max-width: 100%;
-
-  display: grid;
-
-  grid-template-columns: 1fr 20px 1fr;
-
-  align-items: center;
-
-  gap: 16px;
-
-  margin: 28px 0;
-}
-
-
-.expanded-divider span {
-  height: 1px;
-
-  background: #4c4c4c;
-}
-
-
-.expanded-divider img {
-  width: 20px;
-
-  opacity: 0.7;
-}
-
-
-.expanded-description {
-  max-width: 600px;
-
-  color: #b5b5b5;
-
-  font-size: 13px;
-
   font-weight: 400;
 
-  line-height: 1.85;
-
-  letter-spacing: 1.1px;
+  letter-spacing: 5px;
 }
 
 
-/* =========================================================
-   LEARN MORE BUTTON
-========================================================= */
-
-.division-learn-button {
-  width: 260px;
-  height: 62px;
-
-  margin-top: 34px;
-
-  padding: 0 25px;
-
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-
-  font-family: "Montserrat", sans-serif;
+.hero-content h1 {
+  margin: 0;
 
   color: #f5f5f5;
 
-  background: rgba(255,255,255,0.015);
+  font-size:
+    clamp(
+      58px,
+      6vw,
+      92px
+    );
 
-  border: 1px solid #777;
+  font-weight: 400;
 
-  cursor: pointer;
+  line-height: 1.07;
 
-  font-size: 12px;
-
-  font-weight: 500;
-
-  letter-spacing: 3px;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+  letter-spacing: 10px;
 }
 
 
-.division-learn-button:hover {
-  color: #050505;
+.hero-divider {
+  width: 145px;
 
-  background: #f5f5f5;
+  height: 1px;
 
-  border-color: #f5f5f5;
+  margin:
+    30px
+    0
+    26px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.65),
+      transparent
+    );
 }
 
 
-.learn-arrow {
-  font-size: 22px;
+.hero-content p {
+  width:
+    min(
+      660px,
+      100%
+    );
 
-  transition: transform 0.3s ease;
-}
+  margin: 0;
 
+  color: #999999;
 
-.division-learn-button:hover
-.learn-arrow {
-  transform: translateX(6px);
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.8;
 }
 
 
 /* =========================================================
-   IMAGE / MEDIA
+   SCROLL
 ========================================================= */
 
-.division-media {
-  aspect-ratio: 1.15 / 1;
-
-  position: relative;
-
-  overflow: hidden;
-
-  border: 1px solid #484848;
-
-  border-radius: 22px;
-
-  background:
-    radial-gradient(
-      circle at 50% 40%,
-      #292929,
-      #161616 55%,
-      #0c0c0c
-    );
-
-  box-shadow:
-    0 25px 70px rgba(0,0,0,0.32);
-}
-
-
-/*
-   Dark cinematic texture
-*/
-
-.division-media::before {
-  content: "";
-
+.scroll-down {
   position: absolute;
 
-  inset: 0;
+  left: 50%;
 
-  background:
-    linear-gradient(
-      135deg,
-      transparent,
-      rgba(255,255,255,0.035),
-      transparent
-    );
+  bottom: 26px;
 
-  opacity: 0.6;
-}
+  z-index: 5;
 
-
-.media-overlay {
-  position: absolute;
-
-  inset: 0;
+  transform:
+    translateX(-50%);
 
   display: flex;
 
   flex-direction: column;
 
   align-items: center;
-  justify-content: center;
 
-  gap: 15px;
+  gap: 14px;
 
-  color: #aaa;
+  color: #7f7f7f;
 
-  font-size: 12px;
+  font-size: 9px;
 
   letter-spacing: 3px;
+
+  text-decoration: none;
 }
 
 
-.media-icon {
-  width: 55px;
-  height: 55px;
+.scroll-circle {
+  width: 44px;
 
-  display: grid;
+  height: 44px;
 
-  place-items: center;
-
-  border: 1px solid #777;
-
-  font-size: 27px;
-}
-
-
-/* =========================================================
-   DEPARTMENT SECTIONS
-========================================================= */
-
-.department-section {
-  width: 100%;
-
-  padding: 100px 5%;
-
-  border-bottom: 1px solid #333;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      #151515,
-      #080808 48%,
-      #050505
-    );
-}
-
-
-.operations-departments-section {
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      #181818,
-      #0b0b0b 50%,
-      #050505
-    );
-}
-
-
-.department-inner {
-  width: min(1280px, 100%);
-
-  margin: auto;
-}
-
-
-.department-heading {
   display: flex;
 
-  align-items: baseline;
+  align-items: center;
 
-  gap: 24px;
+  justify-content: center;
 
-  margin-bottom: 55px;
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.4);
+
+  border-radius: 50%;
+
+  color: #eeeeee;
+
+  font-size: 18px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
 
-.department-heading span {
-  color: #666;
+.scroll-down:hover
+.scroll-circle {
+  transform:
+    translateY(5px);
 
-  font-size: 12px;
+  background: #f4f4f4;
 
-  letter-spacing: 3px;
-}
-
-
-.department-heading h2 {
-  font-family: "Montserrat", sans-serif;
-
-  font-size: clamp(30px, 4vw, 48px);
-
-  font-weight: 600;
-
-  letter-spacing: 6px;
+  color: #050505;
 }
 
 
 /* =========================================================
-   DEPARTMENT CARDS
+   OVERVIEW SECTION
 ========================================================= */
 
-.department-grid {
-  display: grid;
+.division-overview {
+  position: relative;
 
-  grid-template-columns: repeat(4, 1fr);
+  padding:
+    110px
+    5%;
 
-  gap: 20px;
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 255, 255, 0.035),
+      transparent 35%
+    ),
+    #070707;
+
+  border-bottom:
+    1px solid
+    #333333;
 }
 
 
-.department-card {
-  min-height: 300px;
+.overview-wrapper {
+  width:
+    min(
+      1380px,
+      100%
+    );
 
-  padding: 28px;
+  margin:
+    0 auto;
 
   position: relative;
 
-  overflow: hidden;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   OVERVIEW CARDS
+========================================================= */
+
+.overview-card {
+  min-height: 560px;
+
+  position: relative;
+
+  padding:
+    48px
+    48px
+    44px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.17);
 
   background:
     linear-gradient(
       145deg,
-      #151515,
-      #0c0c0c
+      rgba(23, 23, 23, 0.96),
+      rgba(7, 7, 7, 0.98)
     );
 
-  border: 1px solid #333;
+  overflow: hidden;
 
   transition:
     transform 0.35s ease,
@@ -757,834 +428,291 @@
 }
 
 
-.department-card::before {
+.overview-card::before {
   content: "";
 
   position: absolute;
 
   left: 0;
+
   top: 0;
 
   width: 2px;
+
   height: 0;
 
-  background: #e8e8e8;
+  background: #f1f1f1;
 
-  transition: height 0.4s ease;
+  transition:
+    height 0.4s ease;
 }
 
 
-.department-card:hover {
-  transform: translateY(-7px);
+.overview-card:hover {
+  transform:
+    translateY(-7px);
 
-  border-color: #686868;
+  border-color:
+    rgba(255, 255, 255, 0.42);
 
   background:
     linear-gradient(
       145deg,
       #1b1b1b,
-      #0d0d0d
+      #090909
     );
 }
 
 
-.department-card:hover::before {
+.overview-card:hover::before {
   height: 100%;
 }
 
 
-.department-index {
-  display: block;
-
-  color: #666;
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  margin-bottom: 55px;
-}
-
-
-.department-card h3 {
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 18px;
-
-  font-weight: 600;
-
-  letter-spacing: 3px;
-
-  margin-bottom: 25px;
-}
-
-
-.department-card p {
-  color: #999;
-
-  font-size: 12px;
-
-  line-height: 1.8;
-
-  letter-spacing: 0.8px;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 1000px) {
-
-  .division-split {
-    min-height: auto;
-
-    flex-direction: column;
-  }
-
-  .division-panel {
-    min-height: 650px;
-
-    flex: none !important;
-  }
-
-  .division-panel:first-child {
-    border-right: none;
-
-    border-bottom: 1px solid #333;
-  }
-
-  .division-expanded,
-  .operations-expanded {
-    grid-template-columns: 1fr;
-
-    padding: 60px 0;
-  }
-
-  .operations-expanded
-  .division-media {
-    order: 2;
-  }
-
-  .operations-expanded
-  .division-copy {
-    order: 1;
-  }
-
-  .department-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .division-panel {
-    min-height: 580px;
-  }
-
-  .division-idle h1 {
-    font-size: 30px;
-
-    letter-spacing: 5px;
-  }
-
-  .division-copy h2 {
-    font-size: 32px;
-
-    letter-spacing: 5px;
-  }
-
-  .division-expanded {
-    width: 88%;
-  }
-
-  .expanded-description {
-    font-size: 11px;
-  }
-
-  .department-section {
-    padding: 70px 6%;
-  }
-
-  .department-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .department-heading {
-    align-items: flex-start;
-
-    flex-direction: column;
-
-    gap: 10px;
-  }
-
-  .department-heading h2 {
-    font-size: 27px;
-
-    letter-spacing: 4px;
-  }
-
-}
-
-/* =========================================================
-   TECHNICAL DIVISIONS
-========================================================= */
-
-.technical-divisions-section {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-
-  min-height: calc(100svh - 88px);
-
-  padding: 38px 5% 45px;
-
-  background:
-    radial-gradient(
-      circle at 50% -10%,
-      rgba(255, 255, 255, 0.05),
-      transparent 38%
-    ),
-    linear-gradient(
-      135deg,
-      #070707 0%,
-      #101010 50%,
-      #080808 100%
-    );
-
-  border-top: 1px solid #303030;
-  border-bottom: 1px solid #303030;
-
-  scroll-margin-top: 88px;
-}
-
-
-/* =========================================================
-   BACKGROUND GRID
-========================================================= */
-
-.technical-divisions-section::before {
-  content: "";
-
+.overview-number {
   position: absolute;
 
-  inset: 0;
+  right: 40px;
 
-  background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.012) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.012) 1px,
-      transparent 1px
+  top: 35px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.055
     );
 
-  background-size: 75px 75px;
+  font-size: 90px;
 
-  opacity: 0.5;
+  font-weight: 300;
 
-  pointer-events: none;
+  line-height: 1;
 }
 
 
-/* =========================================================
-   INNER
-========================================================= */
-
-.technical-divisions-inner {
-  width: min(1500px, 100%);
-
-  margin: auto;
-
-  position: relative;
-
-  z-index: 2;
-}
-
-
-/* =========================================================
-   HEADING
-========================================================= */
-
-.technical-divisions-heading {
-  margin-bottom: 60px;
-}
-
-
-.technical-divisions-heading h2 {
-  margin: 0;
-
-  color: #f5f5f5;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: clamp(32px, 3.5vw, 50px);
-
-  font-weight: 600;
-
-  letter-spacing: 7px;
-}
-
-
-/* =========================================================
-   CENTERED DIVIDER
-========================================================= */
-
-.technical-heading-divider {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns:
-    1fr
-    22px
-    1fr;
-
-  align-items: center;
-
-  gap: 16px;
-
-  margin-top: 24px;
-}
-
-
-.technical-heading-divider span {
-  height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0.42)
-    );
-}
-
-
-.technical-heading-divider span:last-child {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.42),
-      rgba(255, 255, 255, 0.05)
-    );
-}
-
-
-.technical-heading-divider img {
-  width: 22px;
-  height: 22px;
-
-  object-fit: contain;
-
-  opacity: 0.75;
-}
-
-
-/* =========================================================
-   GRID
-========================================================= */
-
-.technical-divisions-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
-  gap: 24px;
-
-  align-items: stretch;
-}
-
-
-/* =========================================================
-   CARDS
-========================================================= */
-
-.technical-division-card {
-  min-height: 610px;
-
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  padding:
-    78px
-    24px
-    22px;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.22);
-
-  border-radius: 16px;
-
-  background:
-    linear-gradient(
-      150deg,
-      rgba(28, 28, 28, 0.98),
-      rgba(10, 10, 10, 0.98)
-    );
-
-  box-shadow:
-    0 18px 50px
-    rgba(0, 0, 0, 0.25);
-}
-
-
-.technical-division-card:hover {
-  transform: translateY(-7px);
-
-  border-color:
-    rgba(255, 255, 255, 0.48);
-
-  background:
-    linear-gradient(
-      150deg,
-      #202020,
-      #0c0c0c
-    );
-
-  box-shadow:
-    0 25px 60px
-    rgba(0, 0, 0, 0.38);
-}
-
-
-/* =========================================================
-   ICON
-========================================================= */
-
-.technical-icon {
-  width: 90px;
-  height: 90px;
-
-  position: absolute;
-
-  top: -45px;
-  left: 50%;
-
-  transform:
-    translateX(-50%);
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.6);
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle at 45% 35%,
-      #272727,
-      #101010 72%
-    );
-
-  box-shadow:
-    0 12px 30px
-    rgba(0, 0, 0, 0.4);
-
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease;
-}
-
-
-.technical-division-card:hover
-.technical-icon {
-  transform:
-    translateX(-50%)
-    translateY(-4px);
-
-  border-color:
-    rgba(255, 255, 255, 0.95);
-}
-
-
-.technical-icon svg {
-  width: 48px;
-  height: 48px;
-
-  fill: none;
-
-  stroke: #f4f4f4;
-
-  stroke-width: 2.1;
-
-  stroke-linecap: round;
-
-  stroke-linejoin: round;
-}
-
-
-.software-icon span {
-  color: #f4f4f4;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 24px;
-
-  font-weight: 600;
-}
-
-
-/* =========================================================
-   DIVIDER
-========================================================= */
-
-.technical-card-divider {
-  width: 34px;
-  height: 1px;
-
-  margin:
-    0 auto
-    18px;
-
-  background:
-    rgba(255, 255, 255, 0.48);
-
-  transition:
-    width 0.35s ease;
-}
-
-
-.technical-division-card:hover
-.technical-card-divider {
-  width: 58px;
-}
-
-
-/* =========================================================
-   TITLE
-========================================================= */
-
-.technical-division-card h3 {
-  margin:
-    0
-    0
-    16px;
-
-  text-align: center;
-
-  color: #f5f5f5;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 18px;
-
-  font-weight: 600;
-
-  letter-spacing: 3px;
-}
-
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.technical-division-card p {
-  margin: 0;
-
-  color: #dedede;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 12.5px;
-
-  font-weight: 400;
-
-  line-height: 1.62;
-
-  letter-spacing: 0.05px;
-
-  min-height: 220px;
-}
-
-
-/* =========================================================
-   BIGGER IMAGE BOX
-========================================================= */
-
-.technical-card-image {
-  width: 100%;
-
-  height: 210px;
-
-  margin-top: 28px;
-
-  position: relative;
-
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.18);
-
-  border-radius: 10px;
-
-  background:
-    radial-gradient(
-      circle at center,
-      #242424,
-      #121212 70%
-    );
-
-  color: #777;
-
-  font-family: "Montserrat", sans-serif;
+.overview-label {
+  color: #6e6e6e;
 
   font-size: 9px;
 
   font-weight: 500;
 
   letter-spacing: 3px;
-
-  flex-shrink: 0;
 }
 
 
-/* visible bordered box */
+.overview-card h2 {
+  margin:
+    26px
+    0
+    0;
 
+  color: #f5f5f5;
 
-.technical-card-image span {
-  margin-top: 18px;
+  font-size:
+    clamp(
+      34px,
+      3vw,
+      52px
+    );
 
-  position: relative;
+  font-weight: 400;
 
-  z-index: 2;
+  letter-spacing: 8px;
 }
 
 
-.technical-division-card:hover
-.technical-card-image::after {
-  border-color:
-    rgba(255, 255, 255, 0.4);
+.overview-line {
+  width: 85px;
+
+  height: 1px;
+
+  margin:
+    30px
+    0
+    26px;
 
   background:
-    radial-gradient(
-      circle at 50% 45%,
-      #292929,
-      #161616 65%,
-      #0b0b0b
+    linear-gradient(
+      90deg,
+      #8b8b8b,
+      transparent
     );
 }
 
 
-/* =========================================================
-   ACTUAL IMAGE
-========================================================= */
+.overview-card p {
+  max-width: 560px;
 
-.technical-card-image img {
-  position: absolute;
+  margin: 0;
 
-  left: 0;
-  right: 0;
+  color: #9d9d9d;
 
-  top: 18px;
+  font-size: 13px;
 
-  width: 100%;
-
-  height:
-    calc(100% - 18px);
-
-  object-fit: cover;
-
-  border-radius: 10px;
-
-  z-index: 3;
-}
-
-
-.technical-card-image:has(img)
-span {
-  display: none;
+  line-height: 1.85;
 }
 
 
 /* =========================================================
-   TABLET
+   OVERVIEW TAGS
 ========================================================= */
 
-@media (max-width: 1200px) {
+.overview-tags {
+  margin-top: 34px;
 
-  .technical-divisions-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
+  display: flex;
 
-    gap:
-      85px
-      24px;
-  }
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
 
 
-  .technical-division-card {
-    min-height: 560px;
-  }
+.overview-tags span {
+  padding:
+    8px
+    11px;
 
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.6px;
 }
 
 
 /* =========================================================
-   MOBILE
+   OVERVIEW BUTTON
 ========================================================= */
 
-@media (max-width: 700px) {
+.overview-button {
+  width: 230px;
 
-  .technical-divisions-section {
-    padding:
-      55px
-      6%
-      70px;
-  }
+  height: 48px;
 
+  margin-top: auto;
 
-  .technical-divisions-heading {
-    margin-bottom: 80px;
-  }
+  padding:
+    0
+    18px;
 
+  box-sizing: border-box;
 
-  .technical-divisions-heading h2 {
-    font-size: 28px;
+  display: flex;
 
-    letter-spacing: 4px;
-  }
+  align-items: center;
 
+  justify-content: space-between;
 
-  .technical-divisions-grid {
-    grid-template-columns: 1fr;
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.35);
 
-    gap: 85px;
-  }
+  color: #eeeeee;
 
+  font-size: 9px;
 
-  .technical-division-card {
-    min-height: 560px;
+  font-weight: 500;
 
-    padding:
-      72px
-      22px
-      22px;
-  }
+  letter-spacing: 2px;
 
+  text-decoration: none;
 
-  .technical-icon {
-    width: 86px;
-    height: 86px;
-
-    top: -43px;
-  }
-
-
-  .technical-icon svg {
-    width: 45px;
-    height: 45px;
-  }
-
-
-  .technical-division-card p {
-    font-size: 12px;
-
-    line-height: 1.65;
-  }
-
-
-  .technical-card-image {
-    height: 175px;
-  }
-
-  /* =========================================================
-   LEARN MORE SCROLL POSITION
-========================================================= */
-
-#technical-departments,
-#operations-departments {
-  scroll-margin-top: 88px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
+
+.overview-button span {
+  font-size: 18px;
+}
+
+
+.overview-button:hover {
+  background: #f2f2f2;
+
+  border-color: #f2f2f2;
+
+  color: #050505;
 }
 
 
 /* =========================================================
-   OPERATIONS DIVISIONS
+   DEPARTMENT SECTIONS
 ========================================================= */
 
-.operations-divisions-section {
-  width: 100%;
+.department-section {
   position: relative;
+
+  padding:
+    115px
+    5%
+    130px;
+
   overflow: hidden;
 
-  min-height: calc(100svh - 88px);
+  isolation: isolate;
 
-  padding: 38px 5% 45px;
+  scroll-margin-top: 88px;
 
+  border-bottom:
+    1px solid
+    #333333;
+}
+
+
+.technical-section {
   background:
     radial-gradient(
-      circle at 50% -10%,
-      rgba(255, 255, 255, 0.05),
-      transparent 38%
+      circle at 15% 0%,
+      rgba(255, 255, 255, 0.04),
+      transparent 32%
     ),
     linear-gradient(
       135deg,
-      #070707 0%,
-      #101010 50%,
-      #080808 100%
+      #050505,
+      #101010 55%,
+      #070707
     );
-
-  border-top: 1px solid #303030;
-  border-bottom: 1px solid #303030;
-
-  scroll-margin-top: 88px;
 }
 
 
-/* Background grid */
-
-.operations-divisions-section::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.012) 1px,
-      transparent 1px
+.operations-section {
+  background:
+    radial-gradient(
+      circle at 85% 0%,
+      rgba(255, 255, 255, 0.045),
+      transparent 32%
     ),
     linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.012) 1px,
-      transparent 1px
+      225deg,
+      #050505,
+      #101010 55%,
+      #070707
     );
-
-  background-size: 75px 75px;
-
-  opacity: 0.5;
-
-  pointer-events: none;
 }
 
 
-/* =========================================================
-   INNER
-========================================================= */
+.department-wrapper {
+  width:
+    min(
+      1380px,
+      100%
+    );
 
-.operations-divisions-inner {
-  width: min(1500px, 100%);
-
-  margin: auto;
+  margin:
+    0 auto;
 
   position: relative;
 
@@ -1593,143 +721,163 @@ span {
 
 
 /* =========================================================
-   HEADING
+   SECTION HEADING
 ========================================================= */
 
-.operations-divisions-heading {
-  margin-bottom: 60px;
+.department-heading {
+  max-width: 760px;
+
+  margin-bottom: 75px;
 }
 
 
-.operations-divisions-heading h2 {
+.department-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #6d6d6d;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+}
+
+
+.department-heading h2 {
   margin: 0;
 
   color: #f5f5f5;
 
-  font-family: "Montserrat", sans-serif;
+  font-size:
+    clamp(
+      38px,
+      4vw,
+      58px
+    );
 
-  font-size: clamp(32px, 3.5vw, 50px);
+  font-weight: 400;
 
-  font-weight: 600;
+  line-height: 1.05;
 
-  letter-spacing: 7px;
+  letter-spacing: 8px;
 }
 
 
-/* =========================================================
-   CENTERED NOX DIVIDER
-========================================================= */
+.heading-line {
+  width: 125px;
 
-.operations-heading-divider {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns:
-    1fr
-    22px
-    1fr;
-
-  align-items: center;
-
-  gap: 16px;
-
-  margin-top: 24px;
-}
-
-
-.operations-heading-divider span {
   height: 1px;
 
+  margin:
+    28px
+    0
+    25px;
+
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0.42)
+      rgba(255, 255, 255, 0.65),
+      transparent
     );
 }
 
 
-.operations-heading-divider span:last-child {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.42),
-      rgba(255, 255, 255, 0.05)
-    );
-}
+.department-heading p {
+  margin: 0;
 
+  color: #8f8f8f;
 
-.operations-heading-divider img {
-  width: 22px;
-  height: 22px;
+  font-size: 13px;
 
-  object-fit: contain;
-
-  opacity: 0.75;
+  line-height: 1.75;
 }
 
 
 /* =========================================================
-   GRID
+   CARD GRID
 ========================================================= */
 
-.operations-divisions-grid {
+.department-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(4, minmax(0, 1fr));
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
 
-  gap: 24px;
-
-  align-items: stretch;
+  gap: 20px;
 }
 
 
 /* =========================================================
-   CARDS
+   DIVISION CARD
 ========================================================= */
 
-.operations-division-card {
-  min-height: 610px;
+.division-card {
+  min-height: 455px;
+
+  padding:
+    30px
+    28px
+    28px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
 
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-
-  padding:
-    78px
-    24px
-    22px;
+  overflow: hidden;
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.22);
-
-  border-radius: 16px;
+    rgba(255, 255, 255, 0.18);
 
   background:
     linear-gradient(
       150deg,
-      rgba(28, 28, 28, 0.98),
-      rgba(10, 10, 10, 0.98)
+      rgba(25, 25, 25, 0.98),
+      rgba(7, 7, 7, 0.98)
     );
-
-  box-shadow:
-    0 18px 50px
-    rgba(0, 0, 0, 0.25);
 
   transition:
     transform 0.35s ease,
     border-color 0.35s ease,
-    background 0.35s ease,
-    box-shadow 0.35s ease;
+    background 0.35s ease;
 }
 
 
-.operations-division-card:hover {
-  transform: translateY(-7px);
+.division-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+
+  height: 170px;
+
+  right: -85px;
+
+  bottom: -85px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.035);
+
+  transform:
+    rotate(45deg);
+}
+
+
+.division-card:hover {
+  transform:
+    translateY(-7px);
 
   border-color:
     rgba(255, 255, 255, 0.48);
@@ -1738,80 +886,71 @@ span {
     linear-gradient(
       150deg,
       #202020,
-      #0c0c0c
+      #090909
     );
-
-  box-shadow:
-    0 25px 60px
-    rgba(0, 0, 0, 0.38);
 }
 
 
 /* =========================================================
-   ICON
+   CARD TOP
 ========================================================= */
 
-.operations-icon {
-  width: 90px;
-  height: 90px;
+.card-top {
+  display: flex;
 
-  position: absolute;
+  align-items: flex-start;
 
-  top: -45px;
-  left: 50%;
+  justify-content: space-between;
+}
 
-  transform: translateX(-50%);
+
+.card-number {
+  color: #666666;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   ICONS
+========================================================= */
+
+.division-icon {
+  width: 58px;
+
+  height: 58px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.6);
+    rgba(255, 255, 255, 0.28);
 
-  border-radius: 50%;
+  color: #eeeeee;
 
   background:
-    radial-gradient(
-      circle at 45% 35%,
-      #272727,
-      #101010 72%
-    );
-
-  box-shadow:
-    0 12px 30px
-    rgba(0, 0, 0, 0.4);
-
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease;
+    rgba(255, 255, 255, 0.012);
 }
 
 
-.operations-division-card:hover
-.operations-icon {
-  transform:
-    translateX(-50%)
-    translateY(-4px);
+.division-icon svg {
+  width: 30px;
 
-  border-color:
-    rgba(255, 255, 255, 0.95);
-}
-
-
-/* SVG */
-
-.operations-icon svg {
-  width: 48px;
-  height: 48px;
+  height: 30px;
 
   fill: none;
 
-  stroke: #f4f4f4;
+  stroke: #eeeeee;
 
-  stroke-width: 2.1;
+  stroke-width: 1.8;
 
   stroke-linecap: round;
 
@@ -1819,171 +958,135 @@ span {
 }
 
 
-/* Strategy code icon */
+.mechanical-icon svg circle:first-child {
+  fill: none;
+}
 
-.strategy-icon span {
-  color: #f4f4f4;
 
-  font-family: "Montserrat", sans-serif;
+.text-icon {
+  font-size: 30px;
 
-  font-size: 24px;
+  font-weight: 400;
+}
+
+
+.software-icon {
+  font-size: 16px;
 
   font-weight: 600;
+
+  letter-spacing: -1px;
+}
+
+
+.strategy-symbol {
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 33px;
 }
 
 
 /* =========================================================
-   DIVIDER
+   CARD DIVIDER
 ========================================================= */
 
-.operations-card-divider {
-  width: 34px;
+.card-line {
+  width: 38px;
+
   height: 1px;
 
   margin:
-    0 auto
-    18px;
+    34px
+    0
+    23px;
 
   background:
-    rgba(255, 255, 255, 0.48);
+    rgba(
+      255,
+      255,
+      255,
+      0.4
+    );
 
   transition:
-    width 0.35s ease;
+    width 0.3s ease;
 }
 
 
-.operations-division-card:hover
-.operations-card-divider {
-  width: 58px;
+.division-card:hover
+.card-line {
+  width: 70px;
 }
 
 
 /* =========================================================
-   TITLE
+   CARD TEXT
 ========================================================= */
 
-.operations-division-card h3 {
+.division-card h3 {
   margin:
     0
     0
-    16px;
-
-  text-align: center;
+    20px;
 
   color: #f5f5f5;
 
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 18px;
-
-  font-weight: 600;
-
-  letter-spacing: 3px;
-}
-
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.operations-division-card p {
-  margin: 0;
-
-  color: #dedede;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 12.5px;
-
-  font-weight: 400;
-
-  line-height: 1.62;
-
-  letter-spacing: 0.05px;
-
-  min-height: 220px;
-}
-
-
-/* =========================================================
-   IMAGE BOX
-========================================================= */
-
-.operations-card-image {
-  width: 100%;
-
-  height: 210px;
-
-  margin-top: 28px;
-
-  position: relative;
-
-  overflow: hidden;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.18);
-
-  border-radius: 10px;
-
-  background:
-    radial-gradient(
-      circle at center,
-      #242424,
-      #121212 70%
-    );
-
-  color: #777;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 9px;
+  font-size: 19px;
 
   font-weight: 500;
 
   letter-spacing: 3px;
-
-  flex-shrink: 0;
-
-  transition:
-    border-color 0.3s ease,
-    background 0.3s ease;
 }
 
 
-.operations-division-card:hover
-.operations-card-image {
-  border-color:
-    rgba(255, 255, 255, 0.4);
+.division-card p {
+  margin: 0;
 
-  background:
-    radial-gradient(
-      circle at center,
-      #292929,
-      #161616 70%
-    );
+  color: #a0a0a0;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 1.75;
 }
 
 
-/* Real images */
+/* =========================================================
+   SKILLS
+========================================================= */
 
-.operations-card-image img {
-  width: 100%;
-  height: 100%;
+.card-skills {
+  margin-top: auto;
 
-  object-fit: cover;
+  padding-top: 35px;
 
-  display: block;
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
 }
 
 
-.operations-card-image:has(img) span {
-  display: none;
+.card-skills span {
+  padding:
+    6px
+    8px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  color: #707070;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.2px;
 }
 
 
@@ -1991,20 +1094,39 @@ span {
    TABLET
 ========================================================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
 
-  .operations-divisions-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-
-    gap:
-      85px
-      24px;
+  .overview-wrapper {
+    grid-template-columns: 1fr;
   }
 
 
-  .operations-division-card {
-    min-height: 560px;
+  .overview-card {
+    min-height: 500px;
+  }
+
+
+  .department-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .division-card {
+    min-height: 410px;
+  }
+
+
+  .hero-decoration-one {
+    right: -300px;
+  }
+
+
+  .hero-decoration-two {
+    right: -120px;
   }
 
 }
@@ -2014,109 +1136,101 @@ span {
    MOBILE
 ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
-  .operations-divisions-section {
-    padding:
-      55px
-      6%
-      70px;
+  .divisions-hero {
+    height:
+      calc(
+        100svh - 90px
+      );
+
+    min-height:
+      calc(
+        100svh - 90px
+      );
   }
 
 
-  .operations-divisions-heading {
-    margin-bottom: 80px;
+  .hero-content {
+    width: 86%;
   }
 
 
-  .operations-divisions-heading h2 {
-    font-size: 28px;
+  .hero-content h1 {
+    font-size: 45px;
 
-    letter-spacing: 4px;
+    letter-spacing: 6px;
   }
 
 
-  .operations-heading-divider {
-    grid-template-columns:
-      1fr
-      18px
-      1fr;
-
-    gap: 12px;
-  }
-
-
-  .operations-heading-divider img {
-    width: 18px;
-    height: 18px;
-  }
-
-
-  .operations-divisions-grid {
-    grid-template-columns: 1fr;
-
-    gap: 85px;
-  }
-
-
-  .operations-division-card {
-    min-height: 560px;
-
-    padding:
-      72px
-      22px
-      22px;
-  }
-
-
-  .operations-icon {
-    width: 86px;
-    height: 86px;
-
-    top: -43px;
-  }
-
-
-  .operations-icon svg {
-    width: 45px;
-    height: 45px;
-  }
-
-
-  .strategy-icon span {
-    font-size: 22px;
-  }
-
-
-  .operations-division-card p {
+  .hero-content p {
     font-size: 12px;
-
-    line-height: 1.65;
   }
 
 
-  .operations-card-image {
-    height: 175px;
+  .hero-decoration-one,
+  .hero-decoration-two {
+    opacity: 0.5;
   }
 
-}
 
-/* Bigger Finance icon */
-.operations-finance-icon svg {
-  width: 58px;
-  height: 58px;
-}
+  .division-overview {
+    padding:
+      80px
+      6%;
+  }
 
 
-/* Bigger Strategy icon */
-.operations-strategy-icon svg {
-  width: 65px;
-  height: 65px;
-}
+  .overview-card {
+    min-height: 520px;
 
-.technical-card-image,
-.operations-card-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    padding:
+      36px
+      28px;
+  }
+
+
+  .overview-card h2 {
+    font-size: 31px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .overview-number {
+    font-size: 65px;
+  }
+
+
+  .department-section {
+    padding:
+      85px
+      6%
+      95px;
+
+    scroll-margin-top: 90px;
+  }
+
+
+  .department-heading {
+    margin-bottom: 55px;
+  }
+
+
+  .department-heading h2 {
+    font-size: 31px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .department-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .division-card {
+    min-height: 410px;
+  }
+
 }
