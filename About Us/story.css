@@ -12,89 +12,48 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
+
   background: #050505;
+
   color: #f5f5f5;
+
   font-family: "Montserrat", sans-serif;
 }
 
 
-
 /* =========================================================
-   SHARED STORY BACKGROUNDS
+   SHARED BACKGROUND GRID
 ========================================================= */
 
-.story-hero,
-.story-split-section,
-.principles-section,
-.timeline-section {
-  position: relative;
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 50% -10%,
-      rgba(255, 255, 255, 0.05),
-      transparent 38%
-    ),
-    linear-gradient(
-      135deg,
-      #070707 0%,
-      #101010 50%,
-      #080808 100%
-    );
-}
-
-
-
-/* =========================================================
-   TECHNICAL GRID
-========================================================= */
-
-.story-hero::before,
-.story-split-section::before,
-.principles-section::before,
-.timeline-section::before {
-  content: "";
-
+.story-grid-bg {
   position: absolute;
+
   inset: 0;
+
+  z-index: 0;
 
   background-image:
     linear-gradient(
-      rgba(255, 255, 255, 0.012) 1px,
+      rgba(255,255,255,0.012) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.012) 1px,
+      rgba(255,255,255,0.012) 1px,
       transparent 1px
     );
 
-  background-size: 75px 75px;
+  background-size:
+    75px
+    75px;
 
   opacity: 0.5;
 
   pointer-events: none;
-
-  z-index: 0;
 }
-
-
-
-/* =========================================================
-   CONTENT ABOVE BACKGROUND
-========================================================= */
-
-.story-hero-content,
-.story-section-inner,
-.principles-inner,
-.timeline-inner {
-  position: relative;
-  z-index: 2;
-}
-
 
 
 /* =========================================================
@@ -104,22 +63,35 @@ body {
 .story-hero {
   width: 100%;
 
-  height: calc(100vh - 88px);
-  min-height: calc(100vh - 88px);
+  height:
+    calc(
+      100vh - 88px
+    );
+
+  min-height: 650px;
+
+  position: relative;
 
   display: flex;
+
   align-items: center;
+
+  overflow: hidden;
 
   padding:
     0
     max(7vw, 55px);
 
-  border-bottom: 1px solid #363636;
+  box-sizing: border-box;
+
+  border-bottom:
+    1px solid
+    #363636;
 
   background:
     radial-gradient(
       circle at 78% 45%,
-      rgba(255, 255, 255, 0.055),
+      rgba(255,255,255,0.055),
       transparent 32%
     ),
     linear-gradient(
@@ -131,15 +103,66 @@ body {
 }
 
 
+/* technical grid */
+
+.story-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    75px
+    75px;
+
+  opacity: 0.5;
+
+  pointer-events: none;
+}
+
 
 /* =========================================================
    HERO CONTENT
 ========================================================= */
 
 .story-hero-content {
-  width: min(650px, 58%);
+  width:
+    min(
+      720px,
+      60%
+    );
+
+  position: relative;
+
+  z-index: 3;
 }
 
+
+.story-hero-eyebrow {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #737373;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 5px;
+}
 
 
 /* =========================================================
@@ -150,8 +173,6 @@ body {
   margin: 0;
 
   color: #f5f5f5;
-
-  font-family: "Montserrat", sans-serif;
 
   font-size:
     clamp(
@@ -168,32 +189,42 @@ body {
 }
 
 
+.story-hero-line {
+  width: 145px;
+
+  height: 1px;
+
+  margin:
+    32px
+    0
+    28px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.65),
+      transparent
+    );
+}
+
 
 /* =========================================================
    HERO TEXT
 ========================================================= */
 
 .story-hero p {
-  max-width: 570px;
+  max-width: 620px;
 
-  margin:
-    38px
-    0
-    0;
+  margin: 0;
 
-  color: #b7b7b7;
-
-  font-family: "Montserrat", sans-serif;
+  color: #bcbcbc;
 
   font-size: 15px;
 
   font-weight: 400;
 
-  line-height: 1.8;
-
-  letter-spacing: 0.15px;
+  line-height: 1.85;
 }
-
 
 
 /* =========================================================
@@ -202,25 +233,25 @@ body {
 
 .story-button {
   width: 285px;
+
   height: 62px;
 
-  margin-top: 78px;
+  margin-top: 48px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.42);
+    rgba(255,255,255,0.42);
 
   background:
-    rgba(0, 0, 0, 0.16);
+    rgba(0,0,0,0.16);
 
   color: #ffffff;
-
-  font-family: "Montserrat", sans-serif;
 
   font-size: 11px;
 
@@ -228,18 +259,20 @@ body {
 
   letter-spacing: 3px;
 
-  text-transform: uppercase;
-
   text-decoration: none;
 
   transition:
     background 0.3s ease,
     color 0.3s ease,
-    border-color 0.3s ease;
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
 .story-button:hover {
+  transform:
+    translateY(-3px);
+
   background: #f5f5f5;
 
   border-color: #f5f5f5;
@@ -248,17 +281,21 @@ body {
 }
 
 
-
 /* =========================================================
    HERO WATERMARK
 ========================================================= */
 
 .story-hero-watermark {
-  width: min(750px, 56vw);
+  width:
+    min(
+      750px,
+      56vw
+    );
 
   position: absolute;
 
   right: -130px;
+
   bottom: -185px;
 
   opacity: 0.12;
@@ -268,29 +305,50 @@ body {
     brightness(0.95);
 
   pointer-events: none;
-  user-select: none;
 
   z-index: 1;
 }
 
 
-
 /* =========================================================
-   MISSION / VISION
+   MISSION + VISION
 ========================================================= */
 
-.story-split-section {
+.story-info-section {
+  width: 100%;
+
+  min-height: 500px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
   padding:
-    82px
-    max(4vw, 32px);
+    90px
+    max(5vw, 48px);
 
-  border-bottom: 1px solid #363636;
+  box-sizing: border-box;
 
+  border-bottom:
+    1px solid
+    #363636;
+}
+
+
+/* =========================================================
+   MISSION BACKGROUND
+========================================================= */
+
+.mission-section {
   background:
     radial-gradient(
-      circle at 50% 0%,
-      rgba(255, 255, 255, 0.045),
-      transparent 35%
+      circle at 78% 20%,
+      rgba(255,255,255,0.05),
+      transparent 32%
     ),
     linear-gradient(
       135deg,
@@ -301,37 +359,44 @@ body {
 }
 
 
-
 /* =========================================================
-   SECTION INNER
+   VISION BACKGROUND
 ========================================================= */
 
-.story-section-inner {
-  width: min(1220px, 100%);
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.5fr)
-    minmax(320px, 0.8fr);
-
-  gap: 85px;
-
-  align-items: center;
+.vision-section {
+  background:
+    radial-gradient(
+      circle at 22% 80%,
+      rgba(255,255,255,0.045),
+      transparent 34%
+    ),
+    linear-gradient(
+      225deg,
+      #070707 0%,
+      #101010 50%,
+      #080808 100%
+    );
 }
 
 
-
 /* =========================================================
-   COPY
+   MISSION / VISION INNER
 ========================================================= */
 
-.story-copy {
-  max-width: 720px;
-}
+.story-info-inner {
+  width:
+    min(
+      1320px,
+      100%
+    );
 
+  margin:
+    0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
 
 
 /* =========================================================
@@ -341,80 +406,79 @@ body {
 .story-eyebrow {
   display: block;
 
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 
-  color: #707070;
+  color: #8d8d8d;
 
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 9px;
+  font-size: 10px;
 
   font-weight: 400;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   text-transform: uppercase;
 }
 
 
-
 /* =========================================================
-   SECTION TITLES
+   MISSION / VISION TITLE
 ========================================================= */
 
-.story-copy h2,
+.story-info-inner h2,
 .principles-heading h2,
 .timeline-heading h2 {
   margin: 0;
 
   color: #f5f5f5;
 
-  font-family: "Montserrat", sans-serif;
-
   font-size:
     clamp(
-      32px,
-      3.6vw,
-      48px
+      40px,
+      4.5vw,
+      62px
     );
 
   font-weight: 400;
 
   line-height: 1;
 
-  letter-spacing: 8px;
+  letter-spacing: 9px;
 }
 
 
-
 /* =========================================================
-   TITLE DIVIDER
+   MISSION / VISION DIVIDER
 ========================================================= */
 
 .story-title-divider {
   width: 100%;
 
   margin:
-    23px
+    32px
     0
-    27px;
+    42px;
 
-  display: flex;
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    22px
+    1fr;
 
   align-items: center;
+
+  gap: 16px;
 }
 
 
 .story-title-divider span {
-  flex: 1;
-
   height: 1px;
 
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.06),
-      rgba(255, 255, 255, 0.38)
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.42)
     );
 }
 
@@ -423,156 +487,88 @@ body {
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.38),
-      rgba(255, 255, 255, 0.06)
+      rgba(255,255,255,0.42),
+      rgba(255,255,255,0.06)
     );
 }
 
 
 .story-title-divider img {
-  width: 19px;
-  height: 19px;
+  width: 22px;
 
-  margin:
-    0
-    11px;
+  height: 22px;
 
   object-fit: contain;
 
-  opacity: 0.75;
+  opacity: 0.78;
 
   filter: grayscale(1);
 }
 
 
-
 /* =========================================================
-   COPY TEXT
+   MISSION / VISION TEXT
 ========================================================= */
 
-.story-copy p {
-  margin:
-    0
-    0
-    16px;
-
-  color: #828282;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 12.5px;
-
-  font-weight: 400;
-
-  line-height: 1.8;
-
-  letter-spacing: 0.15px;
-}
-
-
-
-/* =========================================================
-   VISUAL
-========================================================= */
-
-.story-visual {
-  width: 100%;
-}
-
-
-.story-section-image,
-.story-photo-placeholder {
+.story-text-columns {
   width: 100%;
 
-  aspect-ratio: 1.52 / 1;
+  display: grid;
 
-  display: block;
-}
-
-
-
-/* =========================================================
-   REAL IMAGE
-========================================================= */
-
-.story-section-image {
-  object-fit: cover;
-
-  border: 1px solid #3a3a3a;
-
-  filter:
-    grayscale(1)
-    brightness(0.75);
-
-  box-shadow:
-    0
-    25px
-    70px
-    rgba(0, 0, 0, 0.32);
-}
-
-
-
-/* =========================================================
-   PLACEHOLDER
-========================================================= */
-
-.story-photo-placeholder {
-  position: relative;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 50% 40%,
-      #292929,
-      #161616 55%,
-      #0c0c0c
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
     );
 
-  border: 1px solid #484848;
-
-  color: #777;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 9px;
-
-  font-weight: 400;
-
-  letter-spacing: 3px;
-
-  box-shadow:
-    0
-    25px
-    70px
-    rgba(0, 0, 0, 0.32);
+  gap:
+    clamp(
+      60px,
+      7vw,
+      115px
+    );
 }
 
 
-.story-photo-placeholder::after {
+.story-text-columns p {
+  margin: 0;
+
+  position: relative;
+
+  padding-left: 23px;
+
+  color: #d2d2d2;
+
+  font-size: 15.5px;
+
+  font-weight: 400;
+
+  line-height: 1.95;
+
+  letter-spacing: 0.1px;
+}
+
+
+.story-text-columns p::before {
   content: "";
+
+  width: 1px;
 
   position: absolute;
 
-  inset: 0;
+  left: 0;
+
+  top: 5px;
+
+  bottom: 5px;
 
   background:
     linear-gradient(
-      135deg,
-      transparent,
-      rgba(255, 255, 255, 0.035),
-      transparent
+      180deg,
+      rgba(255,255,255,0.52),
+      rgba(255,255,255,0.05)
     );
-
-  pointer-events: none;
 }
-
 
 
 /* =========================================================
@@ -580,17 +576,23 @@ body {
 ========================================================= */
 
 .principles-section {
+  position: relative;
+
+  overflow: hidden;
+
   padding:
     82px
     max(4vw, 32px)
     105px;
 
-  border-bottom: 1px solid #363636;
+  border-bottom:
+    1px solid
+    #363636;
 
   background:
     radial-gradient(
       circle at 50% 15%,
-      rgba(255, 255, 255, 0.06),
+      rgba(255,255,255,0.06),
       transparent 38%
     ),
     linear-gradient(
@@ -602,22 +604,53 @@ body {
 }
 
 
-.principles-inner {
-  width: min(1220px, 100%);
+.principles-section::before {
+  content: "";
 
-  margin: 0 auto;
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    75px
+    75px;
+
+  opacity: 0.5;
+
+  pointer-events: none;
 }
 
 
+.principles-inner {
+  width:
+    min(
+      1220px,
+      100%
+    );
 
-/* =========================================================
-   PRINCIPLES HEADING
-========================================================= */
+  margin:
+    0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
 
 .principles-heading {
   margin-bottom: 55px;
 }
-
 
 
 /* =========================================================
@@ -650,8 +683,8 @@ body {
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0.42)
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.42)
     );
 }
 
@@ -661,8 +694,8 @@ body {
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.42),
-      rgba(255, 255, 255, 0.05)
+      rgba(255,255,255,0.42),
+      rgba(255,255,255,0.05)
     );
 }
 
@@ -670,6 +703,7 @@ body {
 .principles-divider img,
 .timeline-heading-divider img {
   width: 22px;
+
   height: 22px;
 
   object-fit: contain;
@@ -678,7 +712,6 @@ body {
 
   filter: grayscale(1);
 }
-
 
 
 /* =========================================================
@@ -695,10 +728,7 @@ body {
     );
 
   gap: 24px;
-
-  align-items: stretch;
 }
-
 
 
 /* =========================================================
@@ -723,7 +753,7 @@ body {
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.18);
+    rgba(255,255,255,0.18);
 
   background:
     linear-gradient(
@@ -744,7 +774,7 @@ body {
     translateY(-6px);
 
   border-color:
-    rgba(255, 255, 255, 0.48);
+    rgba(255,255,255,0.48);
 
   background:
     linear-gradient(
@@ -755,19 +785,16 @@ body {
 }
 
 
-
-/* =========================================================
-   CARD DETAILS
-========================================================= */
-
 .principle-card::before {
   content: "";
 
   position: absolute;
 
-  top: 0;
   left: 0;
+
   right: 0;
+
+  top: 0;
 
   height: 1px;
 
@@ -775,37 +802,10 @@ body {
     linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.4),
+      rgba(255,255,255,0.4),
       transparent
     );
-
-  opacity: 0.5;
 }
-
-
-.principle-card::after {
-  content: "";
-
-  width: 180px;
-  height: 180px;
-
-  position: absolute;
-
-  right: -70px;
-  top: -70px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.045),
-      transparent 70%
-    );
-
-  pointer-events: none;
-}
-
 
 
 /* =========================================================
@@ -816,12 +816,11 @@ body {
   position: absolute;
 
   top: 10px;
+
   right: 20px;
 
   color:
-    rgba(255, 255, 255, 0.035);
-
-  font-family: "Montserrat", sans-serif;
+    rgba(255,255,255,0.035);
 
   font-size: 100px;
 
@@ -830,21 +829,14 @@ body {
   line-height: 1;
 
   letter-spacing: -3px;
-
-  pointer-events: none;
 }
 
 
-
 /* =========================================================
-   STAR
+   PRINCIPLE DETAILS
 ========================================================= */
 
 .principle-star {
-  position: relative;
-
-  z-index: 2;
-
   margin-bottom: 30px;
 
   color: #f5f5f5;
@@ -853,23 +845,12 @@ body {
 }
 
 
-
-/* =========================================================
-   CATEGORY
-========================================================= */
-
 .principle-category {
-  position: relative;
-
-  z-index: 2;
-
   display: block;
 
   margin-bottom: 10px;
 
   color: #6d6d6d;
-
-  font-family: "Montserrat", sans-serif;
 
   font-size: 8px;
 
@@ -879,21 +860,10 @@ body {
 }
 
 
-
-/* =========================================================
-   PRINCIPLE TITLE
-========================================================= */
-
 .principle-card h3 {
-  position: relative;
-
-  z-index: 2;
-
   margin: 0;
 
   color: #f5f5f5;
-
-  font-family: "Montserrat", sans-serif;
 
   font-size:
     clamp(
@@ -910,13 +880,9 @@ body {
 }
 
 
-
-/* =========================================================
-   PRINCIPLE LINE
-========================================================= */
-
 .principle-line {
   width: 42px;
+
   height: 1px;
 
   margin:
@@ -937,24 +903,13 @@ body {
 }
 
 
-
-/* =========================================================
-   PRINCIPLE TEXT
-========================================================= */
-
 .principle-card p {
-  position: relative;
-
-  z-index: 2;
-
   margin:
     0
     0
     18px;
 
-  color: #818181;
-
-  font-family: "Montserrat", sans-serif;
+  color: #929292;
 
   font-size: 12px;
 
@@ -964,16 +919,17 @@ body {
 }
 
 
-
 /* =========================================================
-   KEYWORDS
+   PRINCIPLE KEYWORDS
 ========================================================= */
 
 .principle-keywords {
   position: absolute;
 
   left: 32px;
+
   right: 32px;
+
   bottom: 27px;
 
   display: flex;
@@ -988,19 +944,14 @@ body {
 
   border-top:
     1px solid
-    rgba(255, 255, 255, 0.12);
+    rgba(255,255,255,0.12);
 
   color: #616161;
 
-  font-family: "Montserrat", sans-serif;
-
   font-size: 7px;
-
-  font-weight: 400;
 
   letter-spacing: 2px;
 }
-
 
 
 /* =========================================================
@@ -1008,6 +959,10 @@ body {
 ========================================================= */
 
 .timeline-section {
+  position: relative;
+
+  overflow: hidden;
+
   padding:
     68px
     0
@@ -1020,7 +975,7 @@ body {
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(255, 255, 255, 0.05),
+      rgba(255,255,255,0.05),
       transparent 38%
     ),
     linear-gradient(
@@ -1029,6 +984,34 @@ body {
       #101010 50%,
       #080808 100%
     );
+}
+
+
+.timeline-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.012) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    75px
+    75px;
+
+  opacity: 0.5;
+
+  pointer-events: none;
 }
 
 
@@ -1041,18 +1024,16 @@ body {
 
   margin:
     0 auto;
+
+  position: relative;
+
+  z-index: 2;
 }
 
-
-
-/* =========================================================
-   TIMELINE HEADING
-========================================================= */
 
 .timeline-heading {
   margin-bottom: 38px;
 }
-
 
 
 /* =========================================================
@@ -1084,6 +1065,7 @@ body {
   top: 54px;
 
   left: -7vw;
+
   right: -7vw;
 
   height: 1px;
@@ -1101,9 +1083,8 @@ body {
 }
 
 
-
 /* =========================================================
-   TIMELINE ITEM
+   TIMELINE ITEMS
 ========================================================= */
 
 .timeline-item {
@@ -1111,19 +1092,13 @@ body {
 
   z-index: 1;
 
-  min-width: 0;
-
   text-align: center;
 }
 
 
-
-/* =========================================================
-   TIMELINE ICON
-========================================================= */
-
 .timeline-icon {
   width: 84px;
+
   height: 84px;
 
   margin:
@@ -1134,14 +1109,8 @@ body {
   display: flex;
 
   align-items: center;
-  justify-content: center;
 
-  background:
-    linear-gradient(
-      145deg,
-      #111,
-      #050505
-    );
+  justify-content: center;
 
   border:
     2px solid
@@ -1149,9 +1118,15 @@ body {
 
   border-radius: 50%;
 
+  background:
+    linear-gradient(
+      145deg,
+      #111111,
+      #050505
+    );
+
   transition:
-    transform 0.25s ease,
-    background 0.25s ease;
+    transform 0.25s ease;
 }
 
 
@@ -1159,24 +1134,17 @@ body {
 .timeline-icon {
   transform:
     translateY(-5px);
-
-  background:
-    #151515;
 }
 
 
-
-/* =========================================================
-   TIMELINE SVG
-========================================================= */
-
 .timeline-icon svg {
   width: 50px;
+
   height: 50px;
 
   fill: none;
 
-  stroke: #fff;
+  stroke: #ffffff;
 
   stroke-width: 2;
 
@@ -1186,23 +1154,14 @@ body {
 }
 
 
-
-/* =========================================================
-   FTC ICON
-========================================================= */
-
 .timeline-ftc img {
   width: 50px;
+
   height: 50px;
 
   object-fit: contain;
 }
 
-
-
-/* =========================================================
-   TIMELINE TEXT
-========================================================= */
 
 .timeline-date {
   display: block;
@@ -1211,11 +1170,7 @@ body {
 
   color: #747474;
 
-  font-family: "Montserrat", sans-serif;
-
   font-size: 9px;
-
-  font-weight: 400;
 
   letter-spacing: 1px;
 }
@@ -1228,8 +1183,6 @@ body {
     14px;
 
   color: #f5f5f5;
-
-  font-family: "Montserrat", sans-serif;
 
   font-size: 16px;
 
@@ -1245,17 +1198,12 @@ body {
   margin:
     0 auto;
 
-  color: #777;
-
-  font-family: "Montserrat", sans-serif;
+  color: #828282;
 
   font-size: 9.5px;
 
-  font-weight: 400;
-
   line-height: 1.7;
 }
-
 
 
 /* =========================================================
@@ -1265,8 +1213,9 @@ body {
 @media (max-width: 1000px) {
 
   .story-hero {
-    padding-left: 45px;
-    padding-right: 45px;
+    padding:
+      0
+      45px;
   }
 
 
@@ -1275,22 +1224,29 @@ body {
   }
 
 
-  .story-section-inner {
-    grid-template-columns:
-      1fr;
+  .story-info-section {
+    min-height: auto;
 
-    gap: 42px;
+    padding:
+      75px
+      45px;
   }
 
 
-  .story-visual {
-    max-width: 620px;
+  .story-text-columns {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+
+  .story-text-columns p {
+    font-size: 14px;
   }
 
 
   .principles-grid {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
 
@@ -1302,8 +1258,7 @@ body {
 
 
   .timeline-track {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
     gap: 42px;
   }
@@ -1319,7 +1274,6 @@ body {
   }
 
 }
-
 
 
 /* =========================================================
@@ -1355,10 +1309,6 @@ body {
 
 
   .story-hero p {
-    max-width: 430px;
-
-    margin-top: 30px;
-
     font-size: 13px;
   }
 
@@ -1368,11 +1318,7 @@ body {
 
     height: 56px;
 
-    margin-top: 55px;
-
-    font-size: 10px;
-
-    letter-spacing: 2.5px;
+    margin-top: 42px;
   }
 
 
@@ -1387,24 +1333,36 @@ body {
   }
 
 
-  .story-split-section {
+  .story-info-section {
     padding:
-      60px
-      21px;
+      62px
+      22px;
   }
 
 
-  .story-copy h2,
+  .story-info-inner h2,
   .principles-heading h2,
   .timeline-heading h2 {
-    font-size: 27px;
+    font-size: 29px;
 
     letter-spacing: 5px;
   }
 
 
-  .story-copy p {
-    font-size: 12px;
+  .story-title-divider {
+    margin:
+      24px
+      0
+      30px;
+  }
+
+
+  .story-text-columns p {
+    padding-left: 16px;
+
+    font-size: 13.5px;
+
+    line-height: 1.82;
   }
 
 
@@ -1413,11 +1371,6 @@ body {
       62px
       21px
       80px;
-  }
-
-
-  .principles-heading {
-    margin-bottom: 36px;
   }
 
 
@@ -1441,17 +1394,6 @@ body {
   }
 
 
-  .principle-card p {
-    font-size: 12px;
-  }
-
-
-  .principle-keywords {
-    left: 24px;
-    right: 24px;
-  }
-
-
   .timeline-section {
     padding:
       60px
@@ -1470,35 +1412,18 @@ body {
 
   .timeline-icon {
     width: 76px;
+
     height: 76px;
   }
 
 
   .timeline-icon svg {
     width: 44px;
+
     height: 44px;
   }
 
-
-  .timeline-ftc img {
-    width: 53px;
-    height: 53px;
-  }
-
-
-  .timeline-item h3 {
-    font-size: 15px;
-  }
-
-
-  .timeline-item p {
-    max-width: 320px;
-
-    font-size: 9.5px;
-  }
-
 }
-
 
 
 /* =========================================================
@@ -1521,12 +1446,17 @@ body {
   }
 
 
-  .story-copy h2,
+  .story-info-inner h2,
   .principles-heading h2,
   .timeline-heading h2 {
-    font-size: 23px;
+    font-size: 25px;
 
     letter-spacing: 4px;
+  }
+
+
+  .story-text-columns p {
+    font-size: 13px;
   }
 
 
